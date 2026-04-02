@@ -14,7 +14,7 @@ const TEAM: TeamMember[] = [
   {
     name: "Nanne de Ru",
     role: "Founding Partner",
-    bio: "Nanne co-founded Powerhouse Company in 2005. His work investigates the social and cultural dimensions of built form, with a particular focus on housing, collective living, and the future of the Dutch city.",
+    bio: "Nanne co-founded Gravity in 2005. His work investigates the social and cultural dimensions of built form, with a particular focus on housing, collective living, and the future of the Dutch city.",
     photo: "https://images.unsplash.com/photo-1640531005390-38bd92755d6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhcmNoaXRlY3QlMjBwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBzdHVkaW98ZW58MXx8fHwxNzc0OTk0NzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     location: "Rotterdam",
   },
@@ -135,7 +135,12 @@ export function TeamPage() {
             </motion.p>
             <motion.h1
               className="text-white"
-              style={{ fontSize: "clamp(36px, 5.5vw, 84px)", fontWeight: 300, lineHeight: 1.05 }}
+              style={{
+                fontSize: "clamp(56px, 7vw, 84px)",
+                fontWeight: 400,
+                lineHeight: 1.06,
+                fontFamily: "'Playfair Display', Georgia, serif",
+              }}
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}

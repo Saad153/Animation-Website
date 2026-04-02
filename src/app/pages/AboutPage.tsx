@@ -88,7 +88,12 @@ export function AboutPage() {
           </motion.p>
           <motion.h1
             className="text-white"
-            style={{ fontSize: "clamp(40px, 6vw, 96px)", fontWeight: 300, lineHeight: 1.05 }}
+            style={{
+              fontSize: "clamp(56px, 7vw, 84px)",
+              fontWeight: 400,
+              lineHeight: 1.06,
+              fontFamily: "'Playfair Display', Georgia, serif",
+            }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -106,7 +111,7 @@ export function AboutPage() {
               className="text-white"
               style={{ fontSize: "clamp(18px, 2.4vw, 28px)", lineHeight: 1.55, fontWeight: 300 }}
             >
-              Powerhouse Company is an internationally operating architecture firm founded in Rotterdam. We create buildings and urban plans that are innovative, socially relevant, and deeply sustainable — work that belongs to its city and endures beyond trends.
+              Gravity is an internationally operating architecture firm founded in Rotterdam. We create buildings and urban plans that are innovative, socially relevant, and deeply sustainable — work that belongs to its city and endures beyond trends.
             </p>
           </FadeIn>
         </div>

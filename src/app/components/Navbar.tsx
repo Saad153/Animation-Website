@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const NAV_LINKS = [
@@ -13,7 +13,35 @@ const NAV_LINKS = [
 export function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const isHome = location.pathname === "/";
+  const isProjectDetail = location.pathname.startsWith("/project/");
+  const isProjects = location.pathname === "/projects";
+  const isLightBg = isProjectDetail || isProjects;
+
+  // Scroll-based hide/show
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const THRESHOLD = 80;
+
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY > lastY && currentY > THRESHOLD) {
+        setHidden(true);
+      } else if (currentY < lastY) {
+        setHidden(false);
+      }
+      lastY = currentY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [location.pathname]);
+
+  // Reset hidden state on route change
+  useEffect(() => {
+    setHidden(false);
+  }, [location.pathname]);
 
   return (
     <>
@@ -25,16 +53,26 @@ export function Navbar() {
             className="fixed z-50"
             style={{ top: 28, left: 28 }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: hidden ? 0 : 1, y: hidden ? -8 : 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
             <Link
               to="/"
-              className="no-underline uppercase text-white/60 hover:text-white/90 transition-colors tracking-[0.15em]"
-              style={{ fontSize: "10px", fontFamily: "'Inter', sans-serif" }}
+              className="no-underline uppercase tracking-[0.15em] transition-colors"
+              style={{
+                fontSize: "10px",
+                fontFamily: "'DM Sans', 'Inter', sans-serif",
+                color: isLightBg ? "rgba(0,0,0,0.5)" : "rgba(255,255,255,0.6)",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.color = isLightBg ? "rgba(0,0,0,0.9)" : "rgba(255,255,255,0.9)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.color = isLightBg ? "rgba(0,0,0,0.5)" : "rgba(255,255,255,0.6)";
+              }}
             >
-              Powerhouse Company
+              Gravity
             </Link>
           </motion.div>
         )}
@@ -45,8 +83,8 @@ export function Navbar() {
         className="fixed z-50"
         style={{ top: 24, left: "50%", x: "-50%" }}
         initial={{ opacity: 0, y: -16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+        animate={{ opacity: hidden ? 0 : 1, y: hidden ? -16 : 0 }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       >
         {/* Desktop pill */}
         <nav
@@ -55,7 +93,7 @@ export function Navbar() {
             boxShadow: "0 2px 24px rgba(0,0,0,0.13), 0 0 0 1px rgba(0,0,0,0.04)",
             padding: "6px 8px",
             gap: 2,
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: "'DM Sans', 'Inter', sans-serif",
           }}
         >
           {NAV_LINKS.map((link) => {
@@ -67,11 +105,12 @@ export function Navbar() {
                 className="relative no-underline transition-all duration-200 rounded-full"
                 style={{
                   fontSize: "11.5px",
-                  letterSpacing: "0.09em",
+                  letterSpacing: "0.10em",
                   color: active ? "#111" : "#888",
                   fontWeight: active ? 500 : 400,
                   padding: "8px 20px",
                   background: active ? "rgba(0,0,0,0.06)" : "transparent",
+                  fontFamily: "'DM Sans', 'Inter', sans-serif",
                 }}
                 onMouseEnter={(e) => {
                   if (!active) (e.currentTarget as HTMLElement).style.color = "#333";
@@ -167,7 +206,7 @@ export function Navbar() {
               transition={{ delay: 0.4 }}
             >
               <p className="text-white/20 uppercase tracking-[0.15em]" style={{ fontSize: "9px" }}>
-                Powerhouse Company — Rotterdam
+                Gravity — Rotterdam
               </p>
             </motion.div>
           </motion.div>

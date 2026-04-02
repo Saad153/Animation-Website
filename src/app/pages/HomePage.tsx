@@ -401,7 +401,7 @@ export function HomePage() {
       className="fixed inset-0 overflow-hidden select-none"
       style={{ background: "#F7F7F5", touchAction: "none" }}
     >
-      {/* ── POWERHOUSE wordmark — centered, fades behind grid as you zoom in ── */}
+      {/* ── GRAVITY wordmark — centered, fades behind grid as you zoom in ── */}
       <motion.div
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
         style={{ zIndex: 20, opacity: transition ? 0 : textOpacity }}
@@ -418,7 +418,7 @@ export function HomePage() {
             lineHeight: 1,
           }}
         >
-          POWERHOUSE
+          GRAVITY
         </span>
       </motion.div>
 

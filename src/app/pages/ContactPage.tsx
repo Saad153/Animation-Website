@@ -7,28 +7,28 @@ const OFFICES = [
     city: "Rotterdam",
     address: "Lloyd Multiplier\nLloydstraat 5\n3024 EA Rotterdam\nThe Netherlands",
     phone: "+31 10 404 6777",
-    email: "rotterdam@powerhouse-company.com",
+    email: "rotterdam@gravity-studio.com",
     isPrimary: true,
   },
   {
     city: "Munich",
     address: "Maxvorstadt\nTheresienstraße 48\n80333 Munich\nGermany",
     phone: "+49 89 202 34120",
-    email: "munich@powerhouse-company.com",
+    email: "munich@gravity-studio.com",
     isPrimary: false,
   },
   {
     city: "Oslo",
     address: "Tjuvholmen Allé 1\n0252 Oslo\nNorway",
     phone: "+47 21 60 03 00",
-    email: "oslo@powerhouse-company.com",
+    email: "oslo@gravity-studio.com",
     isPrimary: false,
   },
   {
     city: "Beijing",
     address: "Chaoyang District\nDongsanhuan Beilu 19\nBeijing, 100026\nChina",
     phone: "+86 10 8589 8900",
-    email: "beijing@powerhouse-company.com",
+    email: "beijing@gravity-studio.com",
     isPrimary: false,
   },
 ];
@@ -60,7 +60,9 @@ export function ContactPage() {
   const inputStyle = (field: string): React.CSSProperties => ({
     width: "100%",
     background: "transparent",
-    border: "none",
+    borderTop: "none",
+    borderLeft: "none",
+    borderRight: "none",
     borderBottom: `1px solid ${focused === field ? "rgba(255,255,255,0.5)" : "rgba(255,255,255,0.12)"}`,
     color: "#fff",
     fontSize: "15px",
@@ -86,7 +88,12 @@ export function ContactPage() {
         </motion.p>
         <motion.h1
           className="text-white"
-          style={{ fontSize: "clamp(36px, 5.5vw, 84px)", fontWeight: 300, lineHeight: 1.05 }}
+          style={{
+            fontSize: "clamp(56px, 7vw, 84px)",
+            fontWeight: 400,
+            lineHeight: 1.06,
+            fontFamily: "'Playfair Display', Georgia, serif",
+          }}
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -191,12 +198,19 @@ export function ContactPage() {
                     onBlur={() => setFocused(null)}
                     placeholder="Tell us about your project or inquiry..."
                     style={{
-                      ...inputStyle("message"),
-                      resize: "none",
-                      borderBottom: "none",
-                      border: `1px solid ${focused === "message" ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.1)"}`,
-                      padding: "14px",
+                      width: "100%",
+                      background: "transparent",
+                      borderTop: `1px solid ${focused === "message" ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.1)"}`,
+                      borderLeft: `1px solid ${focused === "message" ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.1)"}`,
+                      borderRight: `1px solid ${focused === "message" ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.1)"}`,
+                      borderBottom: `1px solid ${focused === "message" ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.1)"}`,
+                      color: "#fff",
+                      fontSize: "15px",
+                      outline: "none",
+                      fontFamily: "'Inter', sans-serif",
                       transition: "border-color 0.25s ease",
+                      resize: "none",
+                      padding: "14px",
                       borderRadius: 2,
                     }}
                   />
