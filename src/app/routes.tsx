@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import { Layout } from "./pages/Layout";
 import { HomePage } from "./pages/HomePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
@@ -18,6 +18,8 @@ export const router = createBrowserRouter([
       { path: "about", Component: AboutPage },
       { path: "team", Component: TeamPage },
       { path: "contact", Component: ContactPage },
+      // Portfolio triggers a PDF download from the navbar; redirect if accessed directly
+      { path: "portfolio", element: <Navigate to="/" replace /> },
     ],
   },
 ]);

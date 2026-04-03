@@ -19,48 +19,110 @@ const STATIC = {
 
 // ─── Per-project data ─────────────────────────────────────────────────────────
 const SUBTITLES: Record<string, string> = {
-  "villa-nova":        "The Right Connections",
-  "the-edge":          "The World's Most Sustainable Office",
-  "sky-tower":         "Living Above the Clouds",
-  "concrete-pavilion": "Light, Space, Silence",
-  "geometric-house":   "Form Follows Flow",
-  "lakeside-retreat":  "Where Architecture Meets Nature",
-  "arts-center":       "Culture Without Walls",
-  "glass-tower":       "Transparency at Scale",
-  "brutalist-library": "Knowledge Forged in Concrete",
-  "forest-cabin":      "A House Among Trees",
+  "jinnah-askari-ii":    "Four Towers, One Identity",
+  "pearl-towers":        "Six Towers, One Community",
+  "dha4-islamabad":      "Oval Forms on the Cliff Edge",
+  "askari-block-130":    "Every Home, Its Own Geometry",
+  "dha-enclave-highrise":"Sea, Sky & Commerce",
+  "askari-block-18a":    "Angular Luxury, Park Views",
+  "askari-block-7-11":   "Twin Towers, Triangular Site",
+  "askari-block-10-12":  "Majestic Twin Towers, Lahore's Heart",
+  "embassy-gardens":     "A Facade That Set the Standard",
+  "malir-jinnah-boulevard": "Eight Towers, One Neighbourhood",
+  "cyber-command-ahq":      "Two Structures, One Identity",
 };
 
 const QUOTES: Record<string, { text: string; author: string; role: string }> = {
-  "villa-nova":        { text: "The city is not a problem to be solved — it is a condition to be inhabited with intelligence and grace.", author: "Nanne de Ru", role: "Founding Partner, Gravity" },
-  "the-edge":          { text: "Sustainability is not a feature. It is the architecture itself — the logic of every decision.", author: "Stefan Prins", role: "Project Lead" },
-  "sky-tower":         { text: "We wanted the building to feel as though it had always belonged to the skyline, and yet had never been seen before.", author: "Charles Bessard", role: "Design Director" },
-  "concrete-pavilion": { text: "Concrete is patience made visible. We worked with light the way a sculptor works with stone — removing until only the essential remains.", author: "Nanne de Ru", role: "Founding Partner, Gravity" },
-  "geometric-house":   { text: "A house is not a machine for living — it is a relationship. Between the people who inhabit it and the landscape that surrounds it.", author: "Stefan Prins", role: "Project Lead" },
-  "lakeside-retreat":  { text: "We dissolved the boundary between inside and outside until the lake became another room.", author: "Charles Bessard", role: "Design Director" },
-  "arts-center":       { text: "Culture is the city's most generous gift to itself. Our task was simply to hold the space open.", author: "Nanne de Ru", role: "Founding Partner, Gravity" },
-  "glass-tower":       { text: "Transparency is not merely a material property. It is an ethical stance — a building declaring its presence honestly.", author: "Stefan Prins", role: "Project Lead" },
-  "brutalist-library": { text: "The library must outlast its age. We built it from the material of permanence, and let light do the rest.", author: "Charles Bessard", role: "Design Director" },
-  "forest-cabin":      { text: "The forest asked nothing of us except that we listen. The cabin is our answer.", author: "Nanne de Ru", role: "Founding Partner, Gravity" },
+  "jinnah-askari-ii": {
+    text: "A constrained site is not a limitation — it is an invitation to innovate. The narrow plot forced us to think vertically, and in doing so we discovered a richer spatial typology.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "pearl-towers": {
+    text: "A gate is not merely a threshold — it is a statement of intent. The winged steel form at Pearl Towers announces, before a single apartment is seen, that what lies beyond is extraordinary.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "dha4-islamabad": {
+    text: "The cliff does not resist the building — it demands that the building respond. Every curve of these towers is a reply to the valley, an acknowledgement that the landscape was here first.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "askari-block-130": {
+    text: "An irregular plot is an honest plot. Rather than forcing a standard layout onto a non-standard site, we let the land dictate the plan — and discovered that every home became extraordinary as a result.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "dha-enclave-highrise": {
+    text: "To build on the sea's edge is to accept that the horizon is the most important element of every room. Every decision in this project — from tower placement to facade angle — was made in service of that view.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "askari-block-18a": {
+    text: "The park was not a backdrop — it was a collaborator. Every angle of this tower was drawn in conversation with the green expanse of Askari Park, so that nature enters every apartment as an equal resident.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "askari-block-7-11": {
+    text: "A triangle is the most structurally honest shape in geometry. We took that honesty and made it the building's identity — two towers that are direct, confident, and unapologetically of their site.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "askari-block-10-12": {
+    text: "Amenity is not an afterthought — it is architecture. At Askari 11, the swimming pool, the gym, and the lounge are not tucked away; they are celebrated as part of the building's identity, as much a facade element as glass and steel.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "embassy-gardens": {
+    text: "When the authorities ask you to set the standard for an entire boulevard, you understand that architecture is not a private act. Every arch, every balcony, every cornice on this building was drawn with the weight of the street in mind.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "malir-jinnah-boulevard": {
+    text: "Colour in architecture is not decoration — it is identity. Each bay window on Jinnah Boulevard is a resident announcing themselves to the street. The building is not one thing; it is eight towers, hundreds of homes, and a thousand small acts of personal expression.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "cyber-command-ahq": {
+    text: "To unify is harder than to build anew. Two buildings that once spoke different languages had to be made to sing the same note — and that note had to be strong enough to belong to one of Pakistan's most significant military institutions.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
 };
 
 const CONCEPTS: Record<string, string> = {
-  "villa-nova":        "The scheme emerges from a careful study of Rotterdam's port heritage — the grid of cranes, the rhythm of containers, the vast horizontal scale of the waterfront. Translated into residential form, these industrial logics yield a building of remarkable spatial generosity, where every apartment commands unobstructed river views through deep-recessed glazing.",
-  "the-edge":          "Energy flows through The Edge the way daylight moves through its facades: continuously monitored, redirected, and never wasted. The building's nervous system — 28,000 sensors tracking occupancy, temperature, and light — means that no space is ever heated, cooled, or lit unnecessarily.",
-  "sky-tower":         "The tower's form is generated by a single environmental logic: rotate each floor plate three degrees to reduce wind loads at altitude, while maintaining the orthogonal efficiency demanded by the commercial programme. The twist produces something the calculations could not have predicted — a building that seems in perpetual motion.",
-  "concrete-pavilion": "In Japanese culture, the ma — the interval, the pause, the charged emptiness between things — is as architecturally significant as the mass that defines it. The pavilion is built around three courts of silence: the water court, the stone court, and the moss court.",
-  "geometric-house":   "The house begins with a mathematical proposition: what is the minimum enclosure required to frame a landscape? The answer, after fourteen months of development, is two overlapping hexagonal volumes, their intersection creating the home's primary living space — a room that feels simultaneously vast and intimate.",
-  "lakeside-retreat":  "Siting was the project's most demanding act. The hotel must appear inevitable — as though the lake had deposited it there slowly, like a geological event. The building's roof-plane follows the gradient of the hillside precisely.",
-  "arts-center":       "The building refuses the traditional hierarchy of arts institutions — the grand entrance, the monumental stair, the sequence of increasingly important galleries. Instead, every threshold is equal. You may enter from the street, from the plaza, from the park, or from below.",
-  "glass-tower":       "The double-skin facade is the building's primary environmental device: a twelve-centimeter cavity that buffers the office floors against temperature extremes while enabling natural ventilation for nearly nine months of the year.",
-  "brutalist-library": "There is a common misunderstanding about Brutalism: that it is cold, inhospitable, indifferent to human scale. This library is an argument against that reading. The raw concrete exterior is deliberate — a declaration of civic seriousness. Inside, the same material is warmed by timber, softened by light.",
-  "forest-cabin":      "The cabin is cross-laminated timber throughout — floors, walls, ceilings, structural elements. Every surface is the same material in a different orientation, a decision that produces an interior of extraordinary coherence.",
+  "jinnah-askari-ii":
+    "The design response to this challenging narrow and elongated plot is a quartet of towers that read as a unified composition from afar while revealing distinct characters up close. High and low masses alternate in a syncopated rhythm, breaking the monotony typical of high-rise residential clusters. The podium weaves generous amenity floors — a gym, pool deck, and landscaped sky terrace — beneath the residential floors, while two basement levels accommodate the parking demand of a building of this scale. The result is a vertical neighbourhood that delivers world-class urban living within one of Karachi's most ambitious residential developments.",
+  "pearl-towers":
+    "Pearl Towers is conceived as a self-sufficient urban village rising from a generous 70-kanal site. Six towers of G+29 floors are arranged around a central communal garden — a green heart that every apartment looks toward. The podium level is a richly programmed base: gyms, swimming pools, a pharmacy, salon, and a mosque integrated seamlessly so that residents need rarely leave. The signature element is the monumental steel winged gate — a soaring sculptural canopy inspired by the spread of wings — that frames the entrance boulevard and gives the entire complex its unmistakable civic identity.",
+  "dha4-islamabad":
+    "Sited on the precipitous cliff edge of DHA Phase 4, Islamabad, these G+15 oval towers exploit what most developments would consider an impossible constraint. The fluid elliptical floor plates rotate subtly floor by floor, maximising valley views from every unit while reducing wind loads at altitude. The soft, undulating facade — composed of continuous horizontal bands of glazing and warm cladding — echoes the contour lines of the hillside below. Each tower appears to grow organically from the terrain, as though shaped by the same geological forces that formed the valley over millennia. At 76.78 kanals, the master plan preserves the natural cliff ecology, threading landscape between the towers and down the escarpment in a continuous green cascade.",
+  "askari-block-130":
+    "The irregular geometry of this Askari 5 plot — a condition that typically forces architects toward compromise — became the generative logic of the entire design. Rather than subdividing the land into a regular grid and accepting residual awkward spaces, the design team embraced the angular boundaries, deriving each apartment's layout directly from the site's perimeter. The result is a G+14 tower in which no two floor plans are identical. Some apartments open wide toward the south; others are narrow and deep, oriented east. Each has a distinct spatial character, a particular relationship to light, and a unique sense of address. The warm facade palette of cream and bronze cladding, punctuated by deep balconies, gives the building a coherent exterior identity that belies the richly individual world within.",
+  "dha-enclave-highrise":
+    "The DHA Enclave Highrise is one of Karachi's most ambitious waterfront developments currently in the design phase. Four towers — two residential, sea-facing to the west, and two commercial, anchoring the eastern edge of the podium — are arranged around a landscaped promenade at grade. The residential towers are characterised by curving, full-height glazed facades that maximise Arabian Sea views, while the commercial towers adopt a more orthogonal language, creating a dialogue between the two programmatic worlds. Cascading sky gardens interrupt each tower's facade at every fourth floor, bringing nature into the vertical realm and reducing solar gain. The podium stitches the four towers together with retail, hospitality, and civic amenity, creating a destination that belongs as much to the city as to its residents and tenants.",
+  "askari-block-18a":
+    "The G+18 Askari Block 18A tower is one of the studio's most disciplined exercises in site-responsive design. The small, acutely angular plot in Askari 5 demanded a building form that did not attempt to disguise its boundaries but instead celebrated them. The result is a slender tower of emphatic geometry — each facade a different angle, each elevation reading uniquely from the street. Two luxury 3-bed apartments occupy each floor, both oriented to face the Askari Park directly to the north. Deep balconies slice across the facade at each level, providing shade, outdoor living space, and a visual rhythm that gives the tower an identity from a distance. The base is compact and secure, with parking integrated into the lower floors and ground-level amenities serving the building's residents.",
+  "askari-block-7-11":
+    "Askari Blocks 7 and 11 presented an unusual brief: two towers of matching footprint, sited on a narrow triangular plot. Rather than treating this as a problem of subdivision, the design team conceived the two towers as a single architectural statement — a pair in conversation, separated by a shared podium and linked by the bold central latticed core that rises between them. Three 3-bed apartments per floor wrap around the triangular plan, each with generous terraces that turn every face of the triangle outward to light and air. The distinctive cross-braced central element is structural and expressive simultaneously — carrying vertical loads while creating a legible architectural identity that makes these twin towers instantly recognisable within the Askari 5 neighbourhood.",
+  "askari-block-10-12":
+    "Rising G+18 floors in the prestigious Askari 11 enclave, Blocks 10 and 12 represent Gravity Studio's vision of vertical community living in Lahore. Two towers of matching floor plan stand side by side, their shared language creating a harmonious pair rather than two isolated objects. The defining ambition of this project is the integration of amenities — swimming pool, gymnasium, and residents' lounges — not as basement afterthoughts but as celebrated volumes within the building's envelope, expressed on the facade and contributing to the towers' distinctive vertical character. Construction is well advanced, with the concrete structure rising steadily against Lahore's skyline. The evening render captures the promise of the finished towers: warm, lit apartments above a generously planted ground level, the twin forms majestic in the dusk light of one of Pakistan's most sought-after residential addresses.",
+  "embassy-gardens":
+    "Embassy Gardens in Bahria Town, Islamabad, is a study in the civic power of classical architecture. The G+3 building occupies a prominent boulevard plot, its ground floor given over to arched retail colonnades that animate the street, while three upper floors of residential apartments rise above with a composed, symmetrical facade of articulated bays, wrought-iron balconies, and decorative cornicing. The classicism is neither pastiche nor nostalgia — it is a precise response to Bahria Town's neoclassical planning language, executed with material care and proportional discipline. The design's success was decisive: Bahria Town authorities, recognising the elevation's quality and its ability to give coherence to the streetscape, mandated it as the template for all subsequent buildings on the surrounding boulevard. Embassy Gardens thus became not merely a completed project but the architectural DNA of an entire neighbourhood — a rare honour and a testament to the enduring relevance of classically grounded design.",
+  "malir-jinnah-boulevard":
+    "Jinnah Boulevard in Malir, Karachi, is among the studio's most ambitious residential masterplans — eight apartment towers of varying heights arranged across a generous 4-acre gated site, creating a self-contained urban quarter. The compositional strategy deliberately resists uniformity: towers step up and down in section, creating a dynamic roofline that reads as a small skyline unto itself. The signature gesture is the bay window system — projecting volumes clad in a palette of warm, saturated colours that animate the otherwise white rendered facades. Red, teal, amber, and cream bays punctuate each elevation at irregular intervals, giving each apartment a distinct street identity and the overall complex a playful, residential warmth rarely achieved at this scale. At ground level, a commercial boulevard runs along the main entrance, providing retail and services that activate the public edge of the site. The interior of the complex is pedestrianised, landscaped, and fully amenitised — a secure, green world that contrasts with the density of the surrounding Malir urban fabric.",
+  "cyber-command-ahq":
+    "The PAF Cyber Command Complex presented a fundamentally different challenge from any other project in the studio's portfolio: not to design from scratch, but to unify. Two existing structures — independently constructed, formally inconsistent, and physically separated — had to be transformed into a single coherent institutional complex befitting Pakistan Air Force's premier cyber operations facility. The unifying strategy operated on two levels. Externally, a continuous cladding system of Aluminum Composite Panels — selected specifically to match the material language of the surrounding Air Headquarters campus — was applied across both buildings, erasing their previous individuality and binding them into one legible whole. A central courtyard was introduced between the two structures, providing both a physical connection and a civic breathing space within the complex. Internally, the transformation was equally ambitious. The Cyber Security Centre lobby — a double-height volume of rich timber cladding, polished marble, and blue-lit display screens — delivers an arrival experience of genuine institutional gravitas. The hexagonal ceiling of the main atrium, composed of dark timber coffers with integrated LED lighting in the Cyber Command's signature blue, directly references the unit's emblem and the geometry of the honeycomb glass entrance doors. The result is a building that reads as always having been a single, purposeful whole — and that carries, in its every detail, the technological identity of the force it serves.",
 };
 
 const SIZE_MAP: Record<string, string> = {
-  Residential: "4,200 m²", Commercial: "18,500 m²",
-  "Mixed Use": "32,000 m²", Cultural: "8,900 m²",
-  Hospitality: "12,400 m²", Public: "15,600 m²",
+  "High Rise Buildings": "varies by tower",
+  Educational: "—",
+  "IT Parks": "—",
+  Residential: "4,200 m²",
+  Commercial: "18,500 m²",
+  "Mixed Use": "32,000 m²",
+  Hospitality: "12,400 m²",
 };
 
 // ─── Easing ───────────────────────────────────────────────────────────────────
@@ -118,13 +180,13 @@ function SlideUp({ children, delay = 0, className = "" }: {
 }
 
 // ─── Parallax Hero Image ──────────────────────────────────────────────────────
-function HeroParallax({ src }: { src: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+// Accepts scrollYProgress from the parent section ref (position: relative)
+// so Motion can correctly calculate scroll offsets.
+function HeroParallax({ src, scrollYProgress }: { src: string; scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"] }) {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   return (
-    <div ref={ref} className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden">
       <motion.div className="absolute inset-0" style={{ y, scale: 1.15 }}>
         <img
           src={src}
@@ -146,7 +208,21 @@ export function ProjectDetailPage() {
   const [carouselIdx, setCarouselIdx] = useState(0);
   const [carouselDir, setCarouselDir] = useState(1);
   const [planIdx, setPlanIdx] = useState(0);
-  const { scrollYProgress } = useScroll();
+
+  // Outer wrapper ref — serves as the positioned container for useScroll
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Window-level scroll progress for the progress bar
+  const { scrollYProgress } = useScroll({ container: containerRef });
+
+  // Hero section ref — must be position:relative so Motion can correctly
+  // calculate scroll offsets (non-static positioning requirement)
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress: heroScrollProgress } = useScroll({
+    target: heroRef,
+    container: containerRef,
+    offset: ["start start", "end start"],
+  });
 
   const projectIndex = projects.findIndex((p) => p.id === id);
   const project = projects[projectIndex];
@@ -174,9 +250,9 @@ export function ProjectDetailPage() {
   const prevProject = projects[(projectIndex - 1 + projects.length) % projects.length];
 
   const subtitle  = SUBTITLES[project.id] || project.category;
-  const quote     = QUOTES[project.id]    || { text: "Architecture is a social act.", author: "Nanne de Ru", role: "Founding Partner" };
+  const quote     = QUOTES[project.id]    || { text: "Architecture is a social act.", author: "Gravity Studio", role: "Design Director" };
   const concept   = CONCEPTS[project.id] || project.description;
-  const size      = SIZE_MAP[project.category] || "9,800 m²";
+  const size      = project.area || SIZE_MAP[project.category] || "—";
   const yearEnd   = parseInt(project.year);
   const timespan  = `${yearEnd - 2} — ${project.year}`;
 
@@ -189,11 +265,11 @@ export function ProjectDetailPage() {
   ].filter(Boolean) as string[];
 
   const galleryCapts = [
-    "Exterior view — primary elevation",
-    "Interior atmosphere — spatial quality",
-    "Architectural detail — material palette",
-    "Section perspective — structural logic",
-    "Threshold study — light and boundary",
+    "Aerial view — master site",
+    "Night elevation — tower identity",
+    "Amenity level — communal living",
+    "Construction progress — structural phase",
+    "Architectural detail — facade system",
   ];
 
   const floorPlans = [
@@ -204,8 +280,8 @@ export function ProjectDetailPage() {
 
   const infoItems = [
     { label: "Time span",  value: timespan },
-    { label: "Floor area", value: size },
-    { label: "Status",     value: "Completed" },
+    { label: "Site area",  value: size },
+    { label: "Status",     value: project.status || "Completed" },
     { label: "Location",   value: project.location },
     { label: "Type",       value: project.category },
   ];
@@ -214,7 +290,7 @@ export function ProjectDetailPage() {
   function goNext() { setCarouselDir(1);  setCarouselIdx((i) => (i + 1) % galleryImages.length); }
 
   return (
-    <div style={{ backgroundColor: "#fff", fontFamily: SANS, color: "#111", overflowX: "hidden" }}>
+    <div ref={containerRef} style={{ backgroundColor: "#fff", fontFamily: SANS, color: "#111", overflowX: "hidden", position: "relative" }}>
 
       {/* ── Scroll progress bar ───────────────────────────────────────────── */}
       <motion.div
@@ -229,10 +305,10 @@ export function ProjectDetailPage() {
       {/* ════════════════════════════════════════════════════════════════════
           HERO — fullscreen cinematic
       ════════════════════════════════════════════════════════════════════ */}
-      <section className="relative" style={{ height: "100vh", minHeight: 640, overflow: "hidden" }}>
+      <section className="relative" style={{ height: "100vh", minHeight: 640, overflow: "hidden" }} ref={heroRef}>
 
         {/* Background image with parallax */}
-        <HeroParallax src={project.image} />
+        <HeroParallax src={project.image} scrollYProgress={heroScrollProgress} />
 
         {/* Dark gradient overlay — heavy on left, fades right */}
         <div
@@ -480,7 +556,7 @@ export function ProjectDetailPage() {
 
       {/* ════════════════════════════════════════════════════════════════════
           CONCEPT — editorial text section
-      ════════════════════════════════════════════════════════════════════ */}
+      ═══════════════════════════════════════════════════════════════════ */}
       <div
         className="px-[clamp(28px,6vw,96px)]"
         style={{ paddingTop: "clamp(80px,10vw,140px)", paddingBottom: "clamp(60px,8vw,100px)" }}
@@ -611,7 +687,7 @@ export function ProjectDetailPage() {
 
       {/* ════════════════════════════════════════════════════════════════════
           PULL QUOTE — full-width dark section
-      ═══════════════════════════════���════════════════════════════════════ */}
+      ═══════════════════════════════════════════════════════════════════ */}
       <div style={{ background: "#0a0a0a", padding: "clamp(80px,10vw,140px) clamp(28px,6vw,96px)" }}>
         <div style={{ maxWidth: "80ch" }}>
           <SlideUp>

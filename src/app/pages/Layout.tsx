@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router";
 import { useEffect } from "react";
 import { Navbar } from "../components/Navbar";
 import { PageTransition } from "../components/PageTransition";
+import { WhatsAppFAB } from "../components/WhatsAppFAB";
 
 export function Layout() {
   const location = useLocation();
@@ -23,11 +24,12 @@ export function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className={bgClass}>
+    <div className={bgClass} style={{ position: "relative" }}>
       <Navbar />
       <PageTransition>
         <Outlet />
       </PageTransition>
+      <WhatsAppFAB />
     </div>
   );
 }

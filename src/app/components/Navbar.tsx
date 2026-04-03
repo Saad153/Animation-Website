@@ -1,23 +1,59 @@
 import { Link, useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
-import { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { X, ArrowUpRight, Download } from "lucide-react";
+import { generatePortfolioPDF } from "../utils/generatePortfolioPDF";
 
+// Desktop order: Projects — Team — About — Contact — Portfolio
 const NAV_LINKS = [
-  { label: "Projects", path: "/projects" },
-  { label: "Team", path: "/team" },
-  { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
+  { label: "Projects",  path: "/projects",  download: false },
+  { label: "Team",      path: "/team",      download: false },
+  { label: "About",     path: "/about",     download: false },
+  { label: "Contact",   path: "/contact",   download: false },
+  { label: "Portfolio", path: "/portfolio", download: true  },
 ];
+
+// Mobile overlay order: Projects — Portfolio — Team — About — Contact
+const MOBILE_NAV_LINKS = [
+  { label: "Projects",  path: "/projects",  download: false },
+  { label: "Portfolio", path: "/portfolio", download: true  },
+  { label: "Team",      path: "/team",      download: false },
+  { label: "About",     path: "/about",     download: false },
+  { label: "Contact",   path: "/contact",   download: false },
+];
+
+// Three-line hamburger icon (native SVG, no dependency on lucide Menu)
+function HamburgerIcon() {
+  return (
+    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+      <rect y="0"  width="18" height="1.8" rx="0.9" fill="#111" />
+      <rect y="6"  width="18" height="1.8" rx="0.9" fill="#111" />
+      <rect y="12" width="18" height="1.8" rx="0.9" fill="#111" />
+    </svg>
+  );
+}
 
 export function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [downloading, setDownloading] = useState(false);
   const isHome = location.pathname === "/";
   const isProjectDetail = location.pathname.startsWith("/project/");
   const isProjects = location.pathname === "/projects";
   const isLightBg = isProjectDetail || isProjects;
+
+  const handlePortfolioDownload = useCallback(async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (downloading) return;
+    setDownloading(true);
+    setMobileOpen(false);
+    try {
+      await generatePortfolioPDF();
+    } finally {
+      setDownloading(false);
+    }
+  }, [downloading]);
 
   // Scroll-based hide/show
   useEffect(() => {
@@ -38,14 +74,15 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [location.pathname]);
 
-  // Reset hidden state on route change
+  // Reset hidden + close mobile menu on route change
   useEffect(() => {
     setHidden(false);
+    setMobileOpen(false);
   }, [location.pathname]);
 
   return (
     <>
-      {/* Studio wordmark — appears on inner pages, top-left */}
+      {/* ── Studio wordmark — inner pages, top-left ── */}
       <AnimatePresence>
         {!isHome && (
           <motion.div
@@ -78,17 +115,18 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Floating pill nav — centered */}
+      {/* ══════════════════════════════════════════════════════════════
+          DESKTOP: floating centered pill  (md and above)
+      ══════════════════════════════════════════════════════════════ */}
       <motion.div
-        className="fixed z-50"
+        className="fixed z-50 hidden md:block"
         style={{ top: 24, left: "50%", x: "-50%" }}
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: hidden ? 0 : 1, y: hidden ? -16 : 0 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       >
-        {/* Desktop pill */}
         <nav
-          className="hidden md:flex items-center rounded-full bg-white"
+          className="flex items-center rounded-full bg-white"
           style={{
             boxShadow: "0 2px 24px rgba(0,0,0,0.13), 0 0 0 1px rgba(0,0,0,0.04)",
             padding: "6px 8px",
@@ -97,7 +135,54 @@ export function Navbar() {
           }}
         >
           {NAV_LINKS.map((link) => {
-            const active = location.pathname === link.path || location.pathname.startsWith(`/${link.label.toLowerCase()}`);
+            const active =
+              location.pathname === link.path ||
+              location.pathname.startsWith(`/${link.label.toLowerCase()}`);
+
+            if (link.download) {
+              return (
+                <button
+                  key={link.path}
+                  onClick={handlePortfolioDownload}
+                  disabled={downloading}
+                  className="relative no-underline transition-all duration-200 rounded-full border-none cursor-pointer flex items-center gap-1.5"
+                  style={{
+                    fontSize: "11.5px",
+                    letterSpacing: "0.10em",
+                    color: downloading ? "#bbb" : "#888",
+                    fontWeight: 400,
+                    padding: "8px 20px",
+                    background: "transparent",
+                    fontFamily: "'DM Sans', 'Inter', sans-serif",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!downloading) (e.currentTarget as HTMLElement).style.color = "#333";
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!downloading) (e.currentTarget as HTMLElement).style.color = "#888";
+                  }}
+                >
+                  {downloading ? (
+                    <>
+                      <motion.span
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                        style={{ display: "inline-flex" }}
+                      >
+                        <Download size={10} />
+                      </motion.span>
+                      Generating…
+                    </>
+                  ) : (
+                    <>
+                      <Download size={10} />
+                      {link.label}
+                    </>
+                  )}
+                </button>
+              );
+            }
+
             return (
               <Link
                 key={link.path}
@@ -124,25 +209,35 @@ export function Navbar() {
             );
           })}
         </nav>
+      </motion.div>
 
-        {/* Mobile pill with hamburger */}
+      {/* ══════════════════════════════════════════════════════════════
+          MOBILE: top-right pill with hamburger  (below md)
+      ══════════════════════════════════════════════════════════════ */}
+      <motion.div
+        className="fixed z-50 md:hidden"
+        style={{ top: 16, right: 16 }}
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: hidden ? 0 : 1, y: hidden ? -10 : 0 }}
+        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      >
         <button
-          className="md:hidden flex items-center justify-center rounded-full bg-white cursor-pointer border-none"
+          className="flex items-center justify-center rounded-full bg-white cursor-pointer border-none"
           style={{
-            boxShadow: "0 2px 24px rgba(0,0,0,0.13)",
-            padding: "12px 20px",
-            gap: 10,
-            fontFamily: "'Inter', sans-serif",
+            boxShadow: "0 2px 20px rgba(0,0,0,0.14), 0 0 0 1px rgba(0,0,0,0.05)",
+            width: 48,
+            height: 48,
           }}
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >
-          <Menu size={16} color="#111" />
-          <span style={{ fontSize: "11px", letterSpacing: "0.09em", color: "#888" }}>Menu</span>
+          <HamburgerIcon />
         </button>
       </motion.div>
 
-      {/* Mobile full-screen overlay */}
+      {/* ══════════════════════════════════════════════════════════════
+          Mobile full-screen overlay menu
+      ══════════════════════════════════════════════════════════════ */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -150,60 +245,77 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            style={{ fontFamily: "'DM Sans', 'Inter', sans-serif" }}
           >
-            {/* Close button */}
+            {/* Close button — top right, mirroring open button position */}
             <button
-              className="absolute top-6 right-6 bg-transparent border-none cursor-pointer p-2"
+              className="absolute top-4 right-4 flex items-center justify-center rounded-full bg-white/10 border-none cursor-pointer"
+              style={{ width: 48, height: 48 }}
               onClick={() => setMobileOpen(false)}
               aria-label="Close menu"
             >
-              <X size={20} color="#fff" />
+              <X size={18} color="#fff" />
             </button>
 
-            {/* Mobile nav links */}
+            {/* Nav links */}
             <div className="flex flex-col justify-center flex-1 px-10 gap-3">
               <motion.p
                 className="uppercase text-white/20 tracking-[0.25em] mb-6"
                 style={{ fontSize: "9px" }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.15 }}
+                transition={{ delay: 0.12 }}
               >
                 Navigation
               </motion.p>
-              {NAV_LINKS.map((link, i) => (
+              {MOBILE_NAV_LINKS.map((link, i) => (
                 <motion.div
                   key={link.path}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -10 }}
-                  transition={{ duration: 0.35, delay: 0.08 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.35, delay: 0.07 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <Link
-                    to={link.path}
-                    className="flex items-center justify-between no-underline py-4 border-b border-white/8 group"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    <span
-                      className="uppercase text-white tracking-[0.1em] transition-opacity group-hover:opacity-60"
-                      style={{ fontSize: "22px", fontWeight: 300 }}
+                  {link.download ? (
+                    <button
+                      onClick={handlePortfolioDownload}
+                      disabled={downloading}
+                      className="flex items-center justify-between no-underline py-5 border-b border-white/8 group w-full border-none bg-transparent cursor-pointer"
                     >
-                      {link.label}
-                    </span>
-                    <ArrowUpRight size={16} className="text-white/30 group-hover:text-white/60 transition-colors" />
-                  </Link>
+                      <span
+                        className="uppercase text-white tracking-[0.1em] transition-opacity group-hover:opacity-60 flex items-center gap-3"
+                        style={{ fontSize: "22px", fontWeight: 300 }}
+                      >
+                        {downloading ? "Generating…" : link.label}
+                      </span>
+                      <Download size={16} className="text-white/30 group-hover:text-white/60 transition-colors" />
+                    </button>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="flex items-center justify-between no-underline py-5 border-b border-white/8 group"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      <span
+                        className="uppercase text-white tracking-[0.1em] transition-opacity group-hover:opacity-60"
+                        style={{ fontSize: "22px", fontWeight: 300 }}
+                      >
+                        {link.label}
+                      </span>
+                      <ArrowUpRight size={16} className="text-white/30 group-hover:text-white/60 transition-colors" />
+                    </Link>
+                  )}
                 </motion.div>
               ))}
             </div>
 
-            {/* Mobile footer */}
+            {/* Footer */}
             <motion.div
-              className="px-10 pb-12"
+              className="px-10 pb-14"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.42 }}
             >
               <p className="text-white/20 uppercase tracking-[0.15em]" style={{ fontSize: "9px" }}>
                 Gravity — Rotterdam

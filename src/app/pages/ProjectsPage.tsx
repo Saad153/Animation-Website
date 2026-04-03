@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { Search, X } from "lucide-react";
 import { projects } from "../data/projects";
 
-const CATEGORIES = ["All", "Residential", "Commercial", "Cultural", "Mixed Use", "Public", "Hospitality"];
+const CATEGORIES = ["All", "High Rise Buildings", "Residential", "Commercial Buildings", "Educational", "IT Parks"];
 
 const SERIF = "'Playfair Display', 'Georgia', serif";
 const SANS = "'DM Sans', 'Inter', 'Helvetica Neue', sans-serif";
@@ -194,7 +194,7 @@ export function ProjectsPage() {
         style={{ height: 1, background: "#e8e8e8", marginBottom: 48 }}
       />
 
-      {/* ── Projects Grid ─────────────────────────────────────────────────────── */}
+      {/* ── Projects Grid ────────────────────────────────────────────────────── */}
       <section
         className="px-8 md:px-16 lg:px-24"
         style={{ paddingBottom: "clamp(80px, 12vw, 120px)" }}

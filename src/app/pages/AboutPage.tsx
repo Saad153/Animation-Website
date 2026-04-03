@@ -59,7 +59,7 @@ export function AboutPage() {
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <div className="bg-black min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <div className="bg-black min-h-screen" style={{ fontFamily: "'Inter', sans-serif", position: "relative" }}>
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <div ref={heroRef} className="relative overflow-hidden" style={{ height: "72vh" }}>
