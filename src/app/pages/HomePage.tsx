@@ -93,8 +93,8 @@ const COL_CONFIGS: ColConfig[] = [
 ];
 
 // ─── Gaps ─────────────────────────────────────────────────────────────────────
-const COL_GAP = 14;
-const ROW_GAP = 14;
+const COL_GAP = 18;
+const ROW_GAP = 18;
 
 // ── Intro constants ──────────────────────────────────────────────────────────
 const INTRO_ZOOM_START = 0.3;
