@@ -4,10 +4,10 @@ import { useNavigate } from "react-router";
 import { projects } from "../data/projects";
 
 // ─── Real project images ──────────────────────────────────────────────────────
-import pearlGate      from "figma:asset/d904eb6644b26f621312f75f1150adba64e4e1cd.png";
-import cyberExterior  from "figma:asset/fdca48499e55dcb74fa40cbb5f9bee2494dbad9d.png";
-import malirAerial    from "figma:asset/27dcbce900ba5c921a3bf91389d0ea1597fc7542.png";
-import dhaEnclaveHero from "figma:asset/09d0d22780ebe0c3ad49ef060d2aca3119dc4bb7.png";
+import pearlGate      from "@/assets/d904eb6644b26f621312f75f1150adba64e4e1cd.png";
+import cyberExterior  from "@/assets/fdca48499e55dcb74fa40cbb5f9bee2494dbad9d.png";
+import malirAerial    from "@/assets/27dcbce900ba5c921a3bf91389d0ea1597fc7542.png";
+import dhaEnclaveHero from "@/assets/09d0d22780ebe0c3ad49ef060d2aca3119dc4bb7.png";
 
 // ─── Image pool ───────────────────────────────────────────────────────────────
 const IMAGES = [
