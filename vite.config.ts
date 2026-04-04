@@ -19,4 +19,19 @@ export default defineConfig({
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
+
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Vendor chunks
+          'html2canvas': ['html2canvas'],
+          'purify': ['dompurify'],
+          'motion': ['motion/react'],
+          'react-vendor': ['react', 'react-dom'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
+  },
 })
