@@ -46,6 +46,24 @@ import cyberLobby         from "@/assets/0ba821698482d0a8f11cd01056a559781117165
 import cyberAtrium        from "@/assets/137dd2a9779e1d9657cb57203ef12250661cea74.png";
 import cyberConstruction  from "@/assets/3221dfd860f2581c3b61802235c4366e3931227e.png";
 
+// Project 12 — Gravity Tower 1 G+21
+import gravityTower1Night       from "@/assets/6d7e66940bebc0cab8a432d5e6707b65e1a5c8ae.png";
+import gravityTower1Construction from "@/assets/7791e506d5a18a0753ad8380f4432effc5b2828c.png";
+import gravityTower1Day         from "@/assets/15e205cbe59271f70ac142f75736004114a026ba.png";
+
+// Project 13 — PAF Chalet Mountain Resort
+import pafChaletExterior      from "@/assets/020fc8f9c34c12665429860cbdef1feb0c1a555d.png";
+import pafChaletInterior      from "@/assets/9c012596a4e5f2c06ae5f781849d297a575425bf.png";
+import pafChaletHillside      from "@/assets/3e1a3d4e73b598fd8d58ed65309af26183b92660.png";
+import pafChaletConstruction  from "@/assets/febff86619dda63e27ce2a5f71979b193f1452d2.png";
+import pafChaletRestaurant    from "@/assets/89c70f4bea1afeac8168cb2d157428484c70695f.png";
+
+// Project 14 — PAF PAFVOM 52 Suites
+import pafVfomAerial    from "@/assets/89f81c652f2e9f13876e822dd6938385b3bb96b2.png";
+import pafVfomEntrance  from "@/assets/a69fcac697524958699441c33414e8339ff97c50.png";
+import pafVfomFront     from "@/assets/52bc6d7b4898187277b1fbc9dbe83b10faa34b6f.png";
+import pafVfomLobby     from "@/assets/5cad965d2ab39db9383cd6eca476d0c240180897.png";
+
 export interface Project {
   id: string;
   title: string;
@@ -220,5 +238,47 @@ export const projects: Project[] = [
       "Originally two separate structures, the PAF Cyber Command Complex was unified through a strategic facade redesign and the addition of a central courtyard. Clad in Aluminum Composite Panels to match the surrounding Air Headquarters, the building integrates seamlessly into the existing institutional landscape while delivering a bold, technologically expressive interior.",
     images: [cyberRender, cyberLobby, cyberAtrium, cyberConstruction],
     tileStyle: { width: 280, height: 210, top: "8%", left: "30%", rotate: 0.5 },
+  },
+  {
+    id: "gravity-tower-1",
+    title: "Gravity Tower 1 G+21",
+    location: "Clifton, Karachi",
+    year: "2026",
+    category: "Commercial Buildings",
+    status: "Under Construction",
+    area: "2000 Sq Yards",
+    image: gravityTower1Night,
+    description:
+      "Standing in the heart of the city, this three-sided glass office tower features stepped terraces and expansive windows offering stunning sea views. The building boasts world-class finishes and architecture, while a decorative metal screen seamlessly integrates into the elevation to disguise the above-ground parking levels.",
+    images: [gravityTower1Day, gravityTower1Construction],
+    tileStyle: { width: 265, height: 215, top: "6%", left: "68%", rotate: -1 },
+  },
+  {
+    id: "paf-chalet-resort",
+    title: "PAF Chalet Mountain Resort",
+    location: "Kalabagh, Pakistan",
+    year: "2026",
+    category: "Hospitality",
+    status: "Under Construction",
+    area: "4 Acres",
+    image: pafChaletHillside,
+    description:
+      "This beautiful resort has chalets that are prefab metal structures, erected at site. The main buildings house the restaurants while the chalets are 2- and 3-bedroom buildings with full kitchen, lounge and terraces to enjoy the breathtaking mountain views.",
+    images: [pafChaletExterior, pafChaletInterior, pafChaletRestaurant, pafChaletConstruction],
+    tileStyle: { width: 285, height: 210, top: "7%", left: "42%", rotate: 1.5 },
+  },
+  {
+    id: "paf-vfom-52-suites",
+    title: "PAF PAFVOM 52 Suites",
+    location: "Malir, Karachi",
+    year: "2024",
+    category: "Hospitality",
+    status: "Completed",
+    area: "—",
+    image: pafVfomFront,
+    description:
+      "A G+1 hospitality complex featuring 52 self-contained suites with kitchens and dining spaces, set amidst lush fruit gardens and private courtyards. The traditional European façade, colonnaded entrance portico, and serene internal courtyards create a retreat of quiet elegance within Karachi.",
+    images: [pafVfomAerial, pafVfomEntrance, pafVfomLobby],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
 ];

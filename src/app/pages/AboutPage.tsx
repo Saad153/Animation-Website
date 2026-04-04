@@ -1,135 +1,270 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
+// ─── Font tokens ─────────────────────────────────────────────────────────────
+const SANS  = "'DM Sans', 'Inter', sans-serif";
+const SERIF = "'Playfair Display', Georgia, serif";
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
 const STATS = [
-  { value: "1993", label: "Founded" },
-  { value: "180+", label: "Projects Built" },
-  { value: "28", label: "Countries" },
-  { value: "4", label: "Offices" },
+  { value: "20+",  label: "Years of Practice" },
+  { value: "200+", label: "Projects Completed" },
+  { value: "4",    label: "Offices Nationwide" },
+  { value: "1",    label: "Integrated Platform" },
 ];
 
 const SERVICES = [
   {
     num: "01",
     title: "Architecture",
-    body: "From concept to completion, we design buildings that challenge convention and elevate urban environments — residential towers, cultural institutions, public infrastructure, and everything between.",
+    body: "From concept to completion, we design buildings that challenge convention — residential towers, commercial complexes, resorts, IT parks, and everything between. Each project is an opportunity to enhance creativity and deliver exceptional architectural quality.",
   },
   {
     num: "02",
-    title: "Urban Design",
-    body: "We shape entire neighborhoods and masterplans. Our urban design practice integrates density, mobility, ecology, and community into cohesive, livable districts.",
+    title: "Interior Design",
+    body: "Our interiors are designed with the same rigour as our buildings. We create environments that respond to human scale, material quality, and the specific character of each client — from corporate lobbies to luxury residences.",
   },
   {
     num: "03",
-    title: "Interior Architecture",
-    body: "Interior spaces are designed with the same rigor as our buildings. We create environments that respond to human scale, material quality, and the specific character of each place.",
+    title: "Engineering",
+    body: "We offer a complete range of engineering services — structural, mechanical, electrical, and civil — integrated within a single platform so that architecture and engineering speak the same language from day one.",
   },
   {
     num: "04",
-    title: "Research & Innovation",
-    body: "Our embedded research unit explores new construction methods, circular material flows, and climate-adaptive building systems — turning insight into built reality.",
+    title: "Construction",
+    body: "By combining state-of-the-art technology, modern machinery, and superior craftsmanship with innovative design principles, we deliver finished products of exceptional quality that stand out within the industry.",
   },
 ];
 
-const AWARDS = [
-  { year: "2024", title: "Dutch Architecture Award", project: "Concrete Pavilion, Tokyo" },
-  { year: "2023", title: "RIBA International Prize", project: "Glass Tower, London" },
-  { year: "2023", title: "Architizer A+ Award", project: "Brutalist Library, Berlin" },
-  { year: "2022", title: "World Architecture Festival", project: "Arts Center, Oslo" },
-  { year: "2021", title: "AR New Into Old Award", project: "Villa Nova, Rotterdam" },
+const OFFICES = [
+  {
+    city: "Karachi",
+    label: "Architecture & Interiors",
+    address: "Innovista Indus, Block A,\nMain Sunset Blvd,\nD.H.A. Phase II, Karachi.",
+    email: "gravity.dnc@gmail.com",
+    cell: "+92 333 2222777",
+    tel: "+92 21 3588666",
+  },
+  {
+    city: "Karachi",
+    label: "Construction & Engineering",
+    address: "Innovista Indus, Block A,\nMain Sunset Blvd,\nD.H.A. Phase II, Karachi.",
+    email: "gravity.dnc@gmail.com",
+    cell: "+92 333 2222777",
+    tel: "+92 21 3588666",
+  },
+  {
+    city: "Lahore",
+    label: "Architecture & Interiors",
+    address: "Address coming soon",
+    addressItalic: true,
+    email: "gravity.dnc@gmail.com",
+    cell: "+92 333 2222777",
+    tel: "+92 21 3588666",
+  },
+  {
+    city: "Islamabad",
+    label: "Architecture & Interiors",
+    address: "Address coming soon",
+    addressItalic: true,
+    email: "gravity.dnc@gmail.com",
+    cell: "+92 333 2222777",
+    tel: "+92 21 3588666",
+  },
 ];
 
-function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+function FadeIn({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.85, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
   );
 }
 
+function Rule({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={className}
+      style={{ height: "0.5px", background: "rgba(255,255,255,0.08)", width: "100%" }}
+    />
+  );
+}
+
+// ═════════════════════════════════════════════════════════════════════════════
 export function AboutPage() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
 
   return (
-    <div className="bg-black min-h-screen" style={{ fontFamily: "'Inter', sans-serif", position: "relative" }}>
-
-      {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <div ref={heroRef} className="relative overflow-hidden" style={{ height: "72vh" }}>
-        <motion.div
-          className="absolute inset-0"
-          style={{ y: heroY }}
-        >
+    <div
+      className="bg-black min-h-screen"
+      style={{ fontFamily: SANS, color: "#fff", overflowX: "hidden" }}
+    >
+      {/* ════════════════════════════════════════════════════════════════════
+          HERO
+      ════════════════════════════════════════════════════════════════════ */}
+      <div
+        ref={heroRef}
+        className="relative overflow-hidden"
+        style={{ height: "78vh", minHeight: 520 }}
+      >
+        <motion.div className="absolute inset-0" style={{ y: heroY, scale: 1.12 }}>
           <img
-            src="https://images.unsplash.com/photo-1602872029708-84d970d3382b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBhcmNoaXRlY3R1cmUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzQ3ODQxMTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Studio interior"
+            src="https://images.unsplash.com/photo-1620502257854-e5b6ffd0e7b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcmlzZSUyMHRvd2VyJTIwY29uc3RydWN0aW9uJTIwc2t5bGluZSUyMGRyYW1hdGljJTIwZHVza3xlbnwxfHx8fDE3NzUzMjIxMDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Gravity Studio — high rise under construction at dusk"
             className="w-full h-full object-cover"
-            style={{ transform: "scale(1.1)" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black" />
+          {/* Gradient overlays */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.75) 100%)",
+            }}
+          />
         </motion.div>
 
-        <div className="absolute bottom-0 left-0 right-0 px-8 md:px-16 lg:px-24 pb-16">
+        {/* Hero text */}
+        <div
+          className="absolute bottom-0 left-0 right-0 px-8 md:px-16 lg:px-24"
+          style={{ paddingBottom: "clamp(40px, 7vw, 90px)" }}
+        >
           <motion.p
-            className="uppercase text-white/40 tracking-[0.22em] mb-4"
-            style={{ fontSize: "10px" }}
+            className="uppercase tracking-[0.26em] mb-5"
+            style={{ fontSize: "9px", color: "rgba(255,255,255,0.4)", fontFamily: SANS }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             About the Studio
           </motion.p>
-          <motion.h1
-            className="text-white"
-            style={{
-              fontSize: "clamp(56px, 7vw, 84px)",
-              fontWeight: 400,
-              lineHeight: 1.06,
-              fontFamily: "'Playfair Display', Georgia, serif",
-            }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Architecture<br />as Civic Act
-          </motion.h1>
+
+          <div className="overflow-hidden">
+            <motion.h1
+              style={{
+                fontFamily: SERIF,
+                fontSize: "clamp(48px, 7.5vw, 100px)",
+                fontWeight: 300,
+                lineHeight: 0.96,
+                letterSpacing: "-0.02em",
+                color: "#fff",
+              }}
+              initial={{ y: "105%" }}
+              animate={{ y: "0%" }}
+              transition={{ duration: 1.1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
+            >
+              Building Pakistan's
+              <br />
+              <em style={{ fontStyle: "italic", color: "rgba(255,255,255,0.7)" }}>
+                skyline — one vision
+              </em>
+              <br />
+              at a time.
+            </motion.h1>
+          </div>
         </div>
       </div>
 
-      {/* ── Intro statement ──────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-16 lg:px-24 py-20 border-b border-white/8">
+      {/* ════════════════════════════════════════════════════════════════════
+          INTRO STATEMENT
+      ════════════════════════════════════════════════════════════════════ */}
+      <div
+        className="px-8 md:px-16 lg:px-24"
+        style={{ paddingTop: "clamp(56px, 8vw, 100px)", paddingBottom: "clamp(48px, 7vw, 88px)" }}
+      >
+        <Rule className="mb-14" />
         <div className="max-w-4xl">
           <FadeIn>
             <p
-              className="text-white"
-              style={{ fontSize: "clamp(18px, 2.4vw, 28px)", lineHeight: 1.55, fontWeight: 300 }}
+              style={{
+                fontSize: "clamp(17px, 2.1vw, 26px)",
+                lineHeight: 1.62,
+                fontWeight: 300,
+                color: "rgba(255,255,255,0.88)",
+                fontFamily: SANS,
+              }}
             >
-              Gravity is an internationally operating architecture firm founded in Rotterdam. We create buildings and urban plans that are innovative, socially relevant, and deeply sustainable — work that belongs to its city and endures beyond trends.
+              Over the past two decades, Gravity has established itself as a leading firm in
+              architecture, interior design, and construction services in Pakistan. We are renowned
+              for our impressive range of designs, commitment to service excellence, and
+              high-quality standards. To date, we have completed more than{" "}
+              <span style={{ color: "#fff" }}>200 diverse projects</span>.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <p
+              style={{
+                fontSize: "clamp(14px, 1.5vw, 17px)",
+                lineHeight: 1.8,
+                fontWeight: 300,
+                color: "rgba(255,255,255,0.5)",
+                fontFamily: SANS,
+                marginTop: 28,
+              }}
+            >
+              Our portfolio includes residential homes, apartment towers, commercial buildings,
+              resorts, IT parks, and offices. Each new project is viewed as an opportunity to
+              enhance our creativity, deliver exceptional architectural quality, and showcase our
+              versatility.
             </p>
           </FadeIn>
         </div>
       </div>
 
-      {/* ── Stats ────────────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-16 lg:px-24 py-16 border-b border-white/8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/8">
+      {/* ════════════════════════════════════════════════════════════════════
+          STATS
+      ════════════════════════════════════════════════════════════════════ */}
+      <Rule />
+      <div className="px-8 md:px-16 lg:px-24" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div
+          className="grid grid-cols-2 md:grid-cols-4"
+          style={{ borderLeft: "0.5px solid rgba(255,255,255,0.08)" }}
+        >
           {STATS.map((s, i) => (
-            <FadeIn key={s.label} delay={i * 0.06}>
-              <div className="bg-black px-8 py-10">
+            <FadeIn key={s.label} delay={i * 0.07}>
+              <div
+                style={{
+                  padding: "clamp(32px, 5vw, 56px) clamp(20px, 3vw, 40px)",
+                  borderRight: "0.5px solid rgba(255,255,255,0.08)",
+                  borderBottom: "0.5px solid rgba(255,255,255,0.08)",
+                }}
+              >
                 <p
-                  className="text-white mb-2"
-                  style={{ fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 300, lineHeight: 1 }}
+                  style={{
+                    fontFamily: SERIF,
+                    fontSize: "clamp(40px, 5.5vw, 72px)",
+                    fontWeight: 300,
+                    lineHeight: 1,
+                    color: "#fff",
+                    marginBottom: 10,
+                  }}
                 >
                   {s.value}
                 </p>
-                <p className="text-white/35 uppercase tracking-[0.18em]" style={{ fontSize: "9px" }}>
+                <p
+                  className="uppercase tracking-[0.18em]"
+                  style={{ fontSize: "9px", color: "rgba(255,255,255,0.3)", fontFamily: SANS }}
+                >
                   {s.label}
                 </p>
               </div>
@@ -137,60 +272,153 @@ export function AboutPage() {
           ))}
         </div>
       </div>
+      <Rule />
 
-      {/* ── Philosophy ───────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-16 lg:px-24 py-20 border-b border-white/8">
+      {/* ════════════════════════════════════════════════════════════════════
+          PHILOSOPHY — two-column
+      ════════════════════════════════════════════════════════════════════ */}
+      <div
+        className="px-8 md:px-16 lg:px-24"
+        style={{ paddingTop: "clamp(56px, 8vw, 100px)", paddingBottom: "clamp(48px, 7vw, 88px)" }}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <FadeIn>
-            <p className="text-white/30 uppercase tracking-[0.22em] mb-6" style={{ fontSize: "9px" }}>
-              Philosophy
-            </p>
-            <h2
-              className="text-white"
-              style={{ fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, lineHeight: 1.2 }}
-            >
-              We believe architecture should serve people first.
-            </h2>
-          </FadeIn>
-          <div className="space-y-6">
-            <FadeIn delay={0.1}>
-              <p className="text-white/60" style={{ fontSize: "15px", lineHeight: 1.75 }}>
-                Our work begins with listening — to clients, communities, and the land itself. Every project is shaped by a precise understanding of its social, ecological, and economic context.
+          {/* Left */}
+          <div>
+            <FadeIn>
+              <p
+                className="uppercase tracking-[0.22em] mb-6"
+                style={{ fontSize: "9px", color: "rgba(255,255,255,0.28)", fontFamily: SANS }}
+              >
+                Our Approach
               </p>
+              <h2
+                style={{
+                  fontFamily: SERIF,
+                  fontSize: "clamp(26px, 3.2vw, 44px)",
+                  fontWeight: 300,
+                  lineHeight: 1.22,
+                  color: "#fff",
+                }}
+              >
+                Iconic, innovative,
+                <br />
+                <em style={{ fontStyle: "italic", color: "rgba(255,255,255,0.6)" }}>
+                  timeless, and purposeful.
+                </em>
+              </h2>
             </FadeIn>
-            <FadeIn delay={0.18}>
-              <p className="text-white/60" style={{ fontSize: "15px", lineHeight: 1.75 }}>
-                We pursue formal clarity without reductionism. Our buildings are complex organisms: technically precise, materially honest, and spatially generous. We reject the false choice between beauty and responsibility.
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.26}>
-              <p className="text-white/60" style={{ fontSize: "15px", lineHeight: 1.75 }}>
-                With offices in Rotterdam, Munich, Oslo, and Beijing, we operate across cultures and scales — from individual residences to large-scale masterplans — maintaining the same standard of invention and care throughout.
-              </p>
-            </FadeIn>
+          </div>
+
+          {/* Right */}
+          <div className="space-y-7">
+            {[
+              "In addition to providing a comprehensive range of architectural services, including architecture and interior design, we offer all necessary engineering and construction services through a single, convenient platform.",
+              "By combining state-of-the-art technology, modern machinery, and superior craftsmanship with innovative design principles, we deliver finished products of exceptional quality that stand out within the industry.",
+              "Sustainability in architecture and interiors is a key consideration in our designs. We aim to create things that stand the test of time. We engage with our clients in every project, and aim for a final product that is in line with — or in many cases exceeds — client requirements and expectations.",
+            ].map((para, i) => (
+              <FadeIn key={i} delay={0.08 + i * 0.08}>
+                <p
+                  style={{
+                    fontSize: "clamp(13px, 1.35vw, 15px)",
+                    lineHeight: 1.82,
+                    color: "rgba(255,255,255,0.52)",
+                    fontFamily: SANS,
+                    fontWeight: 300,
+                  }}
+                >
+                  {para}
+                </p>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* ── Services ─────────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-16 lg:px-24 py-20 border-b border-white/8">
+      {/* ════════════════════════════════════════════════════════════════════
+          FULL-WIDTH IMAGE BREAK
+      ════════════════════════════════════════════════════════════════════ */}
+      <div className="relative overflow-hidden" style={{ height: "clamp(260px, 40vw, 540px)" }}>
+        <img
+          src="https://images.unsplash.com/photo-1764083310892-7b816d9276f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwZGV0YWlsJTIwZ2xhc3MlMjBmYWNhZGUlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc3NTMyMjEwMnww&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Architectural facade detail"
+          className="w-full h-full object-cover"
+          style={{ transform: "scale(1.05)" }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.3) 100%)" }}
+        />
+        <div className="absolute inset-0 flex items-center px-8 md:px-16 lg:px-24">
+          <FadeIn>
+            <p
+              style={{
+                fontFamily: SERIF,
+                fontSize: "clamp(22px, 3.5vw, 50px)",
+                fontWeight: 300,
+                fontStyle: "italic",
+                color: "rgba(255,255,255,0.9)",
+                maxWidth: 600,
+                lineHeight: 1.35,
+              }}
+            >
+              "We aim to achieve designs and products that are iconic, innovative, timeless, and purposeful."
+            </p>
+          </FadeIn>
+        </div>
+      </div>
+
+      {/* ════════════════════════════════════════════════════════════════════
+          SERVICES
+      ════════════════════════════════════════════════════════════════════ */}
+      <div
+        className="px-8 md:px-16 lg:px-24"
+        style={{ paddingTop: "clamp(56px, 8vw, 100px)", paddingBottom: "clamp(48px, 7vw, 88px)" }}
+      >
+        <Rule className="mb-14" />
         <FadeIn>
-          <p className="text-white/30 uppercase tracking-[0.22em] mb-14" style={{ fontSize: "9px" }}>
+          <p
+            className="uppercase tracking-[0.22em] mb-14"
+            style={{ fontSize: "9px", color: "rgba(255,255,255,0.28)", fontFamily: SANS }}
+          >
             Services
           </p>
         </FadeIn>
-        <div className="divide-y divide-white/8">
+        <div style={{ borderTop: "0.5px solid rgba(255,255,255,0.08)" }}>
           {SERVICES.map((s, i) => (
             <FadeIn key={s.num} delay={i * 0.07}>
-              <div className="grid grid-cols-1 md:grid-cols-[80px_1fr_1fr] gap-6 py-10 group">
-                <span className="text-white/20" style={{ fontSize: "11px" }}>{s.num}</span>
+              <div
+                className="grid grid-cols-1 md:grid-cols-[64px_1fr_1.6fr] gap-6 group"
+                style={{
+                  paddingTop: "clamp(24px, 3.5vw, 40px)",
+                  paddingBottom: "clamp(24px, 3.5vw, 40px)",
+                  borderBottom: "0.5px solid rgba(255,255,255,0.08)",
+                }}
+              >
+                <span
+                  style={{ fontSize: "10px", color: "rgba(255,255,255,0.2)", fontFamily: SANS, paddingTop: 3 }}
+                >
+                  {s.num}
+                </span>
                 <h3
-                  className="text-white"
-                  style={{ fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 300, lineHeight: 1.2 }}
+                  style={{
+                    fontFamily: SERIF,
+                    fontSize: "clamp(18px, 2vw, 28px)",
+                    fontWeight: 300,
+                    lineHeight: 1.2,
+                    color: "#fff",
+                  }}
                 >
                   {s.title}
                 </h3>
-                <p className="text-white/50" style={{ fontSize: "14px", lineHeight: 1.7 }}>
+                <p
+                  style={{
+                    fontSize: "clamp(13px, 1.3vw, 15px)",
+                    lineHeight: 1.78,
+                    color: "rgba(255,255,255,0.48)",
+                    fontFamily: SANS,
+                    fontWeight: 300,
+                  }}
+                >
                   {s.body}
                 </p>
               </div>
@@ -199,22 +427,89 @@ export function AboutPage() {
         </div>
       </div>
 
-      {/* ── Awards ───────────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-16 lg:px-24 py-20">
+      {/* ════════════════════════════════════════════════════════════════════
+          OFFICES
+      ════════════════════════════════════════════════════════════════════ */}
+      <div
+        className="px-8 md:px-16 lg:px-24"
+        style={{ paddingTop: "clamp(56px, 8vw, 100px)", paddingBottom: "clamp(64px, 10vw, 120px)" }}
+      >
+        <Rule className="mb-14" />
         <FadeIn>
-          <p className="text-white/30 uppercase tracking-[0.22em] mb-14" style={{ fontSize: "9px" }}>
-            Selected Recognition
+          <p
+            className="uppercase tracking-[0.22em] mb-14"
+            style={{ fontSize: "9px", color: "rgba(255,255,255,0.28)", fontFamily: SANS }}
+          >
+            Our Offices
           </p>
         </FadeIn>
-        <div className="divide-y divide-white/8">
-          {AWARDS.map((a, i) => (
-            <FadeIn key={i} delay={i * 0.06}>
-              <div className="flex items-baseline justify-between py-6 gap-6">
-                <span className="text-white/25 shrink-0" style={{ fontSize: "12px", fontVariantNumeric: "tabular-nums" }}>
-                  {a.year}
-                </span>
-                <span className="text-white flex-1" style={{ fontSize: "14px" }}>{a.title}</span>
-                <span className="text-white/40 text-right hidden md:block" style={{ fontSize: "12px" }}>{a.project}</span>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0"
+          style={{ border: "0.5px solid rgba(255,255,255,0.08)" }}
+        >
+          {OFFICES.map((office, i) => (
+            <FadeIn key={`${office.city}-${i}`} delay={i * 0.07}>
+              <div
+                style={{
+                  padding: "clamp(28px, 3.5vw, 44px) clamp(20px, 2.5vw, 32px)",
+                  borderRight: i < OFFICES.length - 1 ? "0.5px solid rgba(255,255,255,0.08)" : "none",
+                  height: "100%",
+                }}
+                className="flex flex-col gap-0"
+              >
+                {/* City */}
+                <h3
+                  style={{
+                    fontFamily: SERIF,
+                    fontSize: "clamp(20px, 2vw, 28px)",
+                    fontWeight: 300,
+                    color: "#fff",
+                    lineHeight: 1.1,
+                    marginBottom: 10,
+                  }}
+                >
+                  {office.city}
+                </h3>
+
+                {/* Label */}
+                <p
+                  className="uppercase tracking-[0.12em]"
+                  style={{ fontSize: "9px", color: "rgba(255,255,255,0.3)", fontFamily: SANS, marginBottom: 18 }}
+                >
+                  {office.label}
+                </p>
+
+                {/* Divider */}
+                <div style={{ height: "0.5px", background: "rgba(255,255,255,0.08)", marginBottom: 18 }} />
+
+                {/* Address */}
+                <p
+                  style={{
+                    fontSize: "12px",
+                    lineHeight: 1.7,
+                    color: (office as any).addressItalic ? "rgba(255,255,255,0.28)" : "rgba(255,255,255,0.5)",
+                    fontStyle: (office as any).addressItalic ? "italic" : "normal",
+                    fontFamily: SANS,
+                    whiteSpace: "pre-line",
+                    marginBottom: 20,
+                    flex: 1,
+                  }}
+                >
+                  {office.address}
+                </p>
+
+                {/* Contact */}
+                <div className="space-y-1 mt-auto">
+                  {[
+                    { k: "Email", v: office.email },
+                    { k: "Cell",  v: office.cell },
+                    { k: "Tel",   v: office.tel },
+                  ].map(({ k, v }) => (
+                    <p key={k} style={{ fontSize: "11px", color: "rgba(255,255,255,0.38)", fontFamily: SANS, lineHeight: 1.6 }}>
+                      <span style={{ color: "rgba(255,255,255,0.2)" }}>{k}: </span>{v}
+                    </p>
+                  ))}
+                </div>
               </div>
             </FadeIn>
           ))}

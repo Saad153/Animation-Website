@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-const WHATSAPP_URL = "https://wa.me/+923320325410";
+const WHATSAPP_URL = "https://wa.me/+923332222777";
 
 export function WhatsAppFAB() {
   return (

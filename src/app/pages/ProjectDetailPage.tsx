@@ -30,6 +30,9 @@ const SUBTITLES: Record<string, string> = {
   "embassy-gardens":     "A Facade That Set the Standard",
   "malir-jinnah-boulevard": "Eight Towers, One Neighbourhood",
   "cyber-command-ahq":      "Two Structures, One Identity",
+  "gravity-tower-1":        "Glass, Sky & the Sea",
+  "paf-chalet-resort":      "Mountain Living, Prefabricated Precision",
+  "paf-vfom-52-suites":     "52 Suites, One European Soul",
 };
 
 const QUOTES: Record<string, { text: string; author: string; role: string }> = {
@@ -88,6 +91,21 @@ const QUOTES: Record<string, { text: string; author: string; role: string }> = {
     author: "Design Director",
     role: "Gravity Studio",
   },
+  "gravity-tower-1": {
+    text: "A tower on three sides of glass is not a building that hides behind its walls — it is one that offers itself entirely to the city, to the sea, and to the sky. Every terrace, every stepped setback, is a gesture of generosity toward the view.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "paf-chalet-resort": {
+    text: "To build in the mountains is to accept that the landscape will always be the dominant presence. The chalets do not compete with Kalabagh's peaks — they settle quietly among the pines, dark-clad and angular, as though they grew from the rock itself.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "paf-vfom-52-suites": {
+    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
 };
 
 const CONCEPTS: Record<string, string> = {
@@ -113,6 +131,12 @@ const CONCEPTS: Record<string, string> = {
     "Jinnah Boulevard in Malir, Karachi, is among the studio's most ambitious residential masterplans — eight apartment towers of varying heights arranged across a generous 4-acre gated site, creating a self-contained urban quarter. The compositional strategy deliberately resists uniformity: towers step up and down in section, creating a dynamic roofline that reads as a small skyline unto itself. The signature gesture is the bay window system — projecting volumes clad in a palette of warm, saturated colours that animate the otherwise white rendered facades. Red, teal, amber, and cream bays punctuate each elevation at irregular intervals, giving each apartment a distinct street identity and the overall complex a playful, residential warmth rarely achieved at this scale. At ground level, a commercial boulevard runs along the main entrance, providing retail and services that activate the public edge of the site. The interior of the complex is pedestrianised, landscaped, and fully amenitised — a secure, green world that contrasts with the density of the surrounding Malir urban fabric.",
   "cyber-command-ahq":
     "The PAF Cyber Command Complex presented a fundamentally different challenge from any other project in the studio's portfolio: not to design from scratch, but to unify. Two existing structures — independently constructed, formally inconsistent, and physically separated — had to be transformed into a single coherent institutional complex befitting Pakistan Air Force's premier cyber operations facility. The unifying strategy operated on two levels. Externally, a continuous cladding system of Aluminum Composite Panels — selected specifically to match the material language of the surrounding Air Headquarters campus — was applied across both buildings, erasing their previous individuality and binding them into one legible whole. A central courtyard was introduced between the two structures, providing both a physical connection and a civic breathing space within the complex. Internally, the transformation was equally ambitious. The Cyber Security Centre lobby — a double-height volume of rich timber cladding, polished marble, and blue-lit display screens — delivers an arrival experience of genuine institutional gravitas. The hexagonal ceiling of the main atrium, composed of dark timber coffers with integrated LED lighting in the Cyber Command's signature blue, directly references the unit's emblem and the geometry of the honeycomb glass entrance doors. The result is a building that reads as always having been a single, purposeful whole — and that carries, in its every detail, the technological identity of the force it serves.",
+  "gravity-tower-1":
+    "Gravity Tower 1 is the studio's most emphatic statement on the relationship between architecture and the sea. Rising G+21 floors on a prime 2,000 sq yard site near Dolmen Mall in Clifton, Karachi, the tower's three-sided glazed envelope was conceived as a continuous frame for the Arabian Sea — a building that does not simply stand near the water but is in permanent dialogue with it. Stepped terraces cascade up the facade at every third floor, breaking the sheer glass plane into a succession of generous outdoor spaces from which the sea is visible at every level. Internally, world-class finishes — marble, brushed brass, and dark-toned timber — give the office floors a weight and materiality that counterbalances the lightness of the all-glass exterior. The lower floors, given over to above-ground parking, posed the challenge of integration: a precisely detailed decorative metal screen wraps these levels, its pattern drawn from the tower's triangular plan geometry, transforming a utilitarian programme into a legible and elegant element of the building's public identity. The result is a tower that belongs to Karachi's seafront with the confidence of a civic landmark.",
+  "paf-chalet-resort":
+    "The PAF Chalet Mountain Resort at Kalabagh represents a fundamentally different typology from any other project in the studio's portfolio — not a single monumental building, but a dispersed community of lightweight structures woven into the forested hillside. The chalets are prefabricated metal structures, precision-manufactured and erected on site with minimal ground disturbance, their steeply pitched dark-steel rooflines and timber-clad walls echoing the geometry of the surrounding pine canopy. Each chalet — available in 2- and 3-bedroom configurations — is designed as a complete residence: full kitchen, spacious lounge, and generous terraces oriented deliberately toward the mountain panorama so that every room is framed by the landscape. The main building adopts a contrasting architectural language — a flowing, aerodynamic white form with a full-perimeter glazed restaurant volume that appears to float above the hillside. From within its dining rooms, the mountains of Kalabagh are the wallpaper. The construction sequence — steel frames rising among the pines — is itself a form of site poetry: lightweight, reversible, and respectful of the ecology it inhabits. The resort is a project about restraint as much as ambition; about building only as much as the mountain will permit, and making every square metre of it extraordinary.",
+  "paf-vfom-52-suites":
+    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
 };
 
 const SIZE_MAP: Record<string, string> = {
@@ -258,19 +282,12 @@ export function ProjectDetailPage() {
 
   const galleryImages = [
     project.image,
-    project.images[0],
-    STATIC.interior,
-    project.images[1],
-    STATIC.detail,
+    ...project.images,
   ].filter(Boolean) as string[];
 
-  const galleryCapts = [
-    "Aerial view — master site",
-    "Night elevation — tower identity",
-    "Amenity level — communal living",
-    "Construction progress — structural phase",
-    "Architectural detail — facade system",
-  ];
+  const galleryCapts = galleryImages.map((_, i) =>
+    i === 0 ? `${project.title} — primary view` : `${project.title} — view ${i + 1} of ${galleryImages.length}`
+  );
 
   const floorPlans = [
     { label: "Site Plan",    img: STATIC.floorplan },
@@ -775,40 +792,39 @@ export function ProjectDetailPage() {
       </div>
 
       {/* ════════════════════════════════════════════════════════════════════
-          TWO-COLUMN IMAGE GRID
+          TWO-COLUMN IMAGE GRID — real project images
       ════════════════════════════════════════════════════════════════════ */}
-      <div className="px-[clamp(28px,6vw,96px)]" style={{ paddingBottom: "clamp(80px,10vw,140px)" }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {[
-            { src: STATIC.night,   cap: "Exterior at dusk — materiality under artificial light" },
-            { src: STATIC.detail,  cap: "Architectural detail — surface texture and shadow" },
-          ].map((img, i) => (
-            <FadeUp key={img.src} delay={i * 0.15}>
-              <motion.div
-                className="overflow-hidden"
-                style={{ height: "clamp(240px, 38vh, 460px)", borderRadius: 2 }}
-                initial={{ scale: 1.06, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 1.2, delay: i * 0.12, ease: EASE_CINEMATIC }}
-              >
-                <img
-                  src={img.src}
-                  alt={img.cap}
-                  className="w-full h-full object-cover"
-                  style={{ display: "block" }}
-                />
-              </motion.div>
-              <p
-                className="m-0 mt-4"
-                style={{ fontSize: 11, color: "#aaa", fontFamily: SANS, letterSpacing: "0.02em" }}
-              >
-                {img.cap}
-              </p>
-            </FadeUp>
-          ))}
+      {project.images.length >= 2 && (
+        <div className="px-[clamp(28px,6vw,96px)]" style={{ paddingBottom: "clamp(80px,10vw,140px)" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {project.images.slice(-2).map((src, i) => (
+              <FadeUp key={src} delay={i * 0.15}>
+                <motion.div
+                  className="overflow-hidden"
+                  style={{ height: "clamp(240px, 38vh, 460px)", borderRadius: 2 }}
+                  initial={{ scale: 1.06, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 1.2, delay: i * 0.12, ease: EASE_CINEMATIC }}
+                >
+                  <img
+                    src={src}
+                    alt={`${project.title} — detail view ${i + 1}`}
+                    className="w-full h-full object-cover"
+                    style={{ display: "block" }}
+                  />
+                </motion.div>
+                <p
+                  className="m-0 mt-4"
+                  style={{ fontSize: 11, color: "#aaa", fontFamily: SANS, letterSpacing: "0.02em" }}
+                >
+                  {project.title} — detail view {i + 1}
+                </p>
+              </FadeUp>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* ════════════════════════════════════════════════════════════════════
           FLOOR PLANS

@@ -1,50 +1,69 @@
 import { motion, useMotionValue, useSpring, useTransform, animate } from "motion/react";
-import { useRef, useEffect, useState, useMemo, useCallback } from "react";
-import { useNavigate } from "react-router";
-import { projects } from "../data/projects";
+import { useRef, useEffect, useState, useMemo } from "react";
 
 // ─── Real project images ──────────────────────────────────────────────────────
-import pearlGate      from "@/assets/d904eb6644b26f621312f75f1150adba64e4e1cd.png";
-import cyberExterior  from "@/assets/fdca48499e55dcb74fa40cbb5f9bee2494dbad9d.png";
-import malirAerial    from "@/assets/27dcbce900ba5c921a3bf91389d0ea1597fc7542.png";
-import dhaEnclaveHero from "@/assets/09d0d22780ebe0c3ad49ef060d2aca3119dc4bb7.png";
+import jinnahAerial    from "@/assets/fe7c436dbcda8afd381392cfcd6639d0c94349bc.png";
+import jinnahNight     from "@/assets/5d5179836a3dc3bd68c1c31ea82c64911df76586.png";
+import pearlNight      from "@/assets/6add05817dfda4fcb1eea94226150f85fa6f8aaf.png";
+import pearlGate       from "@/assets/d904eb6644b26f621312f75f1150adba64e4e1cd.png";
+import pearlAerial     from "@/assets/e56d2a8702d733d2b164803518778164319747e6.png";
+import dhaSunset       from "@/assets/e0034d139ea3b04423620fccffb2677d5d20d566.png";
+import dhaBirdsEye     from "@/assets/bb13b321df0cdaa668c1ee46fcfb0248f3ac2d0e.png";
+import askariRender    from "@/assets/a35c08468163fa9dc0d1871006cc1e08bcb48f9e.png";
+import askariPhoto     from "@/assets/81fd1d357b221b52c6a9f17d0df5f6c5d8721018.png";
+import dhaEnclaveHero  from "@/assets/09d0d22780ebe0c3ad49ef060d2aca3119dc4bb7.png";
+import askari18aFront  from "@/assets/ef1bca31f3087b65b1c6af961c22229a30517c5c.png";
+import askari18aStreet from "@/assets/4859b3b2f408f91a882e750efbe3cc87609bc2af.png";
+import askari711Render from "@/assets/2e8c9d3309b8e3e58d8d00faa794f7f65a636784.png";
+import askari1012Evening from "@/assets/df217dc95983a8b88bf39091e14445fe0cc52434.png";
+import askari1012Night from "@/assets/1aa6d0725f65e00cc9d0b255dfbc2352cbeb0ea3.png";
+import embassyCompleted from "@/assets/a8b07d4d7114f6131ebaa11e8c1371701fa94a93.png";
+import malirAerial     from "@/assets/27dcbce900ba5c921a3bf91389d0ea1597fc7542.png";
+import malirConstruction from "@/assets/ad25a5b0ce14e7dbc2bb669caa37a1981c672522.png";
+import cyberExterior   from "@/assets/fdca48499e55dcb74fa40cbb5f9bee2494dbad9d.png";
+import cyberRender     from "@/assets/632fcbe2413eb2351b52bbf8b44a4956615066ba.png";
+import cyberLobby      from "@/assets/0ba821698482d0a8f11cd01056a5597811171651.png";
+import gravityTower1Night from "@/assets/6d7e66940bebc0cab8a432d5e6707b65e1a5c8ae.png";
+import gravityTower1Day from "@/assets/15e205cbe59271f70ac142f75736004114a026ba.png";
+import pafChaletExterior from "@/assets/020fc8f9c34c12665429860cbdef1feb0c1a555d.png";
+import pafChaletHillside from "@/assets/3e1a3d4e73b598fd8d58ed65309af26183b92660.png";
+import pafChaletRestaurant from "@/assets/89c70f4bea1afeac8168cb2d157428484c70695f.png";
+import pafVfomFront    from "@/assets/52bc6d7b4898187277b1fbc9dbe83b10faa34b6f.png";
+import pafVfomAerial   from "@/assets/89f81c652f2e9f13876e822dd6938385b3bb96b2.png";
+import pafVfomEntrance from "@/assets/a69fcac697524958699441c33414e8339ff97c50.png";
 
-// ─── Image pool ───────────────────────────────────────────────────────────────
+// ─── Image pool — all real project images ────────────────────────────────────
 const IMAGES = [
-  "https://images.unsplash.com/photo-1695067439031-f59068994fae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc3NDg0MDQ0OHww&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1772632664338-58f4a7b3bdd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyZSUyMGxpZ2h0fGVufDF8fHx8MTc3NDg5OTIzOHww&ixlib=rb-4.1.0&q=80&w=1080",
-  pearlGate, // index 2 — Pearl Towers iconic winged gate (cols 0, 5, 6)
-  "https://images.unsplash.com/photo-1756706718604-ef4af3970e33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwY29uY3JldGUlMjBob3VzZSUyMGRlc2lnbnxlbnwxfHx8fDE3NzQ4OTkyMzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1600365134100-7fc7958bd884?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBhcmNoaXRlY3R1cmUlMjBjYWJpbiUyMG5hdHVyZXxlbnwxfHx8fDE3NzQ4OTkyMzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1764276127787-5f19b6d8906c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBjdWx0dXJhbCUyMGFyY2hpdGVjdHVyZSUyMGZhY2FkZXxlbnwxfHx8fDE3NzQ4OTkyNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  cyberExterior, // index 6 — Cyber Command ACP facade (cols 0, 1, 2)
-  "https://images.unsplash.com/photo-1757264119016-7e6b568b810d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB2aWxsYSUyMHBvb2wlMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzc0ODk5MjQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1640788797345-3708cdf2896f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwaGFsbCUyMHBlcmZvcm1pbmclMjBhcnRzJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc3NDg5OTI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1724118135465-edeef6acf221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkZ2UlMjBpbmZyYXN0cnVjdHVyZSUyMHN0ZWVsJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc3NDg5OTI0NXww&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1771337744364-e7dd00c2921c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcGFydG1lbnQlMjBidWlsZGluZyUyMHVyYmFuJTIwcmVzaWRlbnRpYWwlMjBmYWNhZGV8ZW58MXx8fHwxNzc0ODk5MjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1735424325493-7dec695219c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBjYXRoZWRyYWwlMjBtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzQ4OTkyNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1768501362079-bf04cec711db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmUlMjBhZXJpYWwlMjB2aWV3JTIwY2l0eSUyMHJvb2Z0b3B8ZW58MXx8fHwxNzc0ODk5MjQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1699791910411-6c9ea7f47b3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZyUyMGZhY2FkZXxlbnwxfHx8fDE3NzQ4Nzg5OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1602872029708-84d970d3382b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBhcmNoaXRlY3R1cmUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzQ3ODQxMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  malirAerial, // index 15 — Malir G+14 colourful aerial of 8 towers (cols 2, 3, 4, 5)
-  "https://images.unsplash.com/photo-1744148621897-5fb0b6323543?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwY29uY3JldGUlMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzc0ODgyOTYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1520073220816-469094c16514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwZGV0YWlsJTIwZ2VvbWV0cmljfGVufDF8fHx8MTc3NDg5NjIyMHww&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1758448756880-01dbaf85597d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZXNpZGVuY2UlMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzc0ODk2MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1685352212233-76a91e443bb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNldW0lMjBhcmNoaXRlY3R1cmUlMjBtb2Rlcm58ZW58MXx8fHwxNzc0Nzc5MDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-  dhaEnclaveHero, // index 20 — DHA Enclave sea-facing towers (cols 3, 4, 5, 6)
-  "https://images.unsplash.com/photo-1769283979195-d418a41ae2ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicnV0YWxpc3QlMjBhcmNoaXRlY3R1cmUlMjBjb25jcmV0ZXxlbnwxfHx8fDE3NzQ3NzcyOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  "https://images.unsplash.com/photo-1758509362549-df81e9e779c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kZW4lMjBhcmNoaXRlY3R1cmUlMjBjYWJpbiUyMG1vZGVybnxlbnwxfHx8fDE3NzQ4OTYyMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  jinnahAerial,
+  jinnahNight,
+  pearlNight,
+  pearlGate,
+  pearlAerial,
+  dhaSunset,
+  dhaBirdsEye,
+  askariRender,
+  askariPhoto,
+  dhaEnclaveHero,
+  askari18aFront,
+  askari18aStreet,
+  askari711Render,
+  askari1012Evening,
+  askari1012Night,
+  embassyCompleted,
+  malirAerial,
+  malirConstruction,
+  cyberExterior,
+  cyberRender,
+  cyberLobby,
+  gravityTower1Night,
+  gravityTower1Day,
+  pafChaletExterior,
+  pafChaletHillside,
+  pafChaletRestaurant,
+  pafVfomFront,
+  pafVfomAerial,
+  pafVfomEntrance,
 ];
-
-// ─── Project mapping ──────────────────────────────────────────────────────────
-function findProjectForImage(src: string) {
-  const exact = projects.find((p) => p.image === src);
-  if (exact) return exact;
-  const inImages = projects.find((p) => p.images.includes(src));
-  if (inImages) return inImages;
-  const idx = IMAGES.indexOf(src);
-  return projects[idx % projects.length];
-}
 
 // ─── Column config ────────────────────────────────────────────────────────────
 interface ColConfig {
@@ -115,12 +134,6 @@ const BOUNCE_WAYPOINTS = [
   { x: -35, y: 40  },
 ];
 
-// ─── Transition state ─────────────────────────────────────────────────────────
-interface TransitionState {
-  src: string;
-  rect: DOMRect;
-}
-
 // ─── Mobile magazine grid ─────────────────────────────────────────────────────
 // Repeating pattern: square | portrait | landscape(span2) | portrait | square | landscape(span2)
 type MobileItemType = "square" | "portrait" | "landscape";
@@ -134,28 +147,19 @@ function MobileGridItem({
   src,
   type,
   index,
-  onOpen,
   fadingOut,
-  isSelected,
 }: {
   src: string;
   type: MobileItemType;
   index: number;
-  onOpen: (src: string, rect: DOMRect) => void;
+  onOpen?: (src: string, rect: DOMRect) => void;
   fadingOut: boolean;
   isSelected: boolean;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleClick = () => {
-    if (ref.current) onOpen(src, ref.current.getBoundingClientRect());
-  };
-
   const style: React.CSSProperties = {
     overflow: "hidden",
     borderRadius: 3,
     position: "relative",
-    cursor: "pointer",
   };
   if (type === "landscape") {
     style.gridColumn = "span 2";
@@ -163,52 +167,25 @@ function MobileGridItem({
   } else if (type === "portrait") {
     style.aspectRatio = "2 / 3";
   }
-  // square: no explicit aspect-ratio — stretches to match portrait row-mate
 
   return (
     <motion.div
-      ref={ref}
       style={style}
-      className="group"
       initial={{ opacity: 0 }}
       animate={{ opacity: fadingOut ? 0 : 1 }}
-      transition={
-        fadingOut
-          ? { duration: isSelected ? 0.5 : 0.6, delay: isSelected ? 0.5 : 0, ease: [0.22, 1, 0.36, 1] }
-          : { duration: 0.85, delay: index * 0.025, ease: [0.22, 1, 0.36, 1] }
-      }
-      onClick={!fadingOut ? handleClick : undefined}
+      transition={{ duration: 0.85, delay: index * 0.025, ease: [0.22, 1, 0.36, 1] }}
     >
       <img
         src={src}
         alt=""
         draggable={false}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 select-none"
+        className="w-full h-full object-cover select-none"
       />
-      {/* Hover overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <div
-        className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-3 translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400"
-        style={{ pointerEvents: "none" }}
-      >
-        <span className="text-white uppercase tracking-widest" style={{ fontSize: "9px" }}>View</span>
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <path d="M1 11L11 1M11 1H3M11 1V9" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </div>
     </motion.div>
   );
 }
 
-function MobileGrid({
-  onOpen,
-  fadingOut,
-  selectedSrc,
-}: {
-  onOpen: (src: string, rect: DOMRect) => void;
-  fadingOut: boolean;
-  selectedSrc: string | null;
-}) {
+function MobileGrid() {
   const items = useMemo(
     () =>
       Array.from({ length: MOBILE_ITEM_COUNT }, (_, i) => ({
@@ -237,9 +214,8 @@ function MobileGrid({
           src={item.src}
           type={item.type}
           index={item.index}
-          onOpen={onOpen}
-          fadingOut={fadingOut}
-          isSelected={item.src === selectedSrc}
+          fadingOut={false}
+          isSelected={false}
         />
       ))}
     </div>
@@ -252,68 +228,33 @@ function ImageTileCard({
   height,
   shape,
   delay,
-  onOpen,
-  fadingOut,
-  isSelected,
 }: {
   src: string;
   height: number;
   shape: 'r' | 's';
   delay: number;
-  onOpen: (src: string, rect: DOMRect) => void;
-  fadingOut: boolean;
-  isSelected: boolean;
+  onOpen?: (src: string, rect: DOMRect) => void;
+  fadingOut?: boolean;
+  isSelected?: boolean;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleClick = () => {
-    if (ref.current) {
-      onOpen(src, ref.current.getBoundingClientRect());
-    }
-  };
-
   return (
     <motion.div
-      ref={ref}
-      className="w-full shrink-0 group cursor-pointer overflow-hidden relative"
+      className="w-full shrink-0 overflow-hidden"
       style={{
         height: shape === 's' ? undefined : height,
         aspectRatio: shape === 's' ? '1 / 1' : undefined,
         borderRadius: 3,
       }}
       initial={{ opacity: 0 }}
-      animate={{
-        opacity: fadingOut ? 0 : 1,
-      }}
-      transition={
-        fadingOut
-          ? {
-              duration: isSelected ? 0.5 : 0.6,
-              delay: isSelected ? 0.5 : 0,
-              ease: [0.22, 1, 0.36, 1],
-            }
-          : { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }
-      }
-      whileHover={!fadingOut ? { scale: 1.03, zIndex: 30, transition: { duration: 0.35 } } : undefined}
-      onClick={!fadingOut ? handleClick : undefined}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       <img
         src={src}
         alt=""
         draggable={false}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 select-none"
+        className="w-full h-full object-cover select-none"
       />
-      {/* Hover overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <div
-        className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-3 translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400"
-        style={{ pointerEvents: "none" }}
-      >
-        <span className="text-white uppercase tracking-widest" style={{ fontSize: "9px" }}>View</span>
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <path d="M1 11L11 1M11 1H3M11 1V9" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </div>
     </motion.div>
   );
 }
@@ -322,18 +263,12 @@ function ImageTileCard({
 function Column({
   config,
   colIndex,
-  onOpen,
-  fadingOut,
-  selectedSrc,
   numCols,
   colGap,
   rowGap,
 }: {
   config: ColConfig;
   colIndex: number;
-  onOpen: (src: string, rect: DOMRect) => void;
-  fadingOut: boolean;
-  selectedSrc: string | null;
   numCols: number;
   colGap: number;
   rowGap: number;
@@ -365,78 +300,9 @@ function Column({
           height={img.height}
           shape={img.shape}
           delay={colIndex * 0.06 + i * 0.03}
-          onOpen={onOpen}
-          fadingOut={fadingOut}
-          isSelected={img.src === selectedSrc}
         />
       ))}
     </div>
-  );
-}
-
-// ─── Fullscreen transition overlay ────────────────────────────────────────────
-function TransitionOverlay({
-  state,
-  onComplete,
-}: {
-  state: TransitionState;
-  onComplete: () => void;
-}) {
-  const project = findProjectForImage(state.src);
-
-  return (
-    <motion.div className="fixed inset-0" style={{ zIndex: 100 }}>
-      <div className="absolute inset-0 bg-black" />
-      <motion.div
-        className="absolute overflow-hidden"
-        initial={{
-          top: state.rect.top,
-          left: state.rect.left,
-          width: state.rect.width,
-          height: state.rect.height,
-          borderRadius: 3,
-          opacity: 1,
-        }}
-        animate={{
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight * 0.7,
-          borderRadius: 0,
-          opacity: 1,
-        }}
-        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-        onAnimationComplete={onComplete}
-      >
-        <img src={state.src} alt="" className="w-full h-full object-cover" />
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        />
-      </motion.div>
-
-      <motion.div
-        className="absolute left-0 right-0 px-6 md:px-16 lg:px-24"
-        style={{ bottom: "30vh", marginBottom: "-60px" }}
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <h1
-          className="text-white"
-          style={{
-            fontFamily: "'Inter', system-ui, sans-serif",
-            fontSize: "clamp(36px, 5vw, 80px)",
-            fontWeight: 300,
-            lineHeight: 1.1,
-          }}
-        >
-          {project.title}
-        </h1>
-      </motion.div>
-    </motion.div>
   );
 }
 
@@ -472,7 +338,6 @@ export function HomePage() {
   const [hasScrolled, setHasScrolled]       = useState(false);
   const [introComplete, setIntroComplete]   = useState(false);
   const [isMobile, setIsMobile]             = useState(() => window.innerWidth <= 768);
-  const navigate = useNavigate();
 
   // ── Detect mobile breakpoint
   useEffect(() => {
@@ -503,12 +368,6 @@ export function HomePage() {
   const bounceY = useMotionValue(0);
   const smoothBounceX = useSpring(bounceX, { stiffness: 30, damping: 18, mass: 1.2 });
   const smoothBounceY = useSpring(bounceY, { stiffness: 30, damping: 18, mass: 1.2 });
-
-  // ── Handlers
-  const handleOpen = useCallback((src: string, _rect: DOMRect) => {
-    const project = findProjectForImage(src);
-    navigate(`/project/${project.id}`);
-  }, [navigate]);
 
   // ── Intro animation
   useEffect(() => {
@@ -620,20 +479,13 @@ export function HomePage() {
         }}
       >
         {isMobile ? (
-          <MobileGrid
-            onOpen={handleOpen}
-            fadingOut={false}
-            selectedSrc={null}
-          />
+          <MobileGrid />
         ) : (
           COL_CONFIGS.map((config, i) => (
             <Column
               key={i}
               config={config}
               colIndex={i}
-              onOpen={handleOpen}
-              fadingOut={false}
-              selectedSrc={null}
               numCols={COL_CONFIGS.length}
               colGap={COL_GAP}
               rowGap={ROW_GAP}

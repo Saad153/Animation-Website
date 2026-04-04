@@ -318,7 +318,7 @@ export function Navbar() {
               transition={{ delay: 0.42 }}
             >
               <p className="text-white/20 uppercase tracking-[0.15em]" style={{ fontSize: "9px" }}>
-                Gravity — Rotterdam
+                Gravity — Karachi
               </p>
             </motion.div>
           </motion.div>

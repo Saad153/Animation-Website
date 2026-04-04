@@ -4,31 +4,35 @@ import { ArrowUpRight } from "lucide-react";
 
 const OFFICES = [
   {
-    city: "Rotterdam",
-    address: "Lloyd Multiplier\nLloydstraat 5\n3024 EA Rotterdam\nThe Netherlands",
-    phone: "+31 10 404 6777",
-    email: "rotterdam@gravity-studio.com",
+    city: "Karachi",
+    label: "Architecture & Interiors",
+    address: "Innovista Indus, Block A,\nMain Sunset Blvd,\nD.H.A. Phase II, Karachi.",
+    phone: "+92 333 2222777",
+    email: "gravity.dnc@gmail.com",
     isPrimary: true,
   },
   {
-    city: "Munich",
-    address: "Maxvorstadt\nTheresienstraße 48\n80333 Munich\nGermany",
-    phone: "+49 89 202 34120",
-    email: "munich@gravity-studio.com",
+    city: "Karachi",
+    label: "Construction & Engineering",
+    address: "Innovista Indus, Block A,\nMain Sunset Blvd,\nD.H.A. Phase II, Karachi.",
+    phone: "+92 21 3588666",
+    email: "gravity.dnc@gmail.com",
     isPrimary: false,
   },
   {
-    city: "Oslo",
-    address: "Tjuvholmen Allé 1\n0252 Oslo\nNorway",
-    phone: "+47 21 60 03 00",
-    email: "oslo@gravity-studio.com",
+    city: "Lahore",
+    label: "Architecture & Interiors",
+    address: "Address coming soon.",
+    phone: "+92 333 2222777",
+    email: "gravity.dnc@gmail.com",
     isPrimary: false,
   },
   {
-    city: "Beijing",
-    address: "Chaoyang District\nDongsanhuan Beilu 19\nBeijing, 100026\nChina",
-    phone: "+86 10 8589 8900",
-    email: "beijing@gravity-studio.com",
+    city: "Islamabad",
+    label: "Architecture & Interiors",
+    address: "Address coming soon.",
+    phone: "+92 333 2222777",
+    email: "gravity.dnc@gmail.com",
     isPrimary: false,
   },
 ];
@@ -237,7 +241,7 @@ export function ContactPage() {
             </FadeIn>
             <div className="divide-y divide-white/8">
               {OFFICES.map((office, i) => (
-                <FadeIn key={office.city} delay={0.12 + i * 0.07}>
+                <FadeIn key={`${office.city}-${i}`} delay={0.12 + i * 0.07}>
                   <div className="py-8">
                     <div className="flex items-center gap-3 mb-5">
                       <p className="text-white" style={{ fontSize: "16px", fontWeight: 400 }}>
@@ -252,6 +256,9 @@ export function ContactPage() {
                         </span>
                       )}
                     </div>
+                    <p className="text-white/25 uppercase tracking-[0.12em] mb-3" style={{ fontSize: "8px" }}>
+                      {office.label}
+                    </p>
                     <p className="text-white/40 mb-4 whitespace-pre-line" style={{ fontSize: "13px", lineHeight: 1.7 }}>
                       {office.address}
                     </p>
