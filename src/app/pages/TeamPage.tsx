@@ -1,191 +1,635 @@
 import { motion } from "motion/react";
-import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import ceoPhoto from "@/assets/0e039392175619cb699c6ed4430d4bd2a6c13da8.png";
+import paPhoto  from "@/assets/32ecbdbe0bf26392c3dd4e4ad738c939b1ab29b0.png";
 
-interface TeamMember {
+// ─── Fonts ───────────────────────────────────────────────────────────────────
+const SANS  = "'DM Sans', 'Inter', sans-serif";
+const SERIF = "'Playfair Display', Georgia, serif";
+
+// ─── All 31 team members ──────────────────────────────────────────────────────
+interface Member {
+  sr: number;
   name: string;
-  role: string;
-  bio: string;
-  photo: string;
-  location: string;
+  designation: string;
+  education: string;
+  hasPhoto?: boolean; // only CEO and PA will have real photos later
 }
 
-const TEAM: TeamMember[] = [
+const TEAM: Member[] = [
+  { sr: 1,  name: "Afzaal A. Sheikh",   designation: "CEO",                   education: "B.E. (Civil)",              hasPhoto: true  },
+  { sr: 2,  name: "Fara Zia Qadir",     designation: "Principal Architect",   education: "B. Arch. & MURP",           hasPhoto: true  },
+  { sr: 3,  name: "Kashif Jamal",       designation: "Chief Engineer",        education: "B.E. (Civil)",              hasPhoto: false },
+  { sr: 4,  name: "M. Farhan Karamat",  designation: "Project Manager",       education: "B. Arch.",                  hasPhoto: false },
+  { sr: 5,  name: "Saadat Israr",       designation: "Construction Manager",  education: "B. Tech. (Civil) & MBA",    hasPhoto: false },
+  { sr: 6,  name: "Rameez Ahmed",       designation: "Construction Manager",  education: "B. Tech. (Civil)",          hasPhoto: false },
+  { sr: 7,  name: "Azeem Siddiqui",     designation: "Site Supervisor",       education: "MBA (HR)",                  hasPhoto: false },
+  { sr: 8,  name: "Saira Mirani",       designation: "HR Manager",            education: "MBA (HR)",                  hasPhoto: false },
+  { sr: 9,  name: "Syed Zahid Hussain", designation: "Admin Manager",         education: "B.A. & DAE (Electronics)",  hasPhoto: false },
+  { sr: 10, name: "Sameer Khalid",      designation: "Senior Architect",      education: "B. Arch.",                  hasPhoto: false },
+  { sr: 11, name: "Hamza Shahab",       designation: "Project Architect",     education: "B. Arch.",                  hasPhoto: false },
+  { sr: 12, name: "Aziz-Ur-Rehman",    designation: "Project Architect",     education: "B. Arch.",                  hasPhoto: false },
+  { sr: 13, name: "Aneel Kumar",        designation: "Project Architect",     education: "B. Arch.",                  hasPhoto: false },
+  { sr: 14, name: "Mikael A. Bhurgri",  designation: "Senior Architect",      education: "B. Arch.",                  hasPhoto: false },
+  { sr: 15, name: "Syeda Haram Rizwan", designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 16, name: "Alisha Nadeem",      designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 17, name: "Aaminah Mansoor",    designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 18, name: "Marzia Jan",         designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 19, name: "Aliza Salman",       designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 20, name: "Sahar Khan",         designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 21, name: "Adil Mehmood",       designation: "Quantity Surveyor",     education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 22, name: "Wajid Alam",         designation: "Senior Draftsman",      education: "B. Tech. (Civil)",          hasPhoto: false },
+  { sr: 23, name: "Haris Moin",         designation: "Senior Draftsman",      education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 24, name: "Hasan Malik",        designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 25, name: "Obaid Raju",         designation: "Draftsman",             education: "D.A.E. (Civil) & B.Com.",   hasPhoto: false },
+  { sr: 26, name: "Sheriyar Ali",       designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 27, name: "Ali Abbas",          designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 28, name: "Amir-Ul-Haq",        designation: "Senior Accountant",     education: "B. Com.",                   hasPhoto: false },
+  { sr: 29, name: "Shahmeer Imran",     designation: "Assistant Accountant",  education: "I. Com.",                   hasPhoto: false },
+  { sr: 30, name: "Nadia Rahim",        designation: "Sales Director",        education: "—",                         hasPhoto: false },
+  { sr: 31, name: "Rizwan",             designation: "Quantity Surveyor",     education: "—",                         hasPhoto: false },
+];
+
+// ─── Department groupings ─────────────────────────────────────────────────────
+const DEPARTMENTS = [
   {
-    name: "Nanne de Ru",
-    role: "Founding Partner",
-    bio: "Nanne co-founded Gravity in 2005. His work investigates the social and cultural dimensions of built form, with a particular focus on housing, collective living, and the future of the Dutch city.",
-    photo: "https://images.unsplash.com/photo-1640531005390-38bd92755d6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhcmNoaXRlY3QlMjBwb3J0cmFpdCUyMG1hbiUyMHN1aXQlMjBzdHVkaW98ZW58MXx8fHwxNzc0OTk0NzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    location: "Rotterdam",
+    label: "Engineering & Construction",
+    code: "01",
+    members: TEAM.filter((m) => [3,4,5,6,7].includes(m.sr)),
   },
   {
-    name: "Charles Bessard",
-    role: "Founding Partner",
-    bio: "Charles brings a rigorous formal intelligence to the practice. His research into structure, facade, and material expression has produced some of the studio's most iconic commercial and cultural projects.",
-    photo: "https://images.unsplash.com/photo-1619441523947-6ecdc0918d65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZGVzaWduZXIlMjBjcmVhdGl2ZSUyMGRpcmVjdG9yJTIwcG9ydHJhaXQlMjBvZmZpY2V8ZW58MXx8fHwxNzc0OTk0NzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    location: "Munich",
+    label: "Administration & HR",
+    code: "02",
+    members: TEAM.filter((m) => [8,9].includes(m.sr)),
   },
   {
-    name: "Stefan Prins",
-    role: "Partner / Director",
-    bio: "Stefan leads the Oslo studio. His background in landscape and infrastructure informs projects that blur the boundary between building and terrain, creating architecture that belongs to its geography.",
-    photo: "https://images.unsplash.com/photo-1769069918451-0e8ee342a3cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXR1cmUlMjBtYWxlJTIwcHJvZmVzc2lvbmFsJTIwcG9ydHJhaXQlMjBhcmNoaXRlY3R1cmFsJTIwb2ZmaWNlfGVufDF8fHx8MTc3NDk5NDc0MXww&ixlib=rb-4.1.0&q=80&w=1080",
-    location: "Oslo",
+    label: "Architecture",
+    code: "03",
+    members: TEAM.filter((m) => [10,11,12,13,14,15,16,17,18,19,20].includes(m.sr)),
   },
   {
-    name: "Johanna Klein",
-    role: "Senior Architect",
-    bio: "Johanna specializes in large-scale cultural buildings. Her designs for performing arts centers and museums have earned international recognition for their spatial generosity and material precision.",
-    photo: "https://images.unsplash.com/photo-1758922584983-82ffd5720c6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGFyY2hpdGVjdCUyMHBvcnRyYWl0JTIwbWluaW1hbCUyMGJhY2tncm91bmR8ZW58MXx8fHwxNzc0OTk0NzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    location: "Rotterdam",
+    label: "Technical & Surveying",
+    code: "04",
+    members: TEAM.filter((m) => [21,22,23,24,25,26,27,31].includes(m.sr)),
   },
   {
-    name: "Paul Stavert",
-    role: "Associate Director",
-    bio: "Paul oversees construction documentation and technical delivery. His encyclopedic knowledge of building systems and his ability to translate complex geometries into executable drawings is unmatched.",
-    photo: "https://images.unsplash.com/photo-1619799090425-0efe92bd62a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjB1cmJhbiUyMGRlc2lnbmVyJTIwYXJjaGl0ZWN0JTIwcG9ydHJhaXQlMjBzZXJpb3VzfGVufDF8fHx8MTc3NDk5NDc0MHww&ixlib=rb-4.1.0&q=80&w=1080",
-    location: "Rotterdam",
-  },
-  {
-    name: "Lars Eriksson",
-    role: "Urban Designer",
-    bio: "Lars leads the studio's urban research agenda, developing masterplans and design frameworks for cities across Scandinavia and Northern Europe. His work engages deeply with climate resilience and public space.",
-    photo: "https://images.unsplash.com/photo-1758600433517-00f851e2a12b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHdvbWFuJTIwcHJvZmVzc2lvbmFsJTIwcG9ydHJhaXQlMjBjcmVhdGl2ZSUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzQ5OTQ3NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    location: "Oslo",
+    label: "Finance & Sales",
+    code: "05",
+    members: TEAM.filter((m) => [28,29,30].includes(m.sr)),
   },
 ];
 
-function TeamCard({ member, index }: { member: TeamMember; index: number }) {
-  const [hovered, setHovered] = useState(false);
+// ─── Initials helper ──────────────────────────────────────────────────────────
+function getInitials(name: string) {
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+}
+
+// ─── Photo map for leadership ─────────────────────────────────────────────────
+const LEADER_PHOTOS: Record<number, string> = {
+  1: ceoPhoto,
+  2: paPhoto,
+};
+
+// ─── Leadership Card ──────────────────────────────────────────────────────────
+function LeadershipCard({ member, index }: { member: Member; index: number }) {
+  const photo = LEADER_PHOTOS[member.sr];
 
   return (
     <motion.div
-      className="group cursor-default"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.75, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, delay: 0.3 + index * 0.15, ease: [0.22, 1, 0.36, 1] }}
+      style={{
+        background: "linear-gradient(135deg, #141414 0%, #1c1c1c 100%)",
+        border: "0.5px solid rgba(255,255,255,0.1)",
+        borderRadius: 3,
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
-      {/* Photo */}
-      <div className="relative overflow-hidden mb-5" style={{ aspectRatio: "3/4" }}>
-        <motion.img
-          src={member.photo}
-          alt={member.name}
-          className="w-full h-full object-cover"
-          animate={{ scale: hovered ? 1.06 : 1 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      {/* Photo area */}
+      <div
+        style={{
+          aspectRatio: "4/5",
+          position: "relative",
+          overflow: "hidden",
+          background: "#111",
+        }}
+      >
+        {photo ? (
+          <motion.img
+            src={photo}
+            alt={member.name}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
+            initial={{ scale: 1.08 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+          />
+        ) : (
+          <>
+            {/* Fallback grid lines */}
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                backgroundImage:
+                  "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+                backgroundSize: "32px 32px",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <div
+                style={{
+                  width: 96, height: 96,
+                  borderRadius: "50%",
+                  border: "0.5px solid rgba(255,255,255,0.12)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  background: "rgba(255,255,255,0.04)",
+                  marginBottom: 20,
+                }}
+              >
+                <span style={{ fontFamily: SERIF, fontSize: 32, fontWeight: 400, color: "rgba(255,255,255,0.35)" }}>
+                  {getInitials(member.name)}
+                </span>
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Subtle gradient overlay at bottom */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "40%",
+            background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)",
+            pointerEvents: "none",
+          }}
         />
-        {/* Hover overlay with bio */}
-        <motion.div
-          className="absolute inset-0 bg-black/80 flex items-end p-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: hovered ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
+
+        {/* Sr number badge */}
+        <div
+          style={{
+            position: "absolute",
+            top: 18,
+            left: 18,
+            fontFamily: SANS,
+            fontSize: 9,
+            letterSpacing: "0.18em",
+            color: "rgba(255,255,255,0.55)",
+            background: "rgba(0,0,0,0.4)",
+            backdropFilter: "blur(8px)",
+            padding: "4px 10px",
+            borderRadius: 20,
+            border: "0.5px solid rgba(255,255,255,0.12)",
+          }}
         >
-          <p className="text-white/80" style={{ fontSize: "13px", lineHeight: 1.65 }}>
-            {member.bio}
-          </p>
-        </motion.div>
-        {/* Location tag */}
-        <div className="absolute top-4 left-4">
-          <span
-            className="bg-black/60 text-white/70 uppercase tracking-[0.15em] px-2.5 py-1 rounded-full"
-            style={{ fontSize: "8px", backdropFilter: "blur(8px)" }}
-          >
-            {member.location}
-          </span>
+          {String(member.sr).padStart(2, "0")}
         </div>
       </div>
 
       {/* Info */}
-      <div className="flex items-start justify-between">
+      <div style={{ padding: "28px 28px 32px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div>
-          <p className="text-white mb-1" style={{ fontSize: "15px" }}>{member.name}</p>
-          <p className="text-white/35 uppercase tracking-[0.12em]" style={{ fontSize: "9px" }}>{member.role}</p>
+          <p
+            style={{
+              fontFamily: SANS,
+              fontSize: 9,
+              letterSpacing: "0.22em",
+              color: "rgba(255,255,255,0.3)",
+              textTransform: "uppercase",
+              margin: "0 0 12px",
+            }}
+          >
+            {member.designation}
+          </p>
+          <h3
+            style={{
+              fontFamily: SERIF,
+              fontSize: "clamp(22px, 2.5vw, 30px)",
+              fontWeight: 400,
+              color: "#fff",
+              margin: "0 0 6px",
+              lineHeight: 1.2,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            {member.name}
+          </h3>
         </div>
-        <motion.div
-          animate={{ opacity: hovered ? 1 : 0, x: hovered ? 0 : 4 }}
-          transition={{ duration: 0.25 }}
+        <div
+          style={{
+            marginTop: 20,
+            paddingTop: 20,
+            borderTop: "0.5px solid rgba(255,255,255,0.07)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
         >
-          <ArrowUpRight size={14} className="text-white/40 mt-1" />
-        </motion.div>
+          <span style={{ fontFamily: SANS, fontSize: 10, color: "rgba(255,255,255,0.25)", letterSpacing: "0.08em" }}>
+            {member.education}
+          </span>
+          <span style={{ fontFamily: SANS, fontSize: 8, letterSpacing: "0.18em", color: "rgba(255,255,255,0.15)", textTransform: "uppercase" }}>
+            Karachi
+          </span>
+        </div>
       </div>
     </motion.div>
   );
 }
 
-export function TeamPage() {
+// ─── Department Section ───────────────────────────────────────────────────────
+function DepartmentSection({
+  label,
+  code,
+  members,
+  startIndex,
+}: {
+  label: string;
+  code: string;
+  members: Member[];
+  startIndex: number;
+}) {
   return (
-    <div className="bg-black min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <div>
+      {/* Section header */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 24,
+          marginBottom: 0,
+          paddingBottom: 20,
+          borderBottom: "0.5px solid rgba(255,255,255,0.08)",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: SANS,
+            fontSize: 8,
+            letterSpacing: "0.2em",
+            color: "rgba(255,255,255,0.2)",
+            textTransform: "uppercase",
+            minWidth: 28,
+          }}
+        >
+          {code}
+        </span>
+        <span
+          style={{
+            fontFamily: SERIF,
+            fontSize: "clamp(14px, 1.4vw, 18px)",
+            fontWeight: 400,
+            color: "rgba(255,255,255,0.5)",
+            letterSpacing: "0.02em",
+          }}
+        >
+          {label}
+        </span>
+        <span
+          style={{
+            fontFamily: SANS,
+            fontSize: 9,
+            color: "rgba(255,255,255,0.15)",
+            letterSpacing: "0.1em",
+            marginLeft: "auto",
+          }}
+        >
+          {members.length} {members.length === 1 ? "member" : "members"}
+        </span>
+      </motion.div>
 
-      {/* ── Header ──────────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-16 lg:px-24 pt-28 pb-16 border-b border-white/8">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-          <div>
-            <motion.p
-              className="text-white/30 uppercase tracking-[0.22em] mb-5"
-              style={{ fontSize: "9px" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-            >
-              The People
-            </motion.p>
-            <motion.h1
-              className="text-white"
-              style={{
-                fontSize: "clamp(56px, 7vw, 84px)",
-                fontWeight: 400,
-                lineHeight: 1.06,
-                fontFamily: "'Playfair Display', Georgia, serif",
-              }}
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Our Team
-            </motion.h1>
-          </div>
-          <motion.p
-            className="text-white/40 max-w-[360px]"
-            style={{ fontSize: "13px", lineHeight: 1.7 }}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
+      {/* Member rows */}
+      {members.map((member, i) => (
+        <MemberRow key={member.sr} member={member} index={startIndex + i} rowIndex={i} totalRows={members.length} />
+      ))}
+    </div>
+  );
+}
+
+// ─── Member Row ───────────────────────────────────────────────────────────────
+function MemberRow({
+  member,
+  index,
+  rowIndex,
+  totalRows,
+}: {
+  member: Member;
+  index: number;
+  rowIndex: number;
+  totalRows: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-20px" }}
+      transition={{ duration: 0.6, delay: rowIndex * 0.04, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ backgroundColor: "rgba(255,255,255,0.025)" }}
+      style={{
+        display: "grid",
+        gridTemplateColumns: "40px 1fr auto auto",
+        alignItems: "center",
+        gap: "0 clamp(16px, 3vw, 48px)",
+        padding: "18px 0",
+        borderBottom: rowIndex < totalRows - 1 ? "0.5px solid rgba(255,255,255,0.05)" : "none",
+        transition: "background-color 0.25s ease",
+        borderRadius: 2,
+        paddingLeft: 12,
+        paddingRight: 12,
+        marginLeft: -12,
+        marginRight: -12,
+        cursor: "default",
+      }}
+    >
+      {/* Sr. no */}
+      <span
+        style={{
+          fontFamily: SANS,
+          fontSize: 9,
+          color: "rgba(255,255,255,0.18)",
+          letterSpacing: "0.12em",
+        }}
+      >
+        {String(member.sr).padStart(2, "0")}
+      </span>
+
+      {/* Name */}
+      <span
+        style={{
+          fontFamily: SANS,
+          fontSize: "clamp(13px, 1.2vw, 15px)",
+          color: "rgba(255,255,255,0.85)",
+          letterSpacing: "0.01em",
+          fontWeight: 400,
+        }}
+      >
+        {member.name}
+      </span>
+
+      {/* Designation */}
+      <span
+        style={{
+          fontFamily: SANS,
+          fontSize: 11,
+          color: "rgba(255,255,255,0.35)",
+          letterSpacing: "0.06em",
+          textAlign: "right",
+          minWidth: "clamp(100px, 14vw, 180px)",
+        }}
+      >
+        {member.designation}
+      </span>
+
+      {/* Education */}
+      <span
+        style={{
+          fontFamily: SANS,
+          fontSize: 10,
+          color: "rgba(255,255,255,0.2)",
+          letterSpacing: "0.05em",
+          textAlign: "right",
+          minWidth: "clamp(80px, 12vw, 160px)",
+        }}
+      >
+        {member.education}
+      </span>
+    </motion.div>
+  );
+}
+
+// ─── Main Page ────────────────────────────────────────────────────────────────
+export function TeamPage() {
+  // Count all departments' running row index for stagger
+  let runningIndex = 2; // leadership = 2 already
+
+  return (
+    <div
+      className="min-h-screen"
+      style={{ background: "#0a0a0a", fontFamily: SANS, color: "#fff" }}
+    >
+      {/* ── Hero header ──────────────────────────────────────────────────────── */}
+      <div
+        style={{
+          padding: "clamp(100px,14vw,160px) clamp(24px,7vw,96px) clamp(60px,8vw,100px)",
+          borderBottom: "0.5px solid rgba(255,255,255,0.08)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        {/* Background large number */}
+        <div
+          style={{
+            position: "absolute",
+            right: "clamp(24px,6vw,80px)",
+            top: "50%",
+            transform: "translateY(-50%)",
+            fontFamily: SERIF,
+            fontSize: "clamp(120px, 20vw, 280px)",
+            fontWeight: 400,
+            color: "rgba(255,255,255,0.03)",
+            letterSpacing: "-0.05em",
+            lineHeight: 1,
+            userSelect: "none",
+            pointerEvents: "none",
+          }}
+        >
+          31
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          style={{
+            fontFamily: SANS,
+            fontSize: 9,
+            letterSpacing: "0.28em",
+            color: "rgba(255,255,255,0.3)",
+            textTransform: "uppercase",
+            margin: "0 0 clamp(20px,3vw,32px)",
+          }}
+        >
+          Our People
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            fontFamily: SERIF,
+            fontSize: "clamp(52px, 8vw, 110px)",
+            fontWeight: 400,
+            lineHeight: 1.04,
+            letterSpacing: "-0.02em",
+            color: "#fff",
+            margin: 0,
+          }}
+        >
+          The Team
+        </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            marginTop: "clamp(28px,4vw,48px)",
+            display: "flex",
+            alignItems: "flex-end",
+            gap: 40,
+            flexWrap: "wrap",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: SANS,
+              fontSize: "clamp(13px, 1.1vw, 15px)",
+              color: "rgba(255,255,255,0.35)",
+              lineHeight: 1.7,
+              margin: 0,
+              maxWidth: "44ch",
+            }}
           >
-            A collective of architects, urban designers, and researchers working across four continents. Hover over each portrait to learn more.
-          </motion.p>
-        </div>
-      </div>
-
-      {/* ── Team grid ───────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-16 lg:px-24 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-          {TEAM.map((member, i) => (
-            <TeamCard key={member.name} member={member} index={i} />
-          ))}
-        </div>
-      </div>
-
-      {/* ── Offices note ────────────────────────────────────────────────────── */}
-      <div className="px-8 md:px-16 lg:px-24 py-16 border-t border-white/8">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <p className="text-white/20 uppercase tracking-[0.22em]" style={{ fontSize: "9px" }}>
-            Offices in Rotterdam, Munich, Oslo, Beijing
+            A multidisciplinary studio of 31 professionals spanning architecture,
+            engineering, construction management, and technical disciplines —
+            headquartered in Karachi since 1993.
           </p>
-          <motion.p
-            className="text-white/40"
-            style={{ fontSize: "13px" }}
+          <div style={{ display: "flex", gap: 32, flexShrink: 0 }}>
+            {[
+              { v: "31", l: "Professionals" },
+              { v: "4",  l: "Offices" },
+              { v: "30+",l: "Years" },
+            ].map((s) => (
+              <div key={s.l}>
+                <p style={{ fontFamily: SERIF, fontSize: "clamp(28px,3vw,40px)", fontWeight: 400, color: "#fff", margin: "0 0 4px", lineHeight: 1 }}>
+                  {s.v}
+                </p>
+                <p style={{ fontFamily: SANS, fontSize: 9, letterSpacing: "0.2em", color: "rgba(255,255,255,0.25)", textTransform: "uppercase", margin: 0 }}>
+                  {s.l}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      <div style={{ padding: "0 clamp(24px,7vw,96px)" }}>
+
+        {/* ── Leadership ────────────────────────────────────────────────────── */}
+        <div style={{ paddingTop: "clamp(56px,8vw,100px)", paddingBottom: "clamp(56px,8vw,100px)", borderBottom: "0.5px solid rgba(255,255,255,0.08)" }}>
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
+            style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: "clamp(36px,5vw,56px)" }}
           >
-            Currently {TEAM.length} professionals — we're always looking for exceptional talent.
-          </motion.p>
+            <span style={{ fontFamily: SANS, fontSize: 8, letterSpacing: "0.22em", color: "rgba(255,255,255,0.2)", textTransform: "uppercase" }}>
+              00
+            </span>
+            <span style={{ fontFamily: SERIF, fontSize: "clamp(14px, 1.4vw, 18px)", fontWeight: 400, color: "rgba(255,255,255,0.5)" }}>
+              Leadership
+            </span>
+          </motion.div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+              gap: "clamp(16px,2.5vw,28px)",
+              maxWidth: 680,
+            }}
+          >
+            {TEAM.filter((m) => m.hasPhoto).map((member, i) => (
+              <LeadershipCard key={member.sr} member={member} index={i} />
+            ))}
+          </div>
         </div>
+
+        {/* ── Department Roster ─────────────────────────────────────────────── */}
+        <div style={{ paddingTop: "clamp(56px,8vw,100px)", paddingBottom: "clamp(80px,10vw,140px)" }}>
+
+          {/* Column headers */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "40px 1fr auto auto",
+              gap: "0 clamp(16px, 3vw, 48px)",
+              padding: "0 12px 16px",
+              marginBottom: 8,
+              borderBottom: "0.5px solid rgba(255,255,255,0.06)",
+            }}
+          >
+            <span style={{ fontFamily: SANS, fontSize: 8, letterSpacing: "0.22em", color: "rgba(255,255,255,0.15)", textTransform: "uppercase" }}>#</span>
+            <span style={{ fontFamily: SANS, fontSize: 8, letterSpacing: "0.22em", color: "rgba(255,255,255,0.15)", textTransform: "uppercase" }}>Name</span>
+            <span style={{ fontFamily: SANS, fontSize: 8, letterSpacing: "0.22em", color: "rgba(255,255,255,0.15)", textTransform: "uppercase", textAlign: "right", minWidth: "clamp(100px, 14vw, 180px)" }}>Designation</span>
+            <span style={{ fontFamily: SANS, fontSize: 8, letterSpacing: "0.22em", color: "rgba(255,255,255,0.15)", textTransform: "uppercase", textAlign: "right", minWidth: "clamp(80px, 12vw, 160px)" }}>Education</span>
+          </motion.div>
+
+          {/* Department sections */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(40px,6vw,72px)", marginTop: "clamp(32px,5vw,56px)" }}>
+            {DEPARTMENTS.map((dept) => {
+              const sectionStart = runningIndex;
+              runningIndex += dept.members.length;
+              return (
+                <DepartmentSection
+                  key={dept.code}
+                  label={dept.label}
+                  code={dept.code}
+                  members={dept.members}
+                  startIndex={sectionStart}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Footer note ───────────────────────────────────────────────────────── */}
+      <div
+        style={{
+          borderTop: "0.5px solid rgba(255,255,255,0.07)",
+          padding: "clamp(28px,4vw,48px) clamp(24px,7vw,96px)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: 16,
+        }}
+      >
+        <p style={{ fontFamily: SANS, fontSize: 9, letterSpacing: "0.2em", color: "rgba(255,255,255,0.18)", textTransform: "uppercase", margin: 0 }}>
+          Gravity Studio — Est. 1993, Karachi
+        </p>
+        <p style={{ fontFamily: SANS, fontSize: 11, color: "rgba(255,255,255,0.25)", margin: 0 }}>
+          31 professionals across Architecture, Engineering, Construction &amp; Management
+        </p>
       </div>
     </div>
   );

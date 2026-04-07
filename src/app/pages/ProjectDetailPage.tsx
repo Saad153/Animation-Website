@@ -10,10 +10,6 @@ const SERIF = "'Cormorant Garamond', 'Playfair Display', Georgia, serif";
 
 // ─── Static supplementary images ─────────────────────────────────────────────
 const STATIC = {
-  cathedral: "https://images.unsplash.com/photo-1574545529295-dd6b786ba2e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXRoZWRyYWwlMjBpbnRlcmlvciUyMGNvbHVtbnMlMjBzdGFpbmVkJTIwZ2xhc3MlMjBsaWdodCUyMGRyYW1hdGljfGVufDF8fHx8MTc3NTE2Mjg5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-  interior:  "https://images.unsplash.com/photo-1758413352731-d6f9ce3b59d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFuZCUyMGludGVyaW9yJTIwYXJjaGl0ZWN0dXJlJTIwbWFyYmxlJTIwY29sdW1ucyUyMGxpZ2h0fGVufDF8fHx8MTc3NTE2Mjg5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-  detail:    "https://images.unsplash.com/photo-1774356599784-c7589417c134?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwaW50ZXJpb3IlMjBtaW5pbWFsJTIwY29uY3JldGUlMjBkZXRhaWx8ZW58MXx8fHwxNzc1MTYyODkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-  night:     "https://images.unsplash.com/photo-1763888538104-a74b3685ab8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwbmlnaHQlMjBkcmFtYXRpY3xlbnwxfHx8fDE3NzUxNjI4OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
   floorplan: "https://images.unsplash.com/photo-1762146828422-50a8bd416d3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwZmxvb3IlMjBwbGFuJTIwYmx1ZXByaW50JTIwdGVjaG5pY2FsJTIwZHJhd2luZ3xlbnwxfHx8fDE3NzUxNjI4OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
 };
 
@@ -573,7 +569,7 @@ export function ProjectDetailPage() {
 
       {/* ════════════════════════════════════════════════════════════════════
           CONCEPT — editorial text section
-      ═══════════════════════════════════════════════════════════════════ */}
+      ���══════════════════════════════════════════════════════════════════ */}
       <div
         className="px-[clamp(28px,6vw,96px)]"
         style={{ paddingTop: "clamp(80px,10vw,140px)", paddingBottom: "clamp(60px,8vw,100px)" }}
@@ -924,7 +920,7 @@ export function ProjectDetailPage() {
         </FadeUp>
       </div>
 
-      {/* ════════════════════════════════════════════════════════════════════
+      {/* ══════════════════════════════════════════════════════���═════════════
           CLOSING FULL-BLEED IMAGE
       ════════════════════════════════════════════════════════════════════ */}
       <motion.div

@@ -47,11 +47,12 @@ const OFFICES = [
   },
   {
     city: "Karachi",
-    label: "Construction & Engineering",
-    address: "Innovista Indus, Block A,\nMain Sunset Blvd,\nD.H.A. Phase II, Karachi.",
+    label: "Furniture and Interiors",
+    address: "25-C, Sunset Commercial Street #1,\nPhase IV, DHA, Karachi",
     email: "gravity.dnc@gmail.com",
     cell: "+92 333 2222777",
     tel: "+92 21 3588666",
+    website: "www.gravity.com.pk",
   },
   {
     city: "Lahore",
@@ -501,9 +502,10 @@ export function AboutPage() {
                 {/* Contact */}
                 <div className="space-y-1 mt-auto">
                   {[
-                    { k: "Email", v: office.email },
-                    { k: "Cell",  v: office.cell },
-                    { k: "Tel",   v: office.tel },
+                    { k: "Email",   v: office.email },
+                    { k: "Cell",    v: office.cell },
+                    { k: "Tel",     v: office.tel },
+                    ...((office as any).website ? [{ k: "Website", v: (office as any).website }] : []),
                   ].map(({ k, v }) => (
                     <p key={k} style={{ fontSize: "11px", color: "rgba(255,255,255,0.38)", fontFamily: SANS, lineHeight: 1.6 }}>
                       <span style={{ color: "rgba(255,255,255,0.2)" }}>{k}: </span>{v}

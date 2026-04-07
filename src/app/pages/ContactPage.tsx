@@ -13,9 +13,11 @@ const OFFICES = [
   },
   {
     city: "Karachi",
-    label: "Construction & Engineering",
-    address: "Innovista Indus, Block A,\nMain Sunset Blvd,\nD.H.A. Phase II, Karachi.",
-    phone: "+92 21 3588666",
+    label: "Furniture and Interiors",
+    address: "25-C, Sunset Commercial Street #1,\nPhase IV, DHA, Karachi",
+    phone: "+92 333 2222777",
+    tel: "+92 21 3588666",
+    website: "www.gravity.com.pk",
     email: "gravity.dnc@gmail.com",
     isPrimary: false,
   },
@@ -268,8 +270,28 @@ export function ContactPage() {
                         className="block text-white/30 hover:text-white/60 transition-colors no-underline"
                         style={{ fontSize: "12px" }}
                       >
-                        {office.phone}
+                        Cell: {office.phone}
                       </a>
+                      {(office as any).tel && (
+                        <a
+                          href={`tel:${(office as any).tel}`}
+                          className="block text-white/30 hover:text-white/60 transition-colors no-underline"
+                          style={{ fontSize: "12px" }}
+                        >
+                          Tel: {(office as any).tel}
+                        </a>
+                      )}
+                      {(office as any).website && (
+                        <a
+                          href={`https://${(office as any).website}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-white/30 hover:text-white/60 transition-colors no-underline"
+                          style={{ fontSize: "12px" }}
+                        >
+                          {(office as any).website}
+                        </a>
+                      )}
                       <a
                         href={`mailto:${office.email}`}
                         className="block text-white/30 hover:text-white/60 transition-colors no-underline"
