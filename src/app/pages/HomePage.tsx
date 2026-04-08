@@ -5,25 +5,44 @@ import React, { useRef, useEffect, useState, useMemo } from "react";
 import gravityLogo from "@/assets/d2755bbe5130e82e2da96ee562f8b24d78c9a00a.png";
 
 // ─── New replacement images (slots 0–7) ───────────────────────────────────────
-import newImg0 from "@/assets/ecb6770e41175b59a115b0f3a41a8c6334c19752.png"; // office interior
-import newImg1 from "@/assets/d900150c7cdfec6cb9495e5b4e00f89f108cf66d.png"; // school lawn
-import newImg2 from "@/assets/23f3c5d3b033a2cb87371525d351815bf782ad5b.png"; // retail interior
-import newImg3 from "@/assets/629794bdfd2990dc6a3ce9003566542b4c738978.png"; // luxury living room
-import newImg4 from "@/assets/9725140cd3216e24855c3433d16281cbf90b77b7.png"; // school dusk
-import newImg5 from "@/assets/b06f1f503232e620858c7013456bed2e8a969db4.png"; // high-rise complex
-import newImg6 from "@/assets/1d92653eec918a706702f502d07c11309d836b31.png"; // glass towers
-import newImg7 from "@/assets/8871e533654e6cb10bd2f59abad5552afb509be1.png"; // Innovista Indus
+import newImg0 from "@/assets/3ed75039c8ed75a966529d7f1a79fa162314833f.png"; // Aabhi interior store
+import newImg1 from "@/assets/f257d47652ed9787b02479a73ffac1b61f3a53cd.png"; // elegant hallway
+import newImg2 from "@/assets/0ac3897d775fe70ef30feba4ed259fb564a82e8f.png"; // modern curved wood-glass building at dusk
+import newImg3 from "@/assets/5c06433b5ec4dbb425bd01103261ec12403a3041.png"; // luxury retail
+import newImg4 from "@/assets/574cd1294d9f97c3c16200d8a8499d1b55706437.png"; // modern residential pool
+import newImg5 from "@/assets/d6ca377de74b166e20e20edd82f10e604a981995.png"; // glass high-rise towers at dusk
+import newImg6 from "@/assets/5297e2828cca6f5d266afc2ce916e25792429e5c.png"; // Innovista Indus entrance
+import newImg7 from "@/assets/bb00a237e6019606a36a0c71d5089d9f3b5f203a.png"; // classical villa entrance wrought iron
 
 // ─── New replacement images (slots 8–16) ──────────────────────────────────────
-import newImg8  from "@/assets/a9578a9426fa0fc4ad6da9caaf8939467386560b.png"; // luxury wood-ceiling interior
-import newImg9  from "@/assets/5f3c2c40b6f7ac3efe82d24b61ce53f2c8ff6a2b.png"; // white arched building
+import newImg8  from "@/assets/c316ade365712c6f044c78c0ac37513f99d12fc2.png"; // mountain chalet cabins on hillside
+import newImg9  from "@/assets/c675d7b65e8fc74117d5dbcc8897d3a295759ae8.png"; // Innovista auditorium red seats
 import newImg10 from "@/assets/7c8e59d7c8faafdb80468dbc5fa3029b2980f855.png"; // indoor swimming pool
-import newImg11 from "@/assets/390a913ebbf03169f4f3203cb9a48892d4bc3b71.png"; // NASTP A5 exterior
-import newImg12 from "@/assets/a7759569c3d6c1a258e218b1b80afb6a72a99f29.png"; // modern residential house
-import newImg13 from "@/assets/a2da5841bf8f42dc69a53d40282e0c99f69f72d6.png"; // tech campus garden
-import newImg14 from "@/assets/68ad14b87fc9e0192d8d51b074e516f78cbb2b6f.png"; // open-plan office
-import newImg15 from "@/assets/ad533d2cfebe437bea0025230bf3a9a8b79e3869.png"; // office interior 2
-import newImg16 from "@/assets/6f1d0472b38706f7784fa68685e2891e9db04f2c.png"; // school red-stripe facade
+import newImg11 from "@/assets/e5e5dfafc7c463ebad3493e5ca687eafb2f29bf4.png"; // beige high-rise tower at dusk with palms
+import newImg12 from "@/assets/a21b1fa5e5c998176a0fde43522a103bdb11e367.png"; // white classical arched building with landscaped street
+import newImg13 from "@/assets/f3ff9122ce0bd8e52bcec5d4826c7723f33b294a.png"; // Pearl Towers entrance canopy at night
+import newImg14 from "@/assets/26ceeda23a165793d73a41d22f04d8d00f149811.png"; // glass high-rise with green terraces
+import newImg15 from "@/assets/560d95bd040747c62cd8edc43662c33556166bba.png"; // brick arched colonnade building at sunset
+import newImg16 from "@/assets/a3d6653f3bb781608bdf1e0984437f3ebcb82e06.png"; // TMF Center of Excellence dual tower
+
+// ─── New replacement images (slots 17–19) ─────────────────────────────────────
+import newImg17 from "@/assets/87a33b798bdb69012f897e09338192c5db0b97ef.png"; // indoor swimming pool
+import newImg18 from "@/assets/69377d84dfc6fd48852caa26119ac4261c664e56.png"; // white arched building exterior
+import newImg19 from "@/assets/9479798145357a18c2d8da2b2abbaeb08af8ed43.png"; // modern tech campus garden
+
+// ─── New replacement images (slots 20–22) ─────────────────────────────────────
+import newImg20 from "@/assets/ca59191f23ff730c6f17f9716db953ec92031041.png"; // brick school building at dusk
+import newImg21 from "@/assets/0ff2ea99a0e32031f5ae3eb1972595fa5b40122c.png"; // luxury wood-ceiling lounge interior
+import newImg22 from "@/assets/a2f687d23538885d8b2ae97cb646ac0f6d94aeab.png"; // open-plan office workspace
+
+// ─── New replacement images (slots 23–25) ─────────────────────────────────────
+import newImg23 from "@/assets/6d29a36b8d8b5e9e6e369f49ab0a953158974b6a.png"; // glass-partition office with plants
+import newImg24 from "@/assets/dad33bfb5e58029f3bd62539147ee8209a046fb4.png"; // open studio office floor
+import newImg25 from "@/assets/2ba56b1853d6b65c8214b9bb5038a6a06c11437c.png"; // Askari Towers high-rise render
+
+// ─── New replacement images (slots 26–27) ─────────────────────────────────────
+import newImg26 from "@/assets/8c2f737cae4806558089adc86b99a320bc950b34.png"; // modern residential townhouses street view
+import newImg27 from "@/assets/177a777dbde57cc4b769b815ef7b4eff0027131f.png"; // DHA building red-white striped facade with lawn
 
 // ─── Real project images ──────────────────────────────────────────────────────
 import jinnahAerial    from "@/assets/fe7c436dbcda8afd381392cfcd6639d0c94349bc.png";
@@ -75,18 +94,21 @@ const IMAGES = [
   newImg14,        // slot 14
   newImg15,        // slot 15
   newImg16,        // slot 16
-  malirConstruction,  // slot 17 (unchanged)
-  cyberExterior,      // slot 18 (unchanged)
-  cyberRender,        // slot 19 (unchanged)
-  cyberLobby,         // slot 20 (unchanged)
-  gravityTower1Night, // slot 21 (unchanged)
-  gravityTower1Day,   // slot 22 (unchanged)
-  pafChaletExterior,  // slot 23 (unchanged)
-  pafChaletHillside,  // slot 24 (unchanged)
-  pafChaletRestaurant,// slot 25 (unchanged)
-  pafVfomFront,       // slot 26 (unchanged)
-  pafVfomAerial,      // slot 27 (unchanged)
-  pafVfomEntrance,    // slot 28 (unchanged)
+  newImg17,        // slot 17
+  newImg18,        // slot 18
+  newImg19,        // slot 19
+  newImg20,        // slot 20
+  newImg21,        // slot 21
+  newImg22,        // slot 22
+  newImg23,        // slot 23
+  newImg24,        // slot 24
+  newImg25,        // slot 25
+  newImg26,        // slot 26
+  newImg27,        // slot 27
+  pafChaletRestaurant,// slot 28 (unchanged)
+  pafVfomFront,       // slot 29 (unchanged)
+  pafVfomAerial,      // slot 30 (unchanged)
+  pafVfomEntrance,    // slot 31 (unchanged)
 ];
 
 // ─── Column config ────────────────────────────────────────────────────────────
@@ -106,38 +128,38 @@ const COL_CONFIGS: ColConfig[] = [
   {
     heights:    [240, 300, 220, 0, 260, 200, 320, 0, 300, 220, 280, 0],
     shapes:     ['r', 'r', 'r', 's', 'r', 'r', 'r', 's', 'r', 'r', 'r', 's'],
-    imgStart: 3,  startOffset: -180,
+    imgStart: 4,  startOffset: -180,
   },
   {
     heights:    [0, 260, 200, 320, 240, 0, 220, 300, 260, 0, 320, 240],
     shapes:     ['s', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 's', 'r', 'r'],
-    imgStart: 6,  startOffset: -30,
+    imgStart: 8,  startOffset: -30,
   },
   {
     heights:    [220, 280, 0, 200, 300, 260, 0, 220, 280, 320, 200, 0],
     shapes:     ['r', 'r', 's', 'r', 'r', 'r', 's', 'r', 'r', 'r', 'r', 's'],
-    imgStart: 9,  startOffset: -250,
+    imgStart: 12, startOffset: -250,
   },
   {
     heights:    [260, 200, 280, 0, 220, 320, 240, 260, 0, 280, 300, 0],
     shapes:     ['r', 'r', 'r', 's', 'r', 'r', 'r', 'r', 's', 'r', 'r', 's'],
-    imgStart: 12, startOffset: -120,
+    imgStart: 16, startOffset: -120,
   },
   {
     heights:    [0, 240, 260, 220, 300, 0, 280, 320, 240, 260, 0, 300],
     shapes:     ['s', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 'r', 's', 'r'],
-    imgStart: 15, startOffset: -200,
+    imgStart: 20, startOffset: -200,
   },
   {
     heights:    [200, 320, 0, 260, 280, 220, 300, 0, 320, 240, 260, 0],
     shapes:     ['r', 'r', 's', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 's'],
-    imgStart: 18, startOffset: -80,
+    imgStart: 24, startOffset: -80,
   },
 ];
 
 // ─── Gaps ─────────────────────────────────────────────────────────────────────
-const COL_GAP = 12;
-const ROW_GAP = 12;
+const COL_GAP = 8;
+const ROW_GAP = 8;
 
 // ── Intro constants ──────────────────────────────────────────────────────────
 const INTRO_ZOOM_START = 0.3;
@@ -159,90 +181,123 @@ const BOUNCE_WAYPOINTS = [
 ];
 
 // ─── Mobile magazine grid ─────────────────────────────────────────────────────
-// Repeating pattern: square | portrait | landscape(span2) | portrait | square | landscape(span2)
-type MobileItemType = "square" | "portrait" | "landscape";
-const MOBILE_PATTERN: MobileItemType[] = [
-  "square", "portrait", "landscape",
-  "portrait", "square", "landscape",
-];
-const MOBILE_ITEM_COUNT = 30; // 5 full cycles = 30 images
-
-function MobileGridItem({
-  src,
-  type,
-  index,
-  fadingOut,
-}: {
-  src: string;
-  type: MobileItemType;
-  index: number;
-  onOpen?: (src: string, rect: DOMRect) => void;
-  fadingOut: boolean;
-  isSelected: boolean;
-}) {
-  const style: React.CSSProperties = {
-    overflow: "hidden",
-    borderRadius: 3,
-    position: "relative",
-  };
-  if (type === "landscape") {
-    style.gridColumn = "span 2";
-    style.aspectRatio = "16 / 9";
-  } else if (type === "portrait") {
-    style.aspectRatio = "2 / 3";
-  }
-
-  return (
-    <motion.div
-      style={style}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: fadingOut ? 0 : 1 }}
-      transition={{ duration: 0.85, delay: index * 0.025, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <img
-        src={src}
-        alt=""
-        draggable={false}
-        className="w-full h-full object-cover select-none"
-      />
-    </motion.div>
-  );
-}
+// Exact layout: 3 rows, 100dvh, no scroll on first view
+// Row 1 (40%): Logo | Image 0   — two 50/50 vertical rectangles
+// Row 2 (20%): Image 1          — one full-width horizontal rectangle
+// Row 3 (40%): Image 2 | Image 3 — two 50/50 vertical rectangles
 
 function MobileGrid() {
-  const items = useMemo(
-    () =>
-      Array.from({ length: MOBILE_ITEM_COUNT }, (_, i) => ({
-        src: IMAGES[i % IMAGES.length],
-        type: MOBILE_PATTERN[i % MOBILE_PATTERN.length],
-        key: `m${i}`,
-        index: i,
-      })),
-    []
-  );
-
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: 8,
-        padding: "80px 8px 8px 8px",
-        width: "100%",
-        alignItems: "stretch",
-      }}
-    >
-      {items.map((item) => (
-        <MobileGridItem
-          key={item.key}
-          src={item.src}
-          type={item.type}
-          index={item.index}
-          fadingOut={false}
-          isSelected={false}
-        />
-      ))}
-    </div>
+    <>
+      <style>{`
+        .mobile-grid-scroll::-webkit-scrollbar { display: none; }
+        .mobile-grid-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
+      <div
+        className="mobile-grid-scroll"
+        style={{ overflowY: "auto", height: "100%", width: "100%" }}
+      >
+        {/* ── First-view block: exactly 100dvh, no scroll ── */}
+        <div
+          style={{
+            display: "grid",
+            height: "100dvh",
+            gridTemplateColumns: "1fr 1fr",
+            gridTemplateRows: "40dvh 20dvh 40dvh",
+            gap: 2,
+            padding: 0,
+            width: "100%",
+          }}
+        >
+          {/* Row 1 Left — Gravity Logo (orange tile) */}
+          <motion.div
+            style={{
+              gridColumn: "1",
+              gridRow: "1",
+              borderRadius: 2,
+              overflow: "hidden",
+              backgroundColor: "#E06020",
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <img
+              src={gravityLogo}
+              alt="Gravity Architecture and Interiors"
+              draggable={false}
+              className="w-full h-full object-cover select-none"
+            />
+          </motion.div>
+
+          {/* Row 1 Right — Image 1 */}
+          <motion.div
+            style={{ gridColumn: "2", gridRow: "1", borderRadius: 2, overflow: "hidden" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.42, delay: 0.07, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <img src={IMAGES[0]} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+          </motion.div>
+
+          {/* Row 2 Full — Image 2 */}
+          <motion.div
+            style={{ gridColumn: "1 / span 2", gridRow: "2", borderRadius: 2, overflow: "hidden" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.42, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <img src={IMAGES[1]} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+          </motion.div>
+
+          {/* Row 3 Left — Image 3 */}
+          <motion.div
+            style={{ gridColumn: "1", gridRow: "3", borderRadius: 2, overflow: "hidden" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.42, delay: 0.21, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <img src={IMAGES[2]} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+          </motion.div>
+
+          {/* Row 3 Right — Image 4 */}
+          <motion.div
+            style={{ gridColumn: "2", gridRow: "3", borderRadius: 2, overflow: "hidden" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.42, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <img src={IMAGES[3]} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+          </motion.div>
+        </div>
+
+        {/* ── Remaining images below — scroll to reveal ── */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 2,
+            padding: "2px 0 8px 0",
+          }}
+        >
+          {IMAGES.slice(4).map((src, i) => (
+            <motion.div
+              key={`m-extra-${i}`}
+              style={{ aspectRatio: "2 / 3", borderRadius: 2, overflow: "hidden" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.42,
+                delay: (i + 5) * 0.012,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <img src={src} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
@@ -374,7 +429,7 @@ function ScrollHint({ visible }: { visible: boolean }) {
   );
 }
 
-// ─── Main HomePage ────────────────────────────────────────────────────────────
+// ── Main HomePage ────────────────────────────────────────────────────────────
 export function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [hasScrolled, setHasScrolled]       = useState(false);
@@ -390,8 +445,8 @@ export function HomePage() {
     return () => mq.removeEventListener("change", handler);
   }, []);
 
-  // ── Zoom
-  const zoomRaw = useMotionValue(INTRO_ZOOM_START);
+  // ── Zoom — mobile starts at 0.97 (very subtle), desktop at 0.3 (dramatic)
+  const zoomRaw = useMotionValue(isMobile ? 0.97 : INTRO_ZOOM_START);
   const zoom    = useSpring(zoomRaw, { stiffness: 80, damping: 24, mass: 0.7 });
 
   // ── Grid fade-in
@@ -399,7 +454,6 @@ export function HomePage() {
   const smoothGridOpacity = useSpring(gridOpacity, { stiffness: 60, damping: 20, mass: 0.8 });
 
   // ── Wordmark: visible early, fades behind grid as zoom increases
-  // At zoom 0.3 → text fully visible; at zoom ~1.2 → almost gone (0.15 remaining)
   const textOpacity = useTransform(zoom, [0.3, 0.7, 1.2], [1, 1, 0.15]);
 
   // ── Grid z-index: starts low (text above), ends high (grid covers text)
@@ -411,22 +465,23 @@ export function HomePage() {
   const smoothBounceX = useSpring(bounceX, { stiffness: 30, damping: 18, mass: 1.2 });
   const smoothBounceY = useSpring(bounceY, { stiffness: 30, damping: 18, mass: 1.2 });
 
-  // ── Intro animation
+  // ── Intro animation — subtle on mobile, dramatic on desktop
   useEffect(() => {
-    animate(gridOpacity, 1, { duration: 0.8, ease: [0.22, 1, 0.36, 1] });
+    const fadeDuration = isMobile ? 0.5 : 0.8;
+    animate(gridOpacity, 1, { duration: fadeDuration, ease: [0.22, 1, 0.36, 1] });
     const t = setTimeout(() => {
-      animate(zoomRaw, INTRO_ZOOM_END, {
-        duration: INTRO_DURATION,
+      animate(zoomRaw, isMobile ? 1.0 : INTRO_ZOOM_END, {
+        duration: isMobile ? 1.0 : INTRO_DURATION,
         ease: [0.25, 0.1, 0.25, 1],
         onComplete: () => setIntroComplete(true),
       });
     }, 200);
     return () => clearTimeout(t);
-  }, [gridOpacity, zoomRaw]);
+  }, [gridOpacity, zoomRaw, isMobile]);
 
-  // ── Bounce after intro
+  // ── Bounce after intro — disabled on mobile, active on desktop
   useEffect(() => {
-    if (!introComplete) return;
+    if (!introComplete || isMobile) return;
     let idx = 0, cancelled = false;
     const nextBounce = () => {
       if (cancelled) return;
@@ -438,10 +493,11 @@ export function HomePage() {
     };
     const t = setTimeout(nextBounce, 500);
     return () => { cancelled = true; clearTimeout(t); };
-  }, [introComplete, bounceX, bounceY, zoomRaw]);
+  }, [introComplete, isMobile, bounceX, bounceY, zoomRaw]);
 
-  // ── Scroll → zoom
+  // ── Scroll → zoom — desktop only
   useEffect(() => {
+    if (isMobile) return;
     const el = containerRef.current;
     if (!el) return;
     const handler = (e: WheelEvent) => {
@@ -452,10 +508,11 @@ export function HomePage() {
     };
     el.addEventListener("wheel", handler, { passive: false });
     return () => el.removeEventListener("wheel", handler);
-  }, [hasScrolled, zoomRaw]);
+  }, [hasScrolled, zoomRaw, isMobile]);
 
-  // ── Touch → zoom
+  // ── Touch → zoom — desktop only
   useEffect(() => {
+    if (isMobile) return;
     const el = containerRef.current;
     if (!el) return;
     let lastY = 0;
@@ -472,72 +529,73 @@ export function HomePage() {
       el.removeEventListener("touchstart", onStart);
       el.removeEventListener("touchmove",  onMove);
     };
-  }, [hasScrolled, zoomRaw]);
+  }, [hasScrolled, zoomRaw, isMobile]);
 
   return (
     <div
       ref={containerRef}
       className="fixed inset-0 overflow-hidden select-none"
-      style={{ background: "#F7F7F5", touchAction: "none" }}
+      style={{ background: "#F7F7F5", touchAction: isMobile ? "auto" : "none" }}
     >
-      {/* ── GRAVITY wordmark — centered, fades behind grid as you zoom in ── */}
-      <motion.div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
-        style={{ zIndex: 20, opacity: textOpacity }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <span
-          style={{
-            fontFamily: "'Inter', system-ui, sans-serif",
-            fontWeight: 700,
-            fontSize: "clamp(60px, 11vw, 160px)",
-            color: "#1a1a1a",
-            letterSpacing: "0.12em",
-            whiteSpace: "nowrap",
-            lineHeight: 1,
-          }}
-        >
-          GRAVITY
-        </span>
-      </motion.div>
+      {isMobile ? (
+        /* ── Mobile: pure static layout, zero transforms, fills 100dvh × 100vw ── */
+        <MobileGrid />
+      ) : (
+        /* ── Desktop: full cinematic zoom + bounce experience ── */
+        <>
+          {/* GRAVITY wordmark */}
+          <motion.div
+            className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
+            style={{ zIndex: 20, opacity: textOpacity }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <span
+              style={{
+                fontFamily: "'Inter', system-ui, sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(60px, 11vw, 160px)",
+                color: "#1a1a1a",
+                letterSpacing: "0.12em",
+                whiteSpace: "nowrap",
+                lineHeight: 1,
+              }}
+            >
+              GRAVITY
+            </span>
+          </motion.div>
 
-      {/* ── Zooming + bouncing grid ── */}
-      <motion.div
-        className="absolute inset-0"
-        style={{
-          zIndex: gridZIndex,
-          scale: zoom,
-          x: smoothBounceX,
-          y: smoothBounceY,
-          transformOrigin: "50% 50%",
-          willChange: "transform",
-          opacity: smoothGridOpacity,
-          // Desktop uses flex row, mobile uses the grid component
-          display: isMobile ? "block" : "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          gap: isMobile ? undefined : COL_GAP,
-          padding: isMobile ? undefined : `80px ${COL_GAP}px`,
-        }}
-      >
-        {isMobile ? (
-          <MobileGrid />
-        ) : (
-          COL_CONFIGS.map((config, i) => (
-            <Column
-              key={i}
-              config={config}
-              colIndex={i}
-              numCols={COL_CONFIGS.length}
-              colGap={COL_GAP}
-              rowGap={ROW_GAP}
-            />
-          ))
-        )}
-      </motion.div>
+          {/* Zooming + bouncing grid */}
+          <motion.div
+            className="absolute inset-0 flex"
+            style={{
+              zIndex: gridZIndex,
+              scale: zoom,
+              x: smoothBounceX,
+              y: smoothBounceY,
+              transformOrigin: "50% 50%",
+              willChange: "transform",
+              opacity: smoothGridOpacity,
+              justifyContent: "center",
+              alignItems: "flex-start",
+              gap: COL_GAP,
+              padding: `80px ${COL_GAP}px`,
+            }}
+          >
+            {COL_CONFIGS.map((config, i) => (
+              <Column
+                key={i}
+                config={config}
+                colIndex={i}
+                numCols={COL_CONFIGS.length}
+                colGap={COL_GAP}
+                rowGap={ROW_GAP}
+              />
+            ))}
+          </motion.div>
 
-      {/* Scroll hint */}
-      <ScrollHint visible={introComplete && !hasScrolled} />
+          <ScrollHint visible={introComplete && !hasScrolled} />
+        </>
+      )}
     </div>
   );
 }
