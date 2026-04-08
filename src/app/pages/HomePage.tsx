@@ -77,38 +77,38 @@ import pafVfomEntrance from "@/assets/a69fcac697524958699441c33414e8339ff97c50.p
 
 // ─── Image pool — all real project images ────────────────────────────────────
 const IMAGES = [
-  newImg0,         // slot  0
-  newImg1,         // slot  1
-  newImg2,         // slot  2
-  newImg3,         // slot  3
-  newImg4,         // slot  4
-  newImg5,         // slot  5
-  newImg6,         // slot  6
-  newImg7,         // slot  7
-  newImg8,         // slot  8
-  newImg9,         // slot  9
-  newImg10,        // slot 10 (logo card covers col3-i1; image still used elsewhere)
-  newImg11,        // slot 11
-  newImg12,        // slot 12
-  newImg13,        // slot 13
-  newImg14,        // slot 14
-  newImg15,        // slot 15
-  newImg16,        // slot 16
-  newImg17,        // slot 17
-  newImg18,        // slot 18
-  newImg19,        // slot 19
-  newImg20,        // slot 20
-  newImg21,        // slot 21
-  newImg22,        // slot 22
-  newImg23,        // slot 23
-  newImg24,        // slot 24
-  newImg25,        // slot 25
-  newImg26,        // slot 26
-  newImg27,        // slot 27
-  pafChaletRestaurant,// slot 28 (unchanged)
-  pafVfomFront,       // slot 29 (unchanged)
-  pafVfomAerial,      // slot 30 (unchanged)
-  pafVfomEntrance,    // slot 31 (unchanged)
+  newImg0,             // slot  0 — Aabhi interior store
+  newImg13,            // slot  1 — Pearl Towers entrance canopy (was slot 13, promoted)
+  newImg2,             // slot  2 — modern curved wood-glass building at dusk
+  newImg3,             // slot  3 — luxury retail
+  newImg4,             // slot  4 — modern residential pool
+  newImg5,             // slot  5 — glass high-rise towers at dusk
+  newImg6,             // slot  6 — Innovista Indus entrance
+  newImg7,             // slot  7 — classical villa entrance
+  newImg8,             // slot  8 — mountain chalet cabins
+  newImg9,             // slot  9 — Innovista auditorium red seats
+  newImg10,            // slot 10 — indoor swimming pool
+  newImg11,            // slot 11 — beige high-rise at dusk with palms
+  newImg12,            // slot 12 — white classical arched building
+  newImg1,             // slot 13 — elegant hallway (swapped from slot 1)
+  newImg14,            // slot 14 — glass high-rise with green terraces
+  newImg15,            // slot 15 — brick arched colonnade at sunset
+  newImg16,            // slot 16 — TMF Center of Excellence dual tower
+  newImg17,            // slot 17 — indoor swimming pool 2
+  newImg18,            // slot 18 — white arched building exterior
+  newImg19,            // slot 19 — modern tech campus garden
+  newImg20,            // slot 20 — brick school building at dusk
+  newImg21,            // slot 21 — luxury wood-ceiling lounge interior
+  newImg22,            // slot 22 — open-plan office workspace
+  newImg23,            // slot 23 — glass-partition office with plants
+  newImg24,            // slot 24 — open studio office floor
+  newImg25,            // slot 25 — Askari Towers high-rise render
+  newImg26,            // slot 26 — modern residential townhouses
+  newImg27,            // slot 27 — DHA building red-white striped facade
+  pafChaletRestaurant, // slot 28
+  pafVfomFront,        // slot 29
+  pafVfomAerial,       // slot 30
+  pafVfomEntrance,     // slot 31
 ];
 
 // ─── Column config ────────────────────────────────────────────────────────────
@@ -153,7 +153,7 @@ const COL_CONFIGS: ColConfig[] = [
   {
     heights:    [200, 320, 0, 260, 280, 220, 300, 0, 320, 240, 260, 0],
     shapes:     ['r', 'r', 's', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 's'],
-    imgStart: 24, startOffset: -80,
+    imgStart: 6,  startOffset: -80,  // was 24 → caused 0-3 repeat; now starts at 6
   },
 ];
 
