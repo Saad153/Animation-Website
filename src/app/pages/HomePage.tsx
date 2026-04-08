@@ -489,7 +489,7 @@ export function HomePage() {
         <span
           style={{
             fontFamily: "'Inter', system-ui, sans-serif",
-            fontWeight: 900,
+            fontWeight: 700,
             fontSize: "clamp(60px, 11vw, 160px)",
             color: "#1a1a1a",
             letterSpacing: "0.12em",
