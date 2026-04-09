@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Navbar } from "../components/Navbar";
 import { PageTransition } from "../components/PageTransition";
 import { WhatsAppFAB } from "../components/WhatsAppFAB";
+import { PortfolioFAB } from "../components/PortfolioFAB";
 
 export function Layout() {
   const location = useLocation();
@@ -30,6 +31,7 @@ export function Layout() {
         <Outlet />
       </PageTransition>
       <WhatsAppFAB />
+      <PortfolioFAB />
     </div>
   );
 }

@@ -163,8 +163,8 @@ export function AboutPage() {
             <motion.h1
               style={{
                 fontFamily: SERIF,
-                fontSize: "clamp(48px, 7.5vw, 100px)",
-                fontWeight: 300,
+                fontSize: "clamp(40px, 7.5vw, 60px)",
+                fontWeight: 100,
                 lineHeight: 0.96,
                 letterSpacing: "-0.02em",
                 color: "#fff",
@@ -173,13 +173,17 @@ export function AboutPage() {
               animate={{ y: "0%" }}
               transition={{ duration: 1.1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
             >
-              Building Pakistan's
+              Our Architectural Design
               <br />
               <em style={{ fontStyle: "italic", color: "rgba(255,255,255,0.7)" }}>
-                skyline — one vision
+                concept is creating expressive
               </em>
               <br />
-              at a time.
+              <em style={{ fontStyle: "italic", color: "rgba(255,255,255,0.7)" }}>
+                spaces that elevate andenhance
+              </em>
+              <br />
+              human experiences.
             </motion.h1>
           </div>
         </div>
@@ -301,17 +305,17 @@ export function AboutPage() {
                   color: "#fff",
                 }}
               >
-                Iconic, innovative,
+                Our Buildings are,
                 <br />
                 <em style={{ fontStyle: "italic", color: "rgba(255,255,255,0.6)" }}>
-                  timeless, and purposeful.
+                  functional sculptures with sustainability at its heart.
                 </em>
               </h2>
             </FadeIn>
           </div>
 
           {/* Right */}
-          <div className="space-y-7">
+          {/* <div className="space-y-7">
             {[
               "In addition to providing a comprehensive range of architectural services, including architecture and interior design, we offer all necessary engineering and construction services through a single, convenient platform.",
               "By combining state-of-the-art technology, modern machinery, and superior craftsmanship with innovative design principles, we deliver finished products of exceptional quality that stand out within the industry.",
@@ -331,7 +335,7 @@ export function AboutPage() {
                 </p>
               </FadeIn>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -362,7 +366,7 @@ export function AboutPage() {
                 lineHeight: 1.35,
               }}
             >
-              "We aim to achieve designs and products that are iconic, innovative, timeless, and purposeful."
+              "Our interior spaces aim to achieve harmony and tranquility that enhance human experience."
             </p>
           </FadeIn>
         </div>
@@ -370,7 +374,7 @@ export function AboutPage() {
 
       {/* ════════════════════════════════════════════════════════════════════
           SERVICES
-      ════════════════════════════════════════════════════════════════════ */}
+      ════════════════════════════════════════════════════════════════════ 
       <div
         className="px-8 md:px-16 lg:px-24"
         style={{ paddingTop: "clamp(56px, 8vw, 100px)", paddingBottom: "clamp(48px, 7vw, 88px)" }}
@@ -426,7 +430,7 @@ export function AboutPage() {
             </FadeIn>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* ════════════════════════════════════════════════════════════════════
           OFFICES

@@ -1,8 +1,10 @@
 import { motion, useMotionValue, useSpring, useTransform, animate } from "motion/react";
-import React, { useRef, useEffect, useState, useMemo } from "react";
+import React, { useRef, useEffect, useState, useMemo, JSX } from "react";
+import { GravityWaveIcon } from "../components/GravityWaveIcon";
 
 // ─── Gravity logo ─────────────────────────────────────────────────────────────
 import gravityLogo from "@/assets/d2755bbe5130e82e2da96ee562f8b24d78c9a00a.png";
+
 
 // ─── New replacement images (slots 0–7) ───────────────────────────────────────
 import newImg0 from "@/assets/3ed75039c8ed75a966529d7f1a79fa162314833f.png"; // Aabhi interior store
@@ -43,7 +45,7 @@ import newImg25 from "@/assets/2ba56b1853d6b65c8214b9bb5038a6a06c11437c.png"; //
 // ─── New replacement images (slots 26–27) ─────────────────────────────────────
 import newImg26 from "@/assets/8c2f737cae4806558089adc86b99a320bc950b34.png"; // modern residential townhouses street view
 import newImg27 from "@/assets/177a777dbde57cc4b769b815ef7b4eff0027131f.png"; // DHA building red-white striped facade with lawn
-
+import logo from "@/assets/logo.png";
 // ─── Real project images ──────────────────────────────────────────────────────
 import jinnahAerial    from "@/assets/fe7c436dbcda8afd381392cfcd6639d0c94349bc.png";
 import jinnahNight     from "@/assets/5d5179836a3dc3bd68c1c31ea82c64911df76586.png";
@@ -87,7 +89,7 @@ const IMAGES = [
   newImg7,             // slot  7 — classical villa entrance
   newImg8,             // slot  8 — mountain chalet cabins
   newImg9,             // slot  9 — Innovista auditorium red seats
-  newImg10,            // slot 10 — indoor swimming pool
+  // newImg10,            // slot 10 — indoor swimming pool
   newImg11,            // slot 11 — beige high-rise at dusk with palms
   newImg12,            // slot 12 — white classical arched building
   newImg1,             // slot 13 — elegant hallway (swapped from slot 1)
@@ -104,7 +106,8 @@ const IMAGES = [
   newImg24,            // slot 24 — open studio office floor
   newImg25,            // slot 25 — Askari Towers high-rise render
   newImg26,            // slot 26 — modern residential townhouses
-  newImg27,            // slot 27 — DHA building red-white striped facade
+  newImg27,
+  logo,            // slot 27 — DHA building red-white striped facade
   pafChaletRestaurant, // slot 28
   pafVfomFront,        // slot 29
   pafVfomAerial,       // slot 30
@@ -195,11 +198,23 @@ function MobileGrid() {
       `}</style>
       <div
         className="mobile-grid-scroll"
-        style={{ overflowY: "auto", height: "100%", width: "100%" }}
+        style={{
+          overflowY: "auto",
+          height: "100dvh",
+          width: "100%",
+          paddingTop: 56, // Space for navbar
+          display: "flex",
+          flexDirection: "column",
+        }}
       >
+      {/* <div
+        className="mobile-grid-scroll"
+        style={{ overflowY: "auto", height: "100%", width: "100%" }}
+      > */}
         {/* ── First-view block: exactly 100dvh, no scroll ── */}
         <div
           style={{
+          
             display: "grid",
             height: "100dvh",
             gridTemplateColumns: "1fr 1fr",
@@ -209,6 +224,7 @@ function MobileGrid() {
             width: "100%",
           }}
         >
+          
           {/* Row 1 Left — Gravity Logo (orange tile) */}
           <motion.div
             style={{
@@ -223,8 +239,8 @@ function MobileGrid() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <img
-              src={gravityLogo}
-              alt="Gravity Architecture and Interiors"
+              src={IMAGES[1]}
+              alt=""
               draggable={false}
               className="w-full h-full object-cover select-none"
             />
@@ -247,7 +263,7 @@ function MobileGrid() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.42, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img src={IMAGES[1]} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+            <img src={logo} alt="Gravity Architecture and Interiors" draggable={false} className="w-full h-full object-cover select-none" />
           </motion.div>
 
           {/* Row 3 Left — Image 3 */}
@@ -272,30 +288,42 @@ function MobileGrid() {
         </div>
 
         {/* ── Remaining images below — scroll to reveal ── */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 2,
-            padding: "2px 0 8px 0",
-          }}
-        >
-          {IMAGES.slice(4).map((src, i) => (
-            <motion.div
-              key={`m-extra-${i}`}
-              style={{ aspectRatio: "2 / 3", borderRadius: 2, overflow: "hidden" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.42,
-                delay: (i + 5) * 0.012,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
-              <img src={src} alt="" draggable={false} className="w-full h-full object-cover select-none" />
-            </motion.div>
-          ))}
-        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 2, padding: "2px 0 8px 0" }}>
+        {IMAGES.slice(4).reduce<JSX.Element[]>((acc, _, i, arr) => {
+          const pos = i % 5;
+          if (pos === 0) {
+            // Row 1 — 2 vertical
+            acc.push(
+              <div key={`row1-${i}`} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2 }}>
+                {[arr[i], arr[i + 1]].filter(Boolean).map((src, j) => (
+                  <motion.div key={`v1-${i}-${j}`} style={{ aspectRatio: "2/3", borderRadius: 2, overflow: "hidden" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.42, delay: (i + j) * 0.012, ease: [0.22, 1, 0.36, 1] }}>
+                    <img src={src} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+                  </motion.div>
+                ))}
+              </div>
+            );
+          } else if (pos === 2) {
+            // Row 2 — 1 horizontal
+            acc.push(
+              <motion.div key={`horiz-${i}`} style={{ aspectRatio: "16/9", borderRadius: 2, overflow: "hidden" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.42, delay: i * 0.012, ease: [0.22, 1, 0.36, 1] }}>
+                <img src={arr[i]} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+              </motion.div>
+            );
+          } else if (pos === 3) {
+            // Row 3 — 2 vertical
+            acc.push(
+              <div key={`row3-${i}`} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2 }}>
+                {[arr[i], arr[i + 1]].filter(Boolean).map((src, j) => (
+                  <motion.div key={`v2-${i}-${j}`} style={{ aspectRatio: "2/3", borderRadius: 2, overflow: "hidden" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.42, delay: (i + j) * 0.012, ease: [0.22, 1, 0.36, 1] }}>
+                    <img src={src} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+                  </motion.div>
+                ))}
+              </div>
+            );
+          }
+          return acc;
+        }, [])}
+      </div>
       </div>
     </>
   );

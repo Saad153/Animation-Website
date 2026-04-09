@@ -88,103 +88,115 @@ export function ProjectsPage() {
 
       {/* ── Filter + Search Row ───────────────────────────────────────────────── */}
       <motion.section
-        className="px-8 md:px-16 lg:px-24 flex items-center justify-between"
-        style={{ paddingTop: 28, paddingBottom: 28 }}
+        className="px-8 md:px-16 lg:px-24 flex flex-col"
+        style={{ paddingTop: 28, paddingBottom: 28, gap: 12 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.35 }}
       >
         {/* Category filters */}
-        <div className="flex items-center gap-0 overflow-x-auto scrollbar-none" style={{ WebkitOverflowScrolling: "touch" }}>
-          {CATEGORIES.map((cat, i) => {
+        
+        <div
+          className="flex items-center gap-2"
+          style={{
+            marginBottom: 12,
+            overflowX: "auto",
+            flexWrap: "nowrap",
+            msOverflowStyle: "none",
+            scrollbarWidth: "none",
+          }}
+        >
+          <style>{`.cat-scroll::-webkit-scrollbar { display: none; }`}</style>
+          {CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat;
             return (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className="shrink-0 relative cursor-pointer border-none bg-transparent transition-colors duration-200"
+                className="shrink-0 cursor-pointer transition-all duration-200 cat-scroll"
                 style={{
                   fontFamily: SANS,
-                  fontSize: "12px",
-                  letterSpacing: "0.06em",
-                  color: isActive ? "#111" : "#999",
+                  fontSize: "13px",
+                  letterSpacing: "0.02em",
+                  color: isActive ? "#fff" : "#666",
                   fontWeight: isActive ? 500 : 400,
-                  padding: "6px 16px",
-                  paddingLeft: i === 0 ? 0 : 16,
+                  padding: "8px 20px",
+                  borderRadius: 999,
+                  border: isActive ? "none" : "1px solid #ddd",
+                  background: isActive ? "#E06020" : "transparent",
+                  whiteSpace: "nowrap",
                 }}
                 onMouseEnter={(e) => {
-                  if (!isActive) (e.currentTarget as HTMLElement).style.color = "#444";
+                  if (!isActive) {
+                    (e.currentTarget as HTMLElement).style.borderColor = "#bbb";
+                    (e.currentTarget as HTMLElement).style.color = "#333";
+                  }
                 }}
                 onMouseLeave={(e) => {
-                  if (!isActive) (e.currentTarget as HTMLElement).style.color = "#999";
+                  if (!isActive) {
+                    (e.currentTarget as HTMLElement).style.borderColor = "#ddd";
+                    (e.currentTarget as HTMLElement).style.color = "#666";
+                  }
                 }}
               >
                 {cat}
-                {isActive && (
-                  <motion.div
-                    layoutId="filter-underline"
-                    className="absolute bottom-0 left-0 right-0"
-                    style={{
-                      height: 1,
-                      background: "#111",
-                      left: i === 0 ? 0 : 16,
-                    }}
-                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  />
-                )}
               </button>
             );
           })}
         </div>
 
-        {/* Search */}
-        <div
-          className="flex items-center gap-2 shrink-0"
-          style={{
-            borderBottom: searchFocused ? "1px solid #111" : "1px solid #ddd",
-            paddingBottom: 6,
-            minWidth: 180,
-            transition: "border-color 0.2s",
-          }}
-        >
-          <Search
-            size={13}
-            style={{ color: searchFocused ? "#111" : "#bbb", flexShrink: 0, transition: "color 0.2s" }}
-          />
-          <input
-            ref={searchRef}
-            type="text"
-            placeholder="Search projects…"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={() => setSearchFocused(true)}
-            onBlur={() => setSearchFocused(false)}
+        {/* Search — always on its own line */}
+        <div style={{ width: "100%" }}>
+          <div
+            className="flex items-center gap-3"
             style={{
+              borderRadius: 999,
+              border: searchFocused ? "1px solid #bbb" : "1px solid #ddd",
+              padding: "10px 20px",
+              transition: "border-color 0.2s",
               background: "transparent",
-              border: "none",
-              outline: "none",
-              fontFamily: SANS,
-              fontSize: "12px",
-              color: "#111",
-              width: "100%",
-              letterSpacing: "0.04em",
+              marginBottom: 12,
             }}
-          />
-          <AnimatePresence>
-            {searchQuery && (
-              <motion.button
-                initial={{ opacity: 0, scale: 0.7 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.7 }}
-                transition={{ duration: 0.15 }}
-                onClick={() => setSearchQuery("")}
-                className="cursor-pointer border-none bg-transparent p-0 flex items-center"
-                style={{ color: "#bbb" }}
-              >
-                <X size={12} />
-              </motion.button>
-            )}
-          </AnimatePresence>
+          >
+            <Search
+              size={16}
+              style={{ color: searchFocused ? "#666" : "#bbb", flexShrink: 0, transition: "color 0.2s" }}
+            />
+            <input
+              ref={searchRef}
+              type="text"
+              placeholder="Search projects..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setSearchFocused(true)}
+              onBlur={() => setSearchFocused(false)}
+              style={{
+                background: "transparent",
+                border: "none",
+                outline: "none",
+                fontFamily: SANS,
+                fontSize: "13px",
+                color: "#111",
+                width: "100%",
+                letterSpacing: "0.02em",
+              }}
+            />
+            <AnimatePresence>
+              {searchQuery && (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.7 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.7 }}
+                  transition={{ duration: 0.15 }}
+                  onClick={() => setSearchQuery("")}
+                  className="cursor-pointer border-none bg-transparent p-0 flex items-center"
+                  style={{ color: "#bbb" }}
+                >
+                  <X size={14} />
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </motion.section>
 

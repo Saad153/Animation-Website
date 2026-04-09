@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect, useCallback } from "react";
 import { X, ArrowUpRight, Download } from "lucide-react";
 import { generatePortfolioPDF } from "../utils/generatePortfolioPDF";
+import glogoIcon from "@/assets/glogoIcon.png";
+import glogoIcon1 from "@/assets/logoTrans.png";
+
 
 // Desktop order: Projects — Team — About — Contact — Portfolio
 const NAV_LINKS = [
@@ -10,13 +13,13 @@ const NAV_LINKS = [
   { label: "Team",      path: "/team",      download: false },
   { label: "About",     path: "/about",     download: false },
   { label: "Contact",   path: "/contact",   download: false },
-  { label: "Portfolio", path: "/portfolio", download: true  },
+  // { label: "Portfolio", path: "/portfolio", download: true  },
 ];
 
 // Mobile overlay order: Projects — Portfolio — Team — About — Contact
 const MOBILE_NAV_LINKS = [
   { label: "Projects",  path: "/projects",  download: false },
-  { label: "Portfolio", path: "/portfolio", download: true  },
+  // { label: "Portfolio", path: "/portfolio", download: true  },
   { label: "Team",      path: "/team",      download: false },
   { label: "About",     path: "/about",     download: false },
   { label: "Contact",   path: "/contact",   download: false },
@@ -26,9 +29,9 @@ const MOBILE_NAV_LINKS = [
 function HamburgerIcon() {
   return (
     <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
-      <rect y="0"  width="18" height="1.8" rx="0.9" fill="#111" />
-      <rect y="6"  width="18" height="1.8" rx="0.9" fill="#111" />
-      <rect y="12" width="18" height="1.8" rx="0.9" fill="#111" />
+      <rect y="0"  width="18" height="1.8" rx="0.9" fill="#fff" />
+      <rect y="6"  width="18" height="1.8" rx="0.9" fill="#fff" />
+      <rect y="12" width="18" height="1.8" rx="0.9" fill="#fff" />
     </svg>
   );
 }
@@ -87,7 +90,7 @@ export function Navbar() {
         {!isHome && (
           <motion.div
             key="wordmark"
-            className="fixed z-50"
+            className="fixed z-50 hidden md:block"
             style={{ top: 28, left: 28 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: hidden ? 0 : 1, y: hidden ? -8 : 0 }}
@@ -109,7 +112,11 @@ export function Navbar() {
                 (e.currentTarget as HTMLElement).style.color = isLightBg ? "rgba(0,0,0,0.5)" : "rgba(255,255,255,0.6)";
               }}
             >
-              Gravity
+              <img
+                src={glogoIcon1}
+                alt="Gravity"
+                style={{ height: 60, width: 80, objectFit: "contain", display: "block" }}
+              />
             </Link>
           </motion.div>
         )}
@@ -212,27 +219,45 @@ export function Navbar() {
       </motion.div>
 
       {/* ══════════════════════════════════════════════════════════════
-          MOBILE: top-right pill with hamburger  (below md)
+          MOBILE: full-width orange bar (below md)
       ══════════════════════════════════════════════════════════════ */}
       <motion.div
-        className="fixed z-50 md:hidden"
-        style={{ top: 16, right: 16 }}
+        className="fixed z-50 md:hidden left-0 right-0"
+        style={{ top: 0 }}
         initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: hidden ? 0 : 1, y: hidden ? -10 : 0 }}
+        animate={{ opacity: hidden ? 0 : 1, y: hidden ? -56 : 0 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
-        <button
-          className="flex items-center justify-center rounded-full bg-white cursor-pointer border-none"
+        <div
+          className="flex items-center justify-between"
           style={{
-            boxShadow: "0 2px 20px rgba(0,0,0,0.14), 0 0 0 1px rgba(0,0,0,0.05)",
-            width: 48,
-            height: 48,
+            height: 56,
+            backgroundColor: "#E06020",
+            paddingLeft: 16,
+            paddingRight: 16,
           }}
-          onClick={() => setMobileOpen(true)}
-          aria-label="Open menu"
         >
-          <HamburgerIcon />
-        </button>
+          {/* Left: Gravity Logo (clickable home link) */}
+          <Link to="/" aria-label="Gravity - Home">
+            <img
+              src={glogoIcon}
+              alt="Gravity"
+              style={{
+                height: 36,
+                width: "auto",
+                display: "block",
+              }}
+            />
+          </Link>
+          <button
+            className="flex items-center justify-center cursor-pointer border-none bg-transparent"
+            style={{ width: 48, height: 48 }}
+            onClick={() => setMobileOpen(true)}
+            aria-label="Open menu"
+          >
+            <HamburgerIcon />
+          </button>
+        </div>
       </motion.div>
 
       {/* ══════════════════════════════════════════════════════════════

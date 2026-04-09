@@ -6,7 +6,7 @@ import paPhoto  from "@/assets/32ecbdbe0bf26392c3dd4e4ad738c939b1ab29b0.png";
 const SANS  = "'DM Sans', 'Inter', sans-serif";
 const SERIF = "'Playfair Display', Georgia, serif";
 
-// ─── All 31 team members ──────────────────────────────────────────────────────
+// ─── All 30 team members ──────────────────────────────────────────────────────
 interface Member {
   sr: number;
   name: string;
@@ -18,35 +18,35 @@ interface Member {
 const TEAM: Member[] = [
   { sr: 1,  name: "Afzaal A. Sheikh",   designation: "CEO",                   education: "B.E. (Civil)",              hasPhoto: true  },
   { sr: 2,  name: "Fara Zia Qadir",     designation: "Principal Architect",   education: "B. Arch. & MURP",           hasPhoto: true  },
-  { sr: 3,  name: "Kashif Jamal",       designation: "Chief Engineer",        education: "B.E. (Civil)",              hasPhoto: false },
-  { sr: 4,  name: "M. Farhan Karamat",  designation: "Project Manager",       education: "B. Arch.",                  hasPhoto: false },
-  { sr: 5,  name: "Saadat Israr",       designation: "Construction Manager",  education: "B. Tech. (Civil) & MBA",    hasPhoto: false },
-  { sr: 6,  name: "Rameez Ahmed",       designation: "Construction Manager",  education: "B. Tech. (Civil)",          hasPhoto: false },
-  { sr: 7,  name: "Azeem Siddiqui",     designation: "Site Supervisor",       education: "MBA (HR)",                  hasPhoto: false },
-  { sr: 8,  name: "Saira Mirani",       designation: "HR Manager",            education: "MBA (HR)",                  hasPhoto: false },
-  { sr: 9,  name: "Syed Zahid Hussain", designation: "Admin Manager",         education: "B.A. & DAE (Electronics)",  hasPhoto: false },
-  { sr: 10, name: "Sameer Khalid",      designation: "Senior Architect",      education: "B. Arch.",                  hasPhoto: false },
+  // { sr: 3,  name: "Kashif Jamal",       designation: "Chief Engineer",        education: "B.E. (Civil)",              hasPhoto: false },
+  { sr: 3,  name: "M. Farhan Karamat",  designation: "Architect/Project Manager",       education: "B. Arch.",                  hasPhoto: false },
+  { sr: 4,  name: "Saadat Israr",       designation: "Construction Manager",  education: "B. Tech. (Civil) & MBA",    hasPhoto: false },
+  { sr: 5,  name: "Rameez Ahmed",       designation: "Construction Manager",  education: "B. Tech. (Civil)",          hasPhoto: false },
+  { sr: 6,  name: "Azeem Siddiqui",     designation: "Site Supervisor",       education: "MBA (HR)",                  hasPhoto: false },
+  { sr: 7,  name: "Saira Mirani",       designation: "HR Manager",            education: "MBA (HR)",                  hasPhoto: false },
+  { sr: 8,  name: "Syed Zahid Hussain", designation: "Admin Manager",         education: "B.A. & DAE (Electronics)",  hasPhoto: false },
+  { sr: 9, name: "Sameer Khalid",      designation: "Senior Architect",      education: "B. Arch.",                  hasPhoto: false },
+  { sr: 10, name: "Mikael A. Bhurgri",  designation: "Senior Architect",      education: "B. Arch.",                  hasPhoto: false },
   { sr: 11, name: "Hamza Shahab",       designation: "Project Architect",     education: "B. Arch.",                  hasPhoto: false },
-  { sr: 12, name: "Aziz-Ur-Rehman",    designation: "Project Architect",     education: "B. Arch.",                  hasPhoto: false },
-  { sr: 13, name: "Aneel Kumar",        designation: "Project Architect",     education: "B. Arch.",                  hasPhoto: false },
-  { sr: 14, name: "Mikael A. Bhurgri",  designation: "Senior Architect",      education: "B. Arch.",                  hasPhoto: false },
-  { sr: 15, name: "Syeda Haram Rizwan", designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
-  { sr: 16, name: "Alisha Nadeem",      designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
-  { sr: 17, name: "Aaminah Mansoor",    designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
-  { sr: 18, name: "Marzia Jan",         designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
-  { sr: 19, name: "Aliza Salman",       designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
-  { sr: 20, name: "Sahar Khan",         designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
-  { sr: 21, name: "Adil Mehmood",       designation: "Quantity Surveyor",     education: "D.A.E. (Civil)",            hasPhoto: false },
-  { sr: 22, name: "Wajid Alam",         designation: "Senior Draftsman",      education: "B. Tech. (Civil)",          hasPhoto: false },
-  { sr: 23, name: "Haris Moin",         designation: "Senior Draftsman",      education: "D.A.E. (Civil)",            hasPhoto: false },
-  { sr: 24, name: "Hasan Malik",        designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
-  { sr: 25, name: "Obaid Raju",         designation: "Draftsman",             education: "D.A.E. (Civil) & B.Com.",   hasPhoto: false },
-  { sr: 26, name: "Sheriyar Ali",       designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
-  { sr: 27, name: "Ali Abbas",          designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
-  { sr: 28, name: "Amir-Ul-Haq",        designation: "Senior Accountant",     education: "B. Com.",                   hasPhoto: false },
-  { sr: 29, name: "Shahmeer Imran",     designation: "Assistant Accountant",  education: "I. Com.",                   hasPhoto: false },
-  { sr: 30, name: "Nadia Rahim",        designation: "Sales Director",        education: "—",                         hasPhoto: false },
-  { sr: 31, name: "Rizwan",             designation: "Quantity Surveyor",     education: "—",                         hasPhoto: false },
+  { sr: 12, name: "Aziz-Ur-Rehman",    designation: "Junior Architect",     education: "B. Arch.",                  hasPhoto: false },
+  { sr: 13, name: "Aneel Kumar",        designation: "Junior Architect",     education: "B. Arch.",                  hasPhoto: false },
+  { sr: 14, name: "Syeda Haram Rizwan", designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 15, name: "Alisha Nadeem",      designation: "Interior Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 16, name: "Aaminah Mansoor",    designation: "Interior Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 17, name: "Marzia Jan",         designation: "Interior Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 18, name: "Aliza Salman",       designation: "Interior Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 19, name: "Sahar Khan",         designation: "Interior Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 20, name: "Adil Mehmood",       designation: "Quantity Surveyor",     education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 21, name: "Wajid Alam",         designation: "Senior Draftsman",      education: "B. Tech. (Civil)",          hasPhoto: false },
+  { sr: 22, name: "Haris Moin",         designation: "Senior Draftsman",      education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 23, name: "Hasan Malik",        designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 24, name: "Obaid Raju",         designation: "Draftsman",             education: "D.A.E. (Civil) & B.Com.",   hasPhoto: false },
+  { sr: 25, name: "Sheriyar Ali",       designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 26, name: "Ali Abbas",          designation: "Draftsman",             education: "D.A.E. (Civil)",            hasPhoto: false },
+  { sr: 27, name: "Amir-Ul-Haq",        designation: "Senior Accountant",     education: "B. Com.",                   hasPhoto: false },
+  { sr: 28, name: "Shahmeer Imran",     designation: "Assistant Accountant",  education: "I. Com.",                   hasPhoto: false },
+  { sr: 29, name: "Nadia Rahim",        designation: "Sales Director",        education: "—",                         hasPhoto: false },
+  { sr: 30, name: "Rizwan",             designation: "Quantity Surveyor",     education: "—",                         hasPhoto: false },
 ];
 
 // ─── Department groupings ─────────────────────────────────────────────────────
@@ -54,27 +54,27 @@ const DEPARTMENTS = [
   {
     label: "Engineering & Construction",
     code: "01",
-    members: TEAM.filter((m) => [3,4,5,6,7].includes(m.sr)),
+    members: TEAM.filter((m) => [3,4,5,6].includes(m.sr)),
   },
   {
     label: "Administration & HR",
     code: "02",
-    members: TEAM.filter((m) => [8,9].includes(m.sr)),
+    members: TEAM.filter((m) => [7,8].includes(m.sr)),
   },
   {
     label: "Architecture",
     code: "03",
-    members: TEAM.filter((m) => [10,11,12,13,14,15,16,17,18,19,20].includes(m.sr)),
+    members: TEAM.filter((m) => [9,10,11,12,13,14,15,16,17,18,19].includes(m.sr)),
   },
   {
     label: "Technical & Surveying",
     code: "04",
-    members: TEAM.filter((m) => [21,22,23,24,25,26,27,31].includes(m.sr)),
+    members: TEAM.filter((m) => [21,22,23,24,25,26].includes(m.sr)),
   },
   {
     label: "Finance & Sales",
     code: "05",
-    members: TEAM.filter((m) => [28,29,30].includes(m.sr)),
+    members: TEAM.filter((m) => [27,28,29,30].includes(m.sr)),
   },
 ];
 
@@ -455,7 +455,7 @@ export function TeamPage() {
             pointerEvents: "none",
           }}
         >
-          31
+          30
         </div>
 
         <motion.p
@@ -513,13 +513,13 @@ export function TeamPage() {
               maxWidth: "44ch",
             }}
           >
-            A multidisciplinary studio of 31 professionals spanning architecture,
+            A multidisciplinary studio of 30 professionals spanning architecture,
             engineering, construction management, and technical disciplines —
             headquartered in Karachi since 1993.
           </p>
           <div style={{ display: "flex", gap: 32, flexShrink: 0 }}>
             {[
-              { v: "31", l: "Professionals" },
+              { v: "30", l: "Professionals" },
               { v: "4",  l: "Offices" },
               { v: "30+",l: "Years" },
             ].map((s) => (
@@ -625,10 +625,10 @@ export function TeamPage() {
         }}
       >
         <p style={{ fontFamily: SANS, fontSize: 9, letterSpacing: "0.2em", color: "rgba(255,255,255,0.18)", textTransform: "uppercase", margin: 0 }}>
-          Gravity Studio — Est. 1993, Karachi
+          Gravity Studio — Karachi
         </p>
         <p style={{ fontFamily: SANS, fontSize: 11, color: "rgba(255,255,255,0.25)", margin: 0 }}>
-          31 professionals across Architecture, Engineering, Construction &amp; Management
+          30 professionals across Architecture, Engineering, Construction &amp; Management
         </p>
       </div>
     </div>
