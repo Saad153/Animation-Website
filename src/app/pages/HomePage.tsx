@@ -77,7 +77,7 @@ import pafVfomFront    from "@/assets/52bc6d7b4898187277b1fbc9dbe83b10faa34b6f.p
 import pafVfomAerial   from "@/assets/89f81c652f2e9f13876e822dd6938385b3bb96b2.png";
 import pafVfomEntrance from "@/assets/a69fcac697524958699441c33414e8339ff97c50.png";
 
-// ─── Image pool — all real project images ────────────────────────────────────
+// ─── Image pool — all real project imags ────────────────────────────────────
 const IMAGES = [
   newImg0,             // slot  0 — Aabhi interior store
   newImg13,            // slot  1 — Pearl Towers entrance canopy (was slot 13, promoted)
