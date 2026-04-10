@@ -64,6 +64,38 @@ import pafVfomEntrance  from "@/assets/a69fcac697524958699441c33414e8339ff97c50.
 import pafVfomFront     from "@/assets/52bc6d7b4898187277b1fbc9dbe83b10faa34b6f.png";
 import pafVfomLobby     from "@/assets/5cad965d2ab39db9383cd6eca476d0c240180897.png";
 
+// Project 14 — Challet
+import challet14 from "@/assets/challet14.jpg";
+
+// Project 15 — American
+import american1 from "@/assets/american1.jpg";
+import american2 from "@/assets/american2.jpg";
+import american3 from "@/assets/american3.jpg";
+
+// Project 16 — Cigar Lounge
+import cigar from "@/assets/cigar.jpg";
+
+// Project 17 — Roof Terrace
+import roof from "@/assets/roof.jpg";
+
+// Project 18 — American Restaurant
+import americanRes1 from "@/assets/americanRes1.jpg";
+import americanRes2 from "@/assets/americanRes2.jpg";
+
+// Project 19 — PAF SCHOOL
+import pafSchool from "@/assets/pafSchool.jpg";
+import pafSchool1 from "@/assets/pafSchool1.jpg";
+import pafSchool2 from "@/assets/pafSchool2.jpg";
+import pafSchool3 from "@/assets/pafSchool3.jpg";
+import pafSchool4 from "@/assets/pafSchool4.jpg";
+import pafSchool5 from "@/assets/pafSchool5.jpg";
+import pafSchool6 from "@/assets/pafSchool6.jpg";
+import pafSchool7 from "@/assets/pafSchool7.jpg";
+import pafSchool8 from "@/assets/pafSchool8.jpg";
+import pafSchool9 from "@/assets/pafSchool9.jpg";
+import pafSchool10 from "@/assets/pafSchool10.jpg";
+import pafSchool11 from "@/assets/pafSchool11.jpg";
+import pafSchool12 from "@/assets/pafSchool12.jpg";
 export interface Project {
   id: string;
   title: string;
@@ -279,6 +311,90 @@ export const projects: Project[] = [
     description:
       "A G+1 hospitality complex featuring 52 self-contained suites with kitchens and dining spaces, set amidst lush fruit gardens and private courtyards. The traditional European façade, colonnaded entrance portico, and serene internal courtyards create a retreat of quiet elegance within Karachi.",
     images: [pafVfomAerial, pafVfomEntrance, pafVfomLobby],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "challet",
+    title: "CHALET -14",
+    location: "Karachi",
+    year: "2026",
+    category: "Hospitality",
+    status: "Under Construction",
+    area: "—",
+    image: challet14,
+    description:
+      "This hotel has been renovated keeping the original classic element intact but adding modern elements to redesign the interiors and give it a beautiful new look.",
+    images: [challet14],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "american",
+    title: "American Lounge ",
+    location: "Karachi",
+    year: "2026",
+    category: "Hospitality",
+    status: "Completed",
+    area: "—",
+    image: american1,
+    description:
+      "The lounge is built on the third floor, with backlit onyx bar dominating the space and dark palette and large paintings giving it a moody but glamorous vibe.",
+    images: [american2,american3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "cigar",
+    title: "CIGAR LOUNGE",
+    location: "Karachi",
+    year: "2027",
+    category: "Hospitality",
+    status: "Upcoming Projects",
+    area: "—",
+    image: cigar,
+    description:
+      "Designed for cigar smokers, this wood paneled room ensures every comfort that is required in an ideal cigar lounge.",
+    images: [],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "roof",
+    title: "ROOF TERRACE",
+    location: "",
+    year: "2027",
+    category: "Hospitality",
+    status: "Upcoming Projects",
+    area: "—",
+    image: roof,
+    description:
+      "The roof terrace of this building has open air dining with a central bar for a great dining experience.",
+    images: [],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "americanRes",
+    title: "AMERICAN RESTAURANT",
+    location: "Karachi",
+    year: "2027",
+    category: "Hospitality",
+    status: "Upcoming Projects",
+    area: "—",
+    image: americanRes1,
+    description:
+      "The restaurant is designed in this building to hold up to 30 guests, with a London style vibe, this is the perfect space to relax and entertain guests.",
+    images: [americanRes2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "pafSchool",
+    title: "PAF FINISHING SCHOOL G+1",
+    location: "Lahore",
+    year: "2025",
+    category: "Educational",
+    status: "Completed",
+    area: "4 ACRES",
+    image: pafSchool,
+    description:
+      "3 buildings complex, housing a hostel building, a swimming pool complex and a main building with an auditorium – the building complex has received numerous architectural awards as well.",
+    images: [pafSchool1, pafSchool2, pafSchool3, pafSchool4, pafSchool5, pafSchool6, pafSchool7, pafSchool8, pafSchool9, pafSchool10,pafSchool11,pafSchool12],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
 ];

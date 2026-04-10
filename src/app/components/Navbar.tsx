@@ -7,6 +7,9 @@ import glogoIcon from "@/assets/glogoIcon.png";
 import glogoIcon1 from "@/assets/logoTrans.png";
 
 
+
+
+
 // Desktop order: Projects — Team — About — Contact — Portfolio
 const NAV_LINKS = [
   { label: "Projects",  path: "/projects",  download: false },
@@ -238,6 +241,7 @@ export function Navbar() {
           }}
         >
           {/* Left: Gravity Logo (clickable home link) */}
+          {!isHome && (
           <Link to="/" aria-label="Gravity - Home">
             <img
               src={glogoIcon}
@@ -249,6 +253,9 @@ export function Navbar() {
               }}
             />
           </Link>
+          )}
+
+          {isHome && <div style={{ width: 36 }} />}
           <button
             className="flex items-center justify-center cursor-pointer border-none bg-transparent"
             style={{ width: 48, height: 48 }}

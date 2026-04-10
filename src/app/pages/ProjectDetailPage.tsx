@@ -29,6 +29,7 @@ const SUBTITLES: Record<string, string> = {
   "gravity-tower-1":        "Glass, Sky & the Sea",
   "paf-chalet-resort":      "Mountain Living, Prefabricated Precision",
   "paf-vfom-52-suites":     "52 Suites, One European Soul",
+  "challet": "Challet",
 };
 
 const QUOTES: Record<string, { text: string; author: string; role: string }> = {
@@ -102,6 +103,36 @@ const QUOTES: Record<string, { text: string; author: string; role: string }> = {
     author: "Design Director",
     role: "Gravity Studio",
   },
+  "challet": {
+    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "american": {
+    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "cigar": {
+    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "roof": {
+    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "americanRes": {
+    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
+  "pafSchool": {
+    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
 };
 
 const CONCEPTS: Record<string, string> = {
@@ -133,8 +164,19 @@ const CONCEPTS: Record<string, string> = {
     "The PAF Chalet Mountain Resort at Kalabagh represents a fundamentally different typology from any other project in the studio's portfolio — not a single monumental building, but a dispersed community of lightweight structures woven into the forested hillside. The chalets are prefabricated metal structures, precision-manufactured and erected on site with minimal ground disturbance, their steeply pitched dark-steel rooflines and timber-clad walls echoing the geometry of the surrounding pine canopy. Each chalet — available in 2- and 3-bedroom configurations — is designed as a complete residence: full kitchen, spacious lounge, and generous terraces oriented deliberately toward the mountain panorama so that every room is framed by the landscape. The main building adopts a contrasting architectural language — a flowing, aerodynamic white form with a full-perimeter glazed restaurant volume that appears to float above the hillside. From within its dining rooms, the mountains of Kalabagh are the wallpaper. The construction sequence — steel frames rising among the pines — is itself a form of site poetry: lightweight, reversible, and respectful of the ecology it inhabits. The resort is a project about restraint as much as ambition; about building only as much as the mountain will permit, and making every square metre of it extraordinary.",
   "paf-vfom-52-suites":
     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
-};
-
+  "challet":
+    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+  "american":
+    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+  "cigar":
+    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+  "roof":
+    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+  "americanRes":
+    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+  "pafSchool":
+    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+  };
 const SIZE_MAP: Record<string, string> = {
   "High Rise Buildings": "varies by tower",
   Educational: "—",
@@ -536,7 +578,7 @@ export function ProjectDetailPage() {
       {/* ════════════════════════════════════════════════════════════════════
           FULL-BLEED IMAGE — first scroll reveal
       ════════════════════════════════════════════════════════════════════ */}
-      <motion.div
+      {/* <motion.div
         className="relative overflow-hidden"
         style={{ height: "clamp(420px, 65vh, 800px)" }}
         initial={{ opacity: 0, scale: 1.04 }}
@@ -550,7 +592,7 @@ export function ProjectDetailPage() {
           className="w-full h-full object-cover"
           style={{ display: "block" }}
         />
-        {/* Subtle dark overlay at bottom */}
+        {/* Subtle dark overlay at bottom 
         <div
           className="absolute inset-x-0 bottom-0"
           style={{ height: "30%", background: "linear-gradient(to top, rgba(0,0,0,0.35), transparent)" }}
@@ -567,9 +609,7 @@ export function ProjectDetailPage() {
         </div>
       </motion.div>
 
-      {/* ════════════════════════════════════════════════════════════════════
-          CONCEPT — editorial text section
-      ���══════════════════════════════════════════════════════════════════ */}
+
       <div
         className="px-[clamp(28px,6vw,96px)]"
         style={{ paddingTop: "clamp(80px,10vw,140px)", paddingBottom: "clamp(60px,8vw,100px)" }}
@@ -616,7 +656,7 @@ export function ProjectDetailPage() {
             </p>
           </FadeUp>
         </div>
-      </div>
+      </div> */}
 
       {/* ════════════════════════════════════════════════════════════════════
           GALLERY CAROUSEL — cinematic sliding
@@ -701,7 +741,7 @@ export function ProjectDetailPage() {
       {/* ════════════════════════════════════════════════════════════════════
           PULL QUOTE — full-width dark section
       ═══════════════════════════════════════════════════════════════════ */}
-      <div style={{ background: "#0a0a0a", padding: "clamp(80px,10vw,140px) clamp(28px,6vw,96px)" }}>
+      {/* <div style={{ background: "#0a0a0a", padding: "clamp(80px,10vw,140px) clamp(28px,6vw,96px)" }}>
         <div style={{ maxWidth: "80ch" }}>
           <SlideUp>
             <p
@@ -739,12 +779,12 @@ export function ProjectDetailPage() {
             </div>
           </FadeUp>
         </div>
-      </div>
+      </div> */}
 
       {/* ════════════════════════════════════════════════════════════════════
           MATERIALS — editorial text
       ════════════════════════════════════════════════════════════════════ */}
-      <div
+      {/* <div
         className="px-[clamp(28px,6vw,96px)]"
         style={{ paddingTop: "clamp(80px,10vw,140px)", paddingBottom: "clamp(60px,8vw,100px)" }}
       >
@@ -785,7 +825,7 @@ export function ProjectDetailPage() {
             </p>
           </FadeUp>
         </div>
-      </div>
+      </div> */}
 
       {/* ════════════════════════════════════════════════════════════════════
           TWO-COLUMN IMAGE GRID — real project images
@@ -825,7 +865,7 @@ export function ProjectDetailPage() {
       {/* ════════════════════════════════════════════════════════════════════
           FLOOR PLANS
       ════════════════════════════════════════════════════════════════════ */}
-      <div
+      {/* <div
         className="px-[clamp(28px,6vw,96px)]"
         style={{ paddingBottom: "clamp(80px,10vw,140px)", borderTop: "0.5px solid #e8e8e8", paddingTop: "clamp(60px,8vw,100px)" }}
       >
@@ -918,12 +958,12 @@ export function ProjectDetailPage() {
             ))}
           </div>
         </FadeUp>
-      </div>
+      </div> */}
 
       {/* ══════════════════════════════════════════════════════���═════════════
           CLOSING FULL-BLEED IMAGE
       ════════════════════════════════════════════════════════════════════ */}
-      <motion.div
+      {/* <motion.div
         className="relative overflow-hidden"
         style={{ height: "clamp(380px, 60vh, 700px)" }}
         initial={{ opacity: 0 }}
@@ -949,7 +989,7 @@ export function ProjectDetailPage() {
             Gravity Architecture Studio — {project.year}
           </p>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* ════════════════════════════════════════════════════════════════════
           PROJECT NAVIGATION — prev / next
