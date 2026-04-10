@@ -34,9 +34,10 @@ export function PortfolioFAB() {
         bottom: 24,
         right: 88, // WhatsApp FAB width (56) + gap (8) + original right (24) = 88
         zIndex: 9999,
-        width: 56,
+        width: 90,
         height: 56,
-        borderRadius: "50%",
+        // padding: "16px 20px",
+        borderRadius: "35px",
         backgroundColor: "#E06020",
         display: "flex",
         alignItems: "center",
@@ -49,15 +50,20 @@ export function PortfolioFAB() {
       className="md:hidden" // Only show on mobile
     >
       {downloading ? (
+        <div  style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          <span style={{ color: 'white'}}>Profile</span>
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
         >
-          <Download size={24} color="white" />
+          <Download size={16} color="white" style={{ marginLeft: '5px' }} />
         </motion.div>
+        </div>
       ) : (
-        <Download size={24} color="white" />
+        <span style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>Profile
+        <Download size={16} color="white" style={{ marginLeft: '5px' }} />
+        </span>
       )}
     </motion.button>
   );
