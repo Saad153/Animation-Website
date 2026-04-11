@@ -126,7 +126,7 @@ async function drawCover(doc: jsPDF) {
   doc.setFont("helvetica", "normal");
   doc.setFontSize(7.5);
   doc.setTextColor(...RUST);
-  text(doc, "PORTFOLIO  ·  SELECTED WORKS  2022 – 2025", 16, H / 2 + 28);
+  text(doc, "PORTFOLIO  ·  SELECTED WORKS  2022 – 2027", 16, H / 2 + 28);
 
   // Bottom rule + footer
   rule(doc, H - 30, INK, 0.12);
