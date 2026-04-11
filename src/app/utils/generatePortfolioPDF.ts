@@ -94,7 +94,7 @@ async function drawCover(doc: jsPDF) {
   doc.setTextColor(...INK);
   doc.setGState(doc.GState({ opacity: 0.4 }));
   text(doc, "GRAVITY ARCHITECTURE STUDIO", 16, 18);
-  text(doc, `EST. 1993  ·  KARACHI`, W - 22, 18, { align: "right" });
+  text(doc, ` KARACHI`, W - 22, 18, { align: "right" });
   doc.setGState(doc.GState({ opacity: 1 }));
 
   // Large vertical studio number / year
@@ -174,14 +174,17 @@ async function drawIntro(doc: jsPDF) {
 
   // Body text
   const body = [
-    "Gravity is a Karachi-based architecture and interior design studio",
-    "established in 1993. We believe that buildings should feel inevitable —",
-    "as if they could not exist in any other form or place. We work across",
-    "high-rise residential, commercial, hospitality, educational, and",
+    "Over the past two decades, Gravity has established itself as a leading",
+    "firm in architecture, interior design, and construction services in",
+    "Pakistan. We are renowned for our impressive range of designs,",
+    "commitment to service excellence, and high-quality standards. To date,",
+    "we have completed more than 200 diverse projects",
+    "",
+    "We work across high-rise residential, commercial, hospitality, educational, and",
     "interior typologies, guided by material honesty and contextual care.",
     "",
     "Each project begins with a deep reading of its site, programme, and",
-    "cultural context — and ends only when structure, skin, and soul align.",
+    "cultural context and ends only when structure, skin, and soul align.",
     "From Karachi's dense urban fabric to Pakistan's mountain landscapes,",
     "we bring the same rigour and warmth to every scale of work.",
     "",
@@ -207,7 +210,7 @@ async function drawIntro(doc: jsPDF) {
   const stats = [
     { value: "30+", label: "Years of Practice" },
     { value: String(projects.length), label: "Built Projects" },
-    { value: "31", label: "Team Members" },
+    { value: "30", label: "Team Members" },
     { value: "4", label: "Office Locations" },
   ];
 
@@ -233,7 +236,7 @@ async function drawIntro(doc: jsPDF) {
   doc.setFont("helvetica", "normal");
   doc.setFontSize(7);
   doc.setGState(doc.GState({ opacity: 0.3 }));
-  text(doc, "GRAVITY ARCHITECTURE STUDIO  ·  PORTFOLIO 2022–2025", W / 2, H - 16, { align: "center" });
+  text(doc, "GRAVITY ARCHITECTURE STUDIO  ·  PORTFOLIO 2022–2026", W / 2, H - 16, { align: "center" });
   doc.setGState(doc.GState({ opacity: 1 }));
 }
 
@@ -304,7 +307,7 @@ async function drawProject(
 
   const meta = [
     { label: "LOCATION", value: project.location },
-    { label: "YEAR",     value: project.year },
+    // { label: "YEAR",     value: project.year },
     { label: "STATUS",   value: project.status },
   ];
 
@@ -386,7 +389,7 @@ async function drawBackCover(doc: jsPDF) {
   doc.setFontSize(9);
   doc.setTextColor(247, 245, 240);
   doc.setGState(doc.GState({ opacity: 0.65 }));
-  text(doc, "ARCHITECTURE  ·  INTERIORS  ·  EST. 1993", W / 2, H * 0.2 + 14, { align: "center" });
+  text(doc, "ARCHITECTURE  ·  INTERIORS ", W / 2, H * 0.2 + 14, { align: "center" });
   doc.setGState(doc.GState({ opacity: 1 }));
 
   // Dividing rule at top/cream boundary
@@ -408,8 +411,8 @@ async function drawBackCover(doc: jsPDF) {
 
   const contacts = [
     { label: "EMAIL",   value: "gravity.dnc@gmail.com" },
-    { label: "KARACHI", value: "Architecture & Interiors — DHA Phase 6" },
-    { label: "KARACHI", value: "Furniture & Interiors — DHA Phase 5" },
+    { label: "KARACHI", value: "Architecture & Interiors — DHA Phase 2" },
+    // { label: "KARACHI", value: "Furniture & Interiors — DHA Phase 5" },
     { label: "LAHORE",  value: "Address coming soon" },
     { label: "ISLAMABAD", value: "Address coming soon" },
   ];

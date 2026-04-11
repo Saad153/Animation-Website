@@ -26,12 +26,14 @@ export default defineConfig({
         manualChunks: {
           // Vendor chunks
           'html2canvas': ['html2canvas'],
+          'jspdf': ['jspdf'],
           'purify': ['dompurify'],
           'motion': ['motion/react'],
           'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router'],
         },
       },
     },
-    chunkSizeWarningLimit: 600,
+    chunkSizeWarningLimit: 700,
   },
 })

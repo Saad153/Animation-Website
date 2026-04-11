@@ -181,9 +181,6 @@ interface ColConfig {
   startOffset: number;
 }
 
-const location = useLocation();
-const isHome = location.pathname === "/";
-
 const COL_CONFIGS: ColConfig[] = [
   {
     heights:    [280, 200, 0, 240, 260, 300, 0, 280, 200, 0, 260, 240],
@@ -526,7 +523,8 @@ function ScrollHint({ visible }: { visible: boolean }) {
 
 // ── Main HomePage ────────────────────────────────────────────────────────────
 export function HomePage() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);  
+  const location = useLocation();  
   const [hasScrolled, setHasScrolled]       = useState(false);
   const [introComplete, setIntroComplete]   = useState(false);
   const [isMobile, setIsMobile]             = useState(() => window.innerWidth <= 768);

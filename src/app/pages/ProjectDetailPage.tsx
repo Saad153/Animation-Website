@@ -133,6 +133,11 @@ const QUOTES: Record<string, { text: string; author: string; role: string }> = {
     author: "Design Director",
     role: "Gravity Studio",
   },
+  "atts": {
+    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+    author: "Design Director",
+    role: "Gravity Studio",
+  },
 };
 
 const CONCEPTS: Record<string, string> = {
@@ -181,10 +186,10 @@ const SIZE_MAP: Record<string, string> = {
   "High Rise Buildings": "varies by tower",
   Educational: "—",
   "IT Parks": "—",
-  Residential: "4,200 m²",
-  Commercial: "18,500 m²",
-  "Mixed Use": "32,000 m²",
-  Hospitality: "12,400 m²",
+  Residential: "_",
+  Commercial: "_",
+  "Mixed Use": "_",
+  Hospitality: "_",
 };
 
 // ─── Easing ───────────────────────────────────────────────────────────────────
@@ -334,7 +339,7 @@ export function ProjectDetailPage() {
   ];
 
   const infoItems = [
-    { label: "Time span",  value: timespan },
+    // { label: "Time span",  value: timespan },
     { label: "Site area",  value: size },
     { label: "Status",     value: project.status || "Completed" },
     { label: "Location",   value: project.location },
@@ -424,8 +429,8 @@ export function ProjectDetailPage() {
               <motion.h1
                 className="m-0 p-0"
                 style={{
-                  fontSize: "clamp(52px, 9vw, 130px)",
-                  fontWeight: 300,
+                  fontSize: "clamp(52px, 9vw, 100px)",
+                  fontWeight: 200,
                   lineHeight: 0.92,
                   letterSpacing: "-0.025em",
                   color: "#fff",
@@ -440,7 +445,7 @@ export function ProjectDetailPage() {
             </div>
 
             {/* Year badge */}
-            <motion.div
+            {/* <motion.div
               className="flex items-center gap-4 mt-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -461,7 +466,7 @@ export function ProjectDetailPage() {
               >
                 {project.year}
               </span>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Bottom-right: scroll hint */}

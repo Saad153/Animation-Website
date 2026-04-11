@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { Search, X } from "lucide-react";
 import { projects } from "../data/projects";
 
-const CATEGORIES = ["All", "High Rise Buildings", "Residential", "Commercial Buildings", "Hospitality", "Educational", "IT Parks"];
+const CATEGORIES = ["All", "High Rise Buildings", "Residential", "Commercial Buildings", "Hospitality", "Educational", "IT Parks", "Commercial"];
 
 const SERIF = "'Playfair Display', 'Georgia', serif";
 const SANS = "'DM Sans', 'Inter', 'Helvetica Neue', sans-serif";
@@ -396,7 +396,7 @@ export function ProjectsPage() {
           Gravity
         </p>
         <p style={{ fontFamily: SANS, fontSize: "10px", color: "#ccc", letterSpacing: "0.08em" }}>
-          Karachi — Est. 1993
+          Karachi
         </p>
       </footer>
     </div>

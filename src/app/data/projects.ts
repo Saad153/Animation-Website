@@ -96,6 +96,69 @@ import pafSchool9 from "@/assets/pafSchool9.jpg";
 import pafSchool10 from "@/assets/pafSchool10.jpg";
 import pafSchool11 from "@/assets/pafSchool11.jpg";
 import pafSchool12 from "@/assets/pafSchool12.jpg";
+
+// Project 20 — ATTS
+import atts from "@/assets/atts.jpg";
+import atts1 from "@/assets/atts1.jpg";
+
+// Project 21 — PTTS
+import ptts from "@/assets/ptts.jpg";
+import ptts1 from "@/assets/ptts1.jpg";
+
+// Project 22 — Monument
+import monumentPAF from "@/assets/monumentPAF.jpg";
+
+// Project 23 — Shifa
+import shifa from "@/assets/shifa.jpg";
+import shifa2 from "@/assets/shifa2.jpg";
+import shifa3 from "@/assets/shifa3.jpg";
+
+// Project 24 — Monument
+import alpha from "@/assets/alpha.jpg";
+import alpha2 from "@/assets/alpha2.jpg";
+
+// Project 25 — Malir School
+import malir from "@/assets/malirSchool.jpg";
+import malir2 from "@/assets/malirSchool2.jpg";
+
+// Project 26 — PAF WAR
+import pafWar from "@/assets/pafWar.jpg";
+
+// Project 28 — Malir School
+import pfChang from "@/assets/pfChang.jpg";
+import pfChang2 from "@/assets/pfChang2.jpg";
+import pfChang3 from "@/assets/pfChang3.jpg";
+
+// Project 29 — Malir School
+import albaraka from "@/assets/albaraka.jpg";
+import albaraka2 from "@/assets/albaraka2.jpg";
+import albaraka3 from "@/assets/albaraka3.jpg";
+import albaraka4 from "@/assets/albaraka4.jpg";
+
+// Project 30 — Amadeus Office
+import amadeus from "@/assets/amadeus.jpg";
+import amadeus2 from "@/assets/amadeus2.jpg";
+
+// Project 31 — Advans
+import advans from "@/assets/advans.jpg";
+import advans2 from "@/assets/advans2.jpg";
+import advans3 from "@/assets/advans3.jpg";
+
+// Project 32 — SEF OFFICE
+import sef from "@/assets/sefOffice.jpg";
+import sef2 from "@/assets/sefOffice2.jpg";
+import sef3 from "@/assets/sefOffice3.jpg";
+
+// Project 33 — Farid Supermart
+import farid from "@/assets/farid.jpg";
+import farid1 from "@/assets/farid1.jpg";
+import farid2 from "@/assets/farid2.jpg";
+import farid3 from "@/assets/farid3.jpg";
+
+// Project 34 — Silver Shop
+import silver from "@/assets/silver.jpg";
+import silver1 from "@/assets/silver1.jpg";
+
 export interface Project {
   id: string;
   title: string;
@@ -395,6 +458,202 @@ export const projects: Project[] = [
     description:
       "3 buildings complex, housing a hostel building, a swimming pool complex and a main building with an auditorium – the building complex has received numerous architectural awards as well.",
     images: [pafSchool1, pafSchool2, pafSchool3, pafSchool4, pafSchool5, pafSchool6, pafSchool7, pafSchool8, pafSchool9, pafSchool10,pafSchool11,pafSchool12],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "atts",
+    title: "ATTS COLLEGE KORANGI PAF BASE",
+    location: "Karachi",
+    year: "2025",
+    category: "Educational",
+    status: "Completed",
+    area: "9000 SqFt",
+    image: atts,
+    description:
+      "Admin trade and training Centre is a v shaped building built facing an existing coconut tree grove, with the central form hosing the vertical circulation and the ‘arms ‘linking the corridors to the classroom. The building offers a very elegant design and ease of student’s access, while being naturally ventilated without any electrical consumption.",
+    images: [atts1],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "ptts",
+    title: "PTTS COLLEGE POST TRADING CENTER",
+    location: "Karachi",
+    year: "2025",
+    category: "Educational",
+    status: "Completed",
+    area: "90,000 SqFt",
+    image: ptts,
+    description:
+      "The post trade training center was built next to the ATTS building and is similar in design and function to the PTTS.",
+    images: [ptts1],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "monumentPAF",
+    title: "MONUMENT PAF BASE KORANGI",
+    location: "Karachi",
+    year: "2025",
+    category: "Educational",
+    status: "Completed",
+    area: "",
+    image: monumentPAF,
+    description:
+      "In the same base, a monument was designed to symbolize the PAF base’s educational standing at the Korangi base and its many educational centers at the base.",
+    images: [],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "shifa",
+    title: "SHIFA UNIVERSITY",
+    location: "Islamabad",
+    year: "2025",
+    category: "Educational",
+    status: "Under Construction",
+    area: "100000 SqFt",
+    image: shifa,
+    description:
+      "Designed for the medical students returning from the US, the Shifa University is a small building that houses all the classrooms and labs in a neo traditional brick building.",
+    images: [shifa2, shifa3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "alpha",
+    title: "ALPHA SCHOOL",
+    location: "Karachi",
+    year: "2025",
+    category: "Educational",
+    status: "Completed",
+    area: "",
+    image: alpha,
+    description:
+      "Alpha school was a renovation project converting an old residence into a school for the clients.",
+    images: [alpha2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "malir",
+    title: "MALIR SCHOOL",
+    location: "Karachi",
+    year: "2025",
+    category: "Educational",
+    status: "Completed",
+    area: "",
+    image: malir,
+    description:
+      "The Malir School was a building for elementary till	O-level students, catering to the many new residents in the area. The building has open corridors along the classrooms intercepted by colorful bands that also hide the MEP and provide security and shade.",
+    images: [malir2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "pafWar",
+    title: "PAF WAR COLLEGE EXTERIOR & INTERIOR",
+    location: "Karachi",
+    year: "2025",
+    category: "Educational",
+    status: "Completed",
+    area: "",
+    image: pafWar,
+    description:
+      "This was a renovation project where the entire college got a new facade and upgraded optician’s entrance lobbies.",
+    images: [],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "pfChang",
+    title: "PF CHANG’S",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: pfChang,
+    description:
+      "This commercial interior was designed to have the restaurant on 3 levels and bespoke furniture.",
+    images: [pfChang2, pfChang3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "albaraka",
+    title: "AL-BARAKA BANK ",
+    location: "NASTP Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: albaraka,
+    description:
+      "This small bank was designed under an escalator space in the building and had many unusual design elements due to its unique location.",
+    images: [albaraka2, albaraka3, albaraka4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "amadeus",
+    title: "AMADEUS OFFICE",
+    location: "NASTP Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: amadeus,
+    description:
+      "This office has a small footprint; it is built across two levels and contains the company’s training and conference rooms.",
+    images: [amadeus2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "advans",
+    title: "ADVANS MICRO FINANCE BANK",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: advans,
+    description:
+      "This bank has a casual relaxed vibe, encouraging the users to interact and share thoughts.",
+    images: [advans2, advans3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "sef",
+    title: "SEF OFFICE",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: sef,
+    description:
+      "Sindh education foundation’s headquarters designed with a lot of Sindhi cultural elements in mind, this interior draws on both modern and traditional element.",
+    images: [sef2, sef3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "farid",
+    title: "FARID’S SUPERMARKET",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: farid,
+    description:
+      "This super was designed with to have numerous products and services including bakery, fish, butchers, cosmetics etc. besides the general supermarket items in a very beautiful boutique setting where customers could enjoy their time in a beautiful environment.",
+    images: [farid1, farid2, farid3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "silver",
+    title: "SILVER SHOP",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: silver,
+    description:
+      "This small outlet was designed to display the client’s unique silver products in an airy and elegant setting.",
+    images: [silver1],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
 ];

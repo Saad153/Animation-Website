@@ -515,7 +515,7 @@ export function TeamPage() {
           >
             A multidisciplinary studio of 30 professionals spanning architecture,
             engineering, construction management, and technical disciplines —
-            headquartered in Karachi since 1993.
+            headquartered in Karachi.
           </p>
           <div style={{ display: "flex", gap: 32, flexShrink: 0 }}>
             {[
