@@ -212,6 +212,17 @@ import creek2 from "@/assets/creek2.jpg";
 import creek3 from "@/assets/creek3.jpg";
 import creek4 from "@/assets/creek4.jpg";
 
+// Project 46  FITNESS CENTRE
+import fitness from "@/assets/fitness.jpg";
+import fitness2 from "@/assets/fitness2.jpg";
+
+// Project 47  CREEK VIEW MANORA 
+import squash from "@/assets/squash.jpg";
+import squash2 from "@/assets/squash2.jpg";
+import squash3 from "@/assets/squash3.jpg";
+import squash4 from "@/assets/squash4.jpg";
+import squash5 from "@/assets/squash5.jpg";
+
 export interface Project {
   id: string;
   title: string;
@@ -350,7 +361,7 @@ export const projects: Project[] = [
     title: "Embassy Gardens G+3",
     location: "Bahria Town, Islamabad",
     year: "2023",
-    category: "Residential",
+    category: "High Rise Buildings",
     status: "Completed",
     area: "Bahria Town",
     image: embassyCompleted,
@@ -875,6 +886,36 @@ export const projects: Project[] = [
       `This beautiful creek facing building has a giant sail and is inspired by marine architecture both on the outside and its interior elements. It has suites on the top floors and dining and lounging on the lower floors.
       `,
     images: [creek2, creek3, creek4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "fitness",
+    title: "PNS IQBAL FITNESS CENTRE",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Under Construction",
+    area: "",
+    image: fitness,
+    description:
+      `This gym is built for marines by the harbor on a narrow plot of land, and is designed to offer all types of gym faculties along with a practice pool and steam room and paddle court and dining space..
+      `,
+    images: [fitness2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "squash",
+    title: "SQUASH COMPLEX ",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: squash,
+    description:
+      `A ground plus building was renovated to have a large championship court and several smaller courts. Having new interior and exteriors, the building now hosts many international championships.
+      `,
+    images: [squash2, squash2, squash3, squash4, squash5],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
 ];

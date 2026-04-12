@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { Search, X } from "lucide-react";
 import { projects } from "../data/projects";
 
-const CATEGORIES = ["All", "High Rise Buildings", "Residential", "Commercial Buildings", "Hospitality", "Educational", "IT Parks", "Commercial"];
+const CATEGORIES = ["All", "High Rise Buildings", "Commercial Buildings", "Hospitality", "Educational", "IT Parks", "Commercial"];
 
 const SERIF = "'Playfair Display', 'Georgia', serif";
 const SANS = "'DM Sans', 'Inter', 'Helvetica Neue', sans-serif";
