@@ -342,7 +342,7 @@ export function ProjectsPage() {
                     >
                       {project.location}
                       <span style={{ marginLeft: 8, marginRight: 8, color: "#ddd" }}>·</span>
-                      {project.year}
+                      {/* {project.year} */}
                     </p>
                   </div>
                 </motion.article>

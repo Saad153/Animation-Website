@@ -159,6 +159,59 @@ import farid3 from "@/assets/farid3.jpg";
 import silver from "@/assets/silver.jpg";
 import silver1 from "@/assets/silver1.jpg";
 
+// Project 35 — HSY MANSON
+import hsy from "@/assets/hsy.jpg";
+import hsy2 from "@/assets/hsy2.jpg";
+import hsy3 from "@/assets/hsy3.jpg";
+import hsy4 from "@/assets/hsy4.jpg";
+
+// Project 36 — Deepak
+import deepak from "@/assets/deepak.jpg";
+import deepak2 from "@/assets/deepak2.jpg";
+
+// Project 37 — SONRAJ
+import sonraj from "@/assets/sonraj.jpg";
+import sonraj2 from "@/assets/sonraj2.jpg";
+import sonraj3 from "@/assets/sonraj3.jpg";
+import sonraj4 from "@/assets/sonraj4.jpg";
+import sonraj5 from "@/assets/sonraj5.jpg";
+
+// Project 38  GOLFER
+import golfer from "@/assets/golfer.jpg";
+import golfer2 from "@/assets/golfer2.jpg";
+import golfer3 from "@/assets/golfer3.jpg";
+import golfer4 from "@/assets/golfer4.jpg";
+
+// Project 39  OUTDOOR
+import outdoor from "@/assets/outdoor.jpg";
+
+// Project 40  SNACKBAR
+import snackbar from "@/assets/snackbar.jpg";
+
+// Project 41  ZEBUNNISA 
+import zebunnisa from "@/assets/snackbar2.jpg";
+import zebunnisa2 from "@/assets/snackbar3.jpg";
+
+// Project 42  MAISON SONRAJ 
+import maison from "@/assets/maison.jpg";
+import maison2 from "@/assets/maison2.jpg";
+
+// Project 43  MALIR INDUSTRIAL PARK 
+import malirInd from "@/assets/malirInd.jpg";
+import malirInd2 from "@/assets/malirInd2.jpg";
+
+// Project 44  FUCHSIA 
+import fuchsia from "@/assets/fuchsia.jpg";
+import fuchsia2 from "@/assets/fuchsia2.jpg";
+import fuchsia3 from "@/assets/fuchsia3.jpg";
+import fuchsia4 from "@/assets/fuchsia4.jpg";
+
+// Project 45  CREEK VIEW MANORA 
+import creek from "@/assets/creek.jpg";
+import creek2 from "@/assets/creek2.jpg";
+import creek3 from "@/assets/creek3.jpg";
+import creek4 from "@/assets/creek4.jpg";
+
 export interface Project {
   id: string;
   title: string;
@@ -654,6 +707,174 @@ export const projects: Project[] = [
     description:
       "This small outlet was designed to display the client’s unique silver products in an airy and elegant setting.",
     images: [silver1],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "hsy",
+    title: "HSY MANSION",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: hsy,
+    description:
+      `This stone residence dating to the British times is a heritage building facing Mohatta palace.
+      Given its beautiful architecture the store was designed on the two levels to highlight the existing floors and internal architecture of windows and ceilings while moldings and paintings were added to enhance the walls and keep the furniture in the same colonial language.
+      `,
+    images: [hsy2, hsy3, hsy4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "deepak",
+    title: "DEEPAK PERWANI",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: deepak,
+    description:
+      `This shop in Dolmen mall has a backlit mirror ceiling, the design of which makes the shop appear twice as large, open and glamorous.
+      The rest of the design elements, like the oversized custom-made Venetian mirrors have the shop its distinct personality.
+      `,
+    images: [deepak2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "sonraj",
+    title: "MAISON SONRAJ",
+    location: "Phase 5 Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: sonraj,
+    description:
+      `This luxury perfume store takes its cues from a French villa design, and white marble, classic colors dominate its overall aesthetic.
+      `,
+    images: [sonraj2, sonraj3, sonraj4, sonraj5],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "golfer",
+    title: "GOLFER’S LOUNGE",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: golfer,
+    description:
+      `This lounge at the golf club is designed to give respite to the golfers after a long day of golfing.
+      `,
+    images: [golfer2, golfer3, golfer4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "outdoor",
+    title: "OUTDOOR DINING ",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Under Construction",
+    area: "10,332 SqFt",
+    image: outdoor,
+    description:
+      `Outdoor dining area in front of the creek is designed to blend in with the colonial architect of the golf club.
+      With its tapered roofs and waterfront setting, this setting offers an idyllic space for diners to enjoy the cool evenings of Karachi.
+      `,
+    images: [],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "snackbar",
+    title: "SNACK BAR & GOLFER TERRACE",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Under Construction",
+    area: "",
+    image: snackbar,
+    description:
+      `This bakery and coffee shop along with the terrace lounge have been redesigned to give it a beautiful new interior, keeping with its idyllic setting.
+      `,
+    images: [],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "zebunnisa",
+    title: "COLLECTIBLES ZEBUNISSA STREET",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "",
+    area: "",
+    image: zebunnisa,
+    description:
+      `-
+      `,
+    images: [zebunnisa2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "maison",
+    title: "MAISON SONRAJ",
+    location: "Lahore Dollmen Mall",
+    year: "2025",
+    category: "Commercial",
+    status: "Under Construction",
+    area: "",
+    image: maison,
+    description:
+      `
+      `,
+    images: [maison2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "malirInd",
+    title: "MALIR INDUSTRIAL PARK SITE OFFICE",
+    location: "Malir Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Under Construction",
+    area: "",
+    image: malirInd,
+    description:
+      `This industrial area site office was conceived as a modern interior, incorporating the company logo as a theme in ceilings, paintings, the grey beige palette making the space feel open and modern, and the client walks through the office with seamlessly integrated technology and interior layouts, where he can enjoy a completely submersible experience of what the park and its amenities would offer.
+      `,
+    images: [malirInd2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "fuchsia",
+    title: "FUCHSIA RESTAURANT",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Completed",
+    area: "",
+    image: fuchsia,
+    description:
+      `This first-floor restaurant was designed as steel structure over an existing restaurant and the interior is in cool earthy tones, inspired by nature, with skylights and windows bringing in lots of light.
+      `,
+    images: [fuchsia2, fuchsia3, fuchsia4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "creek",
+    title: "CREEK VIEW AT MANORA ",
+    location: "Karachi",
+    year: "2025",
+    category: "Commercial",
+    status: "Under Construction",
+    area: "4,392 SqFt",
+    image: creek,
+    description:
+      `This beautiful creek facing building has a giant sail and is inspired by marine architecture both on the outside and its interior elements. It has suites on the top floors and dining and lounging on the lower floors.
+      `,
+    images: [creek2, creek3, creek4],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
 ];
