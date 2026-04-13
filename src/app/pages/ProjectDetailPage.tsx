@@ -183,13 +183,12 @@ const CONCEPTS: Record<string, string> = {
     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
   };
 const SIZE_MAP: Record<string, string> = {
-  "High Rise Buildings": "varies by tower",
-  Educational: "—",
-  "IT Parks": "—",
-  Residential: "_",
-  Commercial: "_",
-  "Mixed Use": "_",
-  Hospitality: "_",
+  "HighRise": "varies by tower",
+  "Hospitality": "_",
+  "Educational & Mosques": "—",
+  "Retail": "_",
+  "Offices": "—",
+  "Residential": "_",
 };
 
 // ─── Easing ───────────────────────────────────────────────────────────────────

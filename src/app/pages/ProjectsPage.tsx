@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { Search, X } from "lucide-react";
 import { projects } from "../data/projects";
 
-const CATEGORIES = ["All", "High Rise Buildings", "Commercial Buildings", "Hospitality", "Educational", "IT Parks", "Commercial"];
+const CATEGORIES = ["All", "HighRise", "Hospitality", "Educational & Mosques", "Retail", "Offices", "Residential"];
 
 const SERIF = "'Playfair Display', 'Georgia', serif";
 const SANS = "'DM Sans', 'Inter', 'Helvetica Neue', sans-serif";
@@ -46,13 +46,13 @@ export function ProjectsPage() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           style={{ maxWidth: 1060 }}
         >
-          {/* Overline */}
+          {/* Overline
           <p
             className="uppercase tracking-[0.25em] mb-6"
             style={{ fontSize: "10px", color: "#aaa", fontFamily: SANS, fontWeight: 500 }}
           >
             Selected Work · {projects.length} Projects
-          </p>
+          </p> */}
 
           {/* Editorial headline */}
           <h1
@@ -296,7 +296,7 @@ export function ProjectsPage() {
                     <div
                       className="absolute bottom-3 left-3"
                       style={{
-                        background: "rgba(255,255,255,0.92)",
+                        background: "rgba(0,0,0,1)",
                         backdropFilter: "blur(4px)",
                         padding: "3px 8px",
                         borderRadius: 2,
@@ -305,9 +305,10 @@ export function ProjectsPage() {
                       <span
                         style={{
                           fontFamily: SANS,
-                          fontSize: "9px",
+                          fontSize: "12px",
                           letterSpacing: "0.1em",
-                          color: "#666",
+                          // color: "#0000",
+                          color: "rgba(255,255,255,0.92)",
                           textTransform: "uppercase",
                         }}
                       >
@@ -335,7 +336,7 @@ export function ProjectsPage() {
                       style={{
                         fontFamily: SANS,
                         fontSize: "11px",
-                        color: "#aaa",
+                        color: "#000",
                         letterSpacing: "0.04em",
                         lineHeight: 1.5,
                       }}

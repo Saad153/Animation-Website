@@ -94,7 +94,7 @@ export function Navbar() {
           <motion.div
             key="wordmark"
             className="fixed z-50 hidden md:block"
-            style={{ top: 28, left: 28 }}
+            style={{ top: 0, left: 28 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: hidden ? 0 : 1, y: hidden ? -8 : 0 }}
             exit={{ opacity: 0 }}
@@ -118,7 +118,7 @@ export function Navbar() {
               <img
                 src={glogoIcon1}
                 alt="Gravity"
-                style={{ height: 60, width: 80, objectFit: "contain", display: "block" }}
+                style={{ height: 120, width: 150, objectFit: "contain", display: "block" }}
               />
             </Link>
           </motion.div>
@@ -130,7 +130,7 @@ export function Navbar() {
       ══════════════════════════════════════════════════════════════ */}
       <motion.div
         className="fixed z-50 hidden md:block"
-        style={{ top: 24, left: "50%", x: "-50%" }}
+        style={{ top: 40, left: "50%", x: "-50%" }}
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: hidden ? 0 : 1, y: hidden ? -16 : 0 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}

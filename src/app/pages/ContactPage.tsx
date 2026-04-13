@@ -11,16 +11,16 @@ const OFFICES = [
     email: "gravity.dnc@gmail.com",
     isPrimary: true,
   },
-  // {
-  //   city: "Karachi",
-  //   label: "Furniture and Interiors",
-  //   address: "25-C, Sunset Commercial Street #1,\nPhase IV, DHA, Karachi",
-  //   phone: "+92 333 2222777",
-  //   tel: "+92 21 3588666",
-  //   website: "www.gravity.com.pk",
-  //   email: "gravity.dnc@gmail.com",
-  //   isPrimary: false,
-  // },
+  {
+    city: "Karachi",
+    label: "Furniture and Interiors",
+    address: "25-C, Sunset Commercial Street #1,\nPhase IV, DHA, Karachi",
+    phone: "+92 333 2222777",
+    tel: "+92 21 3588666",
+    website: "www.gravity.com.pk",
+    email: "gravity.dnc@gmail.com",
+    isPrimary: false,
+  },
   {
     city: "Lahore",
     label: "Architecture & Interiors",
@@ -85,7 +85,7 @@ export function ContactPage() {
       <div className="px-8 md:px-16 lg:px-24 pt-28 pb-16 border-b border-white/8">
         <motion.p
           className="text-white/30 uppercase tracking-[0.22em] mb-5"
-          style={{ fontSize: "9px" }}
+          style={{ fontSize: "9px", color: "#fff" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7 }}

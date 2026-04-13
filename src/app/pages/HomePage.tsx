@@ -4,14 +4,14 @@ import { useLocation } from "react-router";
 import { GravityWaveIcon } from "../components/GravityWaveIcon";
 
 // ─── Gravity logo ─────────────────────────────────────────────────────────────
-import gravityLogo from "@/assets/d2755bbe5130e82e2da96ee562f8b24d78c9a00a.png";
+import gravityLogo from "@/assets/laptoplogo.png";
 import logo from "@/assets/logo.png";
 
 
 // ─── New replacement images (slots 0–7) ───────────────────────────────────────
 import newImg0 from "@/assets/3ed75039c8ed75a966529d7f1a79fa162314833f.png"; // Aabhi interior store
 import newImg1 from "@/assets/f257d47652ed9787b02479a73ffac1b61f3a53cd.png"; // elegant hallway
-import newImg2 from "@/assets/project.jpg"; // modern curved wood-glass building at dusk
+import newImg2 from "@/assets/creek2.jpg"; // modern curved wood-glass building at dusk
 import newImg3 from "@/assets/5c06433b5ec4dbb425bd01103261ec12403a3041.png"; // luxury retail
 import newImg4 from "@/assets/574cd1294d9f97c3c16200d8a8499d1b55706437.png"; // modern residential pool
 import newImg5 from "@/assets/c316ade365712c6f044c78c0ac37513f99d12fc2.png"; // glass high-rise towers at dusk
@@ -82,13 +82,18 @@ import natap from "@/assets/natap.png";
 import newImage29 from "@/assets/ecb6770e41175b59a115b0f3a41a8c6334c19752.png";
 import newImage30 from "@/assets/a7759569c3d6c1a258e218b1b80afb6a72a99f29.png";
 import newImg31 from "@/assets/177a777dbde57cc4b769b815ef7b4eff0027131f.png";
+import newImg32 from "@/assets/newAdd.jpeg";
+import newImg33 from "@/assets/advans.jpg";
+import newImg34 from "@/assets/fuchsia3.jpg";
+import newImg35 from "@/assets/golfer4.jpg";
+import newImg36 from "@/assets/alpha.jpg";
 
 // ─── Image pool — all real project images ────────────────────────────────────
 const IMAGES = [
   jinnahAerial,
-  newImg20,
-  newImg1,             // slot  1 — Pearl Towers entrance canopy
   newImg19,
+  newImg1,             // slot  1 — Pearl Towers entrance canopy
+  newImg20,
   newImg4,
   newImg27,
   pearlNight,
@@ -97,7 +102,7 @@ const IMAGES = [
   newImg5,
   newImg9,
   natap,
-  newImg12,
+  newImg32,
   newImage29,
   newImg14,
   newImg15,
@@ -112,6 +117,11 @@ const IMAGES = [
   newImg22,
   newImg11,
   newImg31,
+  newImg12,
+  newImg33,
+  newImg34,
+  newImg35,
+  newImg36
   
 
   // newImg0,             // slot  0 — Aabhi interior store
@@ -181,10 +191,12 @@ interface ColConfig {
   startOffset: number;
 }
 
+
+
 const COL_CONFIGS: ColConfig[] = [
   {
-    heights:    [280, 200, 0, 240, 260, 300, 0, 280, 200, 0, 260, 240],
-    shapes:     ['r', 'r', 's', 'r', 'r', 'r', 's', 'r', 'r', 's', 'r', 'r'],
+    heights:    [280, 200, 300, 240, 260, 300, 0, 280, 200, 0, 260, 240],
+    shapes:     ['r', 'r', 'r', 'r', 'r', 'r', 's', 'r', 'r', 's', 'r', 'r'],
     imgStart: 0,  startOffset: -60,
   },
   {
@@ -193,34 +205,34 @@ const COL_CONFIGS: ColConfig[] = [
     imgStart: 4,  startOffset: -180,
   },
   {
-    heights:    [0, 260, 200, 320, 240, 0, 220, 300, 260, 0, 320, 240],
-    shapes:     ['s', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 's', 'r', 'r'],
+    heights:    [300, 260, 200, 320, 240, 0, 220, 300, 260, 0, 320, 240],
+    shapes:     ['r', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 's', 'r', 'r'],
     imgStart: 8,  startOffset: -30,
   },
   {
-    heights:    [220, 280, 0, 200, 300, 260, 0, 220, 280, 320, 200, 0],
-    shapes:     ['r', 'r', 's', 'r', 'r', 'r', 's', 'r', 'r', 'r', 'r', 's'],
+    heights:    [220, 280, 300, 200, 300, 260, 0, 220, 280, 320, 200, 0],
+    shapes:     ['r', 'r', 'r', 'r', 's', 'r', 's', 'r', 'r', 'r', 'r', 's'],
     imgStart: 12, startOffset: -250,
   },
   {
-    heights:    [260, 200, 280, 0, 220, 320, 240, 260, 0, 280, 300, 0],
-    shapes:     ['r', 'r', 'r', 's', 'r', 'r', 'r', 'r', 's', 'r', 'r', 's'],
+    heights:    [260, 200, 280, 300, 220, 320, 240, 260, 0, 280, 300, 0],
+    shapes:     ['r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 's', 'r', 'r', 's'],
     imgStart: 16, startOffset: -120,
   },
   {
-    heights:    [0, 240, 260, 220, 300, 0, 280, 320, 240, 260, 0, 300],
-    shapes:     ['s', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 'r', 's', 'r'],
+    heights:    [300, 240, 260, 220, 300, 0, 280, 320, 240, 260, 0, 300],
+    shapes:     ['r', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 'r', 's', 'r'],
     imgStart: 20, startOffset: -200,
   },
   {
-    heights:    [200, 320, 0, 260, 280, 220, 300, 0, 320, 240, 260, 0],
-    shapes:     ['r', 'r', 's', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 's'],
+    heights:    [200, 320, 250, 260, 280, 220, 300, 0, 320, 240, 260, 0],
+    shapes:     ['r', 'r', 'r', 'r', 'r', 'r', 'r', 's', 'r', 'r', 'r', 'r'],
     imgStart: 6,  startOffset: -80,  // was 24 → caused 0-3 repeat; now starts at 6
   },
 ];
 // ─── Gaps ─────────────────────────────────────────────────────────────────────
-const COL_GAP = 8;
-const ROW_GAP = 8;
+const COL_GAP = 14;
+const ROW_GAP = 14;
 
 // ── Intro constants ──────────────────────────────────────────────────────────
 const INTRO_ZOOM_START = 0.3;
@@ -462,6 +474,7 @@ function Column({
         // With 57 images, the first 57 tiles (≈ 8 full rows) are 100% unique.
         // Duplicates only appear at tile-row 8+ which is far below the viewport.
         src: IMAGES[(i * numCols + colIndex) % IMAGES.length],
+        // src: IMAGES[(colIndex * 12 + i) % IMAGES.length],
         height: h,
         shape: config.shapes[i],
         key: `c${colIndex}-r${i}`,
@@ -523,8 +536,9 @@ function ScrollHint({ visible }: { visible: boolean }) {
 
 // ── Main HomePage ────────────────────────────────────────────────────────────
 export function HomePage() {
-  const containerRef = useRef<HTMLDivElement>(null);  
-  const location = useLocation();  
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const containerRef = useRef<HTMLDivElement>(null);
   const [hasScrolled, setHasScrolled]       = useState(false);
   const [introComplete, setIntroComplete]   = useState(false);
   const [isMobile, setIsMobile]             = useState(() => window.innerWidth <= 768);
@@ -639,7 +653,7 @@ export function HomePage() {
           {/* GRAVITY wordmark */}
           <motion.div
             className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
-            style={{ zIndex: 20, opacity: textOpacity }}
+            style={{ zIndex: 20, opacity: 1 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <span

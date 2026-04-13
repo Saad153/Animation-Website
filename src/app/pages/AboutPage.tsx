@@ -45,15 +45,15 @@ const OFFICES = [
     cell: "+92 333 2222777",
     tel: "+92 21 3588666",
   },
-  // {
-  //   city: "Karachi",
-  //   label: "Furniture and Interiors",
-  //   address: "25-C, Sunset Commercial Street #1,\nPhase IV, DHA, Karachi",
-  //   email: "gravity.dnc@gmail.com",
-  //   cell: "+92 333 2222777",
-  //   tel: "+92 21 3588666",
-  //   website: "www.gravity.com.pk",
-  // },
+  {
+    city: "Karachi",
+    label: "Furniture and Interiors",
+    address: "25-C, Sunset Commercial Street #1,\nPhase IV, DHA, Karachi",
+    email: "gravity.dnc@gmail.com",
+    cell: "+92 333 2222777",
+    tel: "+92 21 3588666",
+    website: "www.gravity.com.pk",
+  },
   {
     city: "Lahore",
     label: "Architecture & Interiors",
@@ -130,7 +130,7 @@ export function AboutPage() {
       >
         <motion.div className="absolute inset-0" style={{ y: heroY, scale: 1.12 }}>
           <img
-            src="https://images.unsplash.com/photo-1620502257854-e5b6ffd0e7b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwcmlzZSUyMHRvd2VyJTIwY29uc3RydWN0aW9uJTIwc2t5bGluZSUyMGRyYW1hdGljJTIwZHVza3xlbnwxfHx8fDE3NzUzMjIxMDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="/src/assets/aboutbg.jpg"
             alt="Gravity Studio — high rise under construction at dusk"
             className="w-full h-full object-cover"
           />
@@ -151,7 +151,7 @@ export function AboutPage() {
         >
           <motion.p
             className="uppercase tracking-[0.26em] mb-5"
-            style={{ fontSize: "9px", color: "rgba(255,255,255,0.4)", fontFamily: SANS }}
+            style={{ fontSize: "9px", color: "rgb(255, 255, 255)", fontFamily: SANS }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
@@ -292,7 +292,7 @@ export function AboutPage() {
             <FadeIn>
               <p
                 className="uppercase tracking-[0.22em] mb-6"
-                style={{ fontSize: "9px", color: "rgba(255,255,255,0.28)", fontFamily: SANS }}
+                style={{ fontSize: "9px", color: "#fff", fontFamily: SANS }}
               >
                 Our Approach
               </p>
@@ -344,7 +344,7 @@ export function AboutPage() {
       ════════════════════════════════════════════════════════════════════ */}
       <div className="relative overflow-hidden" style={{ height: "clamp(260px, 40vw, 540px)" }}>
         <img
-          src="https://images.unsplash.com/photo-1764083310892-7b816d9276f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwZGV0YWlsJTIwZ2xhc3MlMjBmYWNhZGUlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc3NTMyMjEwMnww&ixlib=rb-4.1.0&q=80&w=1080"
+          src="/src/assets/aboutus.png"
           alt="Architectural facade detail"
           className="w-full h-full object-cover"
           style={{ transform: "scale(1.05)" }}
@@ -443,7 +443,7 @@ export function AboutPage() {
         <FadeIn>
           <p
             className="uppercase tracking-[0.22em] mb-14"
-            style={{ fontSize: "9px", color: "rgba(255,255,255,0.28)", fontFamily: SANS }}
+            style={{ fontSize: "9px", color: "#fff", fontFamily: SANS }}
           >
             Our Offices
           </p>

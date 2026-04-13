@@ -223,6 +223,37 @@ import squash3 from "@/assets/squash3.jpg";
 import squash4 from "@/assets/squash4.jpg";
 import squash5 from "@/assets/squash5.jpg";
 
+// Project 48  NASTP IT PARK 
+import nastp from "@/assets/nastp.jpg";
+import nastp1 from "@/assets/nastp1.jpg";
+import nastp2 from "@/assets/nastp2.jpg";
+import nastp3 from "@/assets/nastp3.jpg";
+import nastp4 from "@/assets/nastp4.jpg";
+import nastp5 from "@/assets/nastp5.jpg";
+import nastp6 from "@/assets/nastp6.jpg";
+import nastp7 from "@/assets/nastp7.png";
+
+// Project 49  NASTP IT 
+import nastpIT from "@/assets/nastpIT.jpg";
+import nastpIT1 from "@/assets/nastpIT1.jpg";
+import nastpIT2 from "@/assets/nastpIT2.jpg";
+import nastpIT3 from "@/assets/nastpIT3.jpg";
+import nastpIT4 from "@/assets/nastpIT4.jpg";
+
+// Project 50  INNOVISTA 
+import innovista from "@/assets/innovista.jpg";
+import innovista1 from "@/assets/innovista1.jpg";
+import innovista2 from "@/assets/innovista2.jpg";
+import innovista3 from "@/assets/innovista3.jpg";
+import innovista4 from "@/assets/innovista4.jpg";
+import innovista5 from "@/assets/innovista5.jpg";
+import innovista6 from "@/assets/innovista6.jpg";
+import innovista7 from "@/assets/innovista7.jpg";
+import innovista8 from "@/assets/innovista8.jpg";
+import innovista9 from "@/assets/innovista9.jpg";
+import innovista10 from "@/assets/innovista10.jpg";
+
+
 export interface Project {
   id: string;
   title: string;
@@ -249,7 +280,7 @@ export const projects: Project[] = [
     title: "G+24 Jinnah Askari II Apartment Towers",
     location: "Karachi, Pakistan",
     year: "2025",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Under Construction",
     area: "1 Acre",
     image: jinnahAerial,
@@ -263,7 +294,7 @@ export const projects: Project[] = [
     title: "Pearl Towers G+29",
     location: "Lahore, Pakistan",
     year: "2025",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Under Construction",
     area: "70 Kanal",
     image: pearlNight,
@@ -277,7 +308,7 @@ export const projects: Project[] = [
     title: "G+15 Apartment Towers DHA-4",
     location: "Islamabad, Pakistan",
     year: "2025",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Under Construction",
     area: "76.78 Kanal",
     image: dhaSunset,
@@ -291,7 +322,7 @@ export const projects: Project[] = [
     title: "G+14 Askari Block 130 Apartment Towers",
     location: "Karachi, Pakistan",
     year: "2024",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Completed",
     area: "Askari 5",
     image: askariRender,
@@ -305,7 +336,7 @@ export const projects: Project[] = [
     title: "DHA Enclave Highrise",
     location: "Karachi, Pakistan",
     year: "2026",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Upcoming Project",
     area: "—",
     image: dhaEnclaveHero,
@@ -319,7 +350,7 @@ export const projects: Project[] = [
     title: "G+18 Askari Block 18A Apartment Tower",
     location: "Karachi, Pakistan",
     year: "2025",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Under Construction",
     area: "Askari 5",
     image: askari711Render,
@@ -333,7 +364,7 @@ export const projects: Project[] = [
     title: "G+18 Askari Block 7 & 11 Apartment Towers",
     location: "Karachi, Pakistan",
     year: "2025",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Under Construction",
     area: "Askari 5",
     image: askari18aStreet,
@@ -347,7 +378,7 @@ export const projects: Project[] = [
     title: "G+18 Askari Block 10 & 12 Apartment Towers",
     location: "Lahore, Pakistan",
     year: "2025",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Under Construction",
     area: "Askari 11",
     image: askari1012Evening,
@@ -361,7 +392,7 @@ export const projects: Project[] = [
     title: "Embassy Gardens G+3",
     location: "Bahria Town, Islamabad",
     year: "2023",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Completed",
     area: "Bahria Town",
     image: embassyCompleted,
@@ -375,7 +406,7 @@ export const projects: Project[] = [
     title: "Malir G+14 Jinnah Boulevard",
     location: "Karachi, Pakistan",
     year: "2026",
-    category: "High Rise Buildings",
+    category: "HighRise",
     status: "Under Construction",
     area: "4 Acres",
     image: malirAerial,
@@ -389,7 +420,7 @@ export const projects: Project[] = [
     title: "Cyber Command at Air Headquarters",
     location: "Islamabad, Pakistan",
     year: "2024",
-    category: "Commercial Buildings",
+    category: "Offices",
     status: "Completed",
     area: "AHQ Complex",
     image: cyberExterior,
@@ -403,7 +434,7 @@ export const projects: Project[] = [
     title: "Gravity Tower 1 G+21",
     location: "Clifton, Karachi",
     year: "2026",
-    category: "Commercial Buildings",
+    category: "HighRise",
     status: "Under Construction",
     area: "2000 Sq Yards",
     image: gravityTower1Night,
@@ -515,7 +546,7 @@ export const projects: Project[] = [
     title: "PAF FINISHING SCHOOL G+1",
     location: "Lahore",
     year: "2025",
-    category: "Educational",
+    category: "Educational & Mosques",
     status: "Completed",
     area: "4 ACRES",
     image: pafSchool,
@@ -529,7 +560,7 @@ export const projects: Project[] = [
     title: "ATTS COLLEGE KORANGI PAF BASE",
     location: "Karachi",
     year: "2025",
-    category: "Educational",
+    category: "Educational & Mosques",
     status: "Completed",
     area: "9000 SqFt",
     image: atts,
@@ -543,7 +574,7 @@ export const projects: Project[] = [
     title: "PTTS COLLEGE POST TRADING CENTER",
     location: "Karachi",
     year: "2025",
-    category: "Educational",
+    category: "Educational & Mosques",
     status: "Completed",
     area: "90,000 SqFt",
     image: ptts,
@@ -557,7 +588,7 @@ export const projects: Project[] = [
     title: "MONUMENT PAF BASE KORANGI",
     location: "Karachi",
     year: "2025",
-    category: "Educational",
+    category: "Educational & Mosques",
     status: "Completed",
     area: "",
     image: monumentPAF,
@@ -571,7 +602,7 @@ export const projects: Project[] = [
     title: "SHIFA UNIVERSITY",
     location: "Islamabad",
     year: "2025",
-    category: "Educational",
+    category: "Educational & Mosques",
     status: "Under Construction",
     area: "100000 SqFt",
     image: shifa,
@@ -585,7 +616,7 @@ export const projects: Project[] = [
     title: "ALPHA SCHOOL",
     location: "Karachi",
     year: "2025",
-    category: "Educational",
+    category: "Educational & Mosques",
     status: "Completed",
     area: "",
     image: alpha,
@@ -599,7 +630,7 @@ export const projects: Project[] = [
     title: "MALIR SCHOOL",
     location: "Karachi",
     year: "2025",
-    category: "Educational",
+    category: "Educational & Mosques",
     status: "Completed",
     area: "",
     image: malir,
@@ -613,7 +644,7 @@ export const projects: Project[] = [
     title: "PAF WAR COLLEGE EXTERIOR & INTERIOR",
     location: "Karachi",
     year: "2025",
-    category: "Educational",
+    category: "Educational & Mosques",
     status: "Completed",
     area: "",
     image: pafWar,
@@ -627,7 +658,7 @@ export const projects: Project[] = [
     title: "PF CHANG’S",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Hospitality",
     status: "Completed",
     area: "",
     image: pfChang,
@@ -641,7 +672,7 @@ export const projects: Project[] = [
     title: "AL-BARAKA BANK ",
     location: "NASTP Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Offices",
     status: "Completed",
     area: "",
     image: albaraka,
@@ -655,7 +686,7 @@ export const projects: Project[] = [
     title: "AMADEUS OFFICE",
     location: "NASTP Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Offices",
     status: "Completed",
     area: "",
     image: amadeus,
@@ -669,7 +700,7 @@ export const projects: Project[] = [
     title: "ADVANS MICRO FINANCE BANK",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Offices",
     status: "Completed",
     area: "",
     image: advans,
@@ -683,7 +714,7 @@ export const projects: Project[] = [
     title: "SEF OFFICE",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Offices",
     status: "Completed",
     area: "",
     image: sef,
@@ -697,7 +728,7 @@ export const projects: Project[] = [
     title: "FARID’S SUPERMARKET",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Retail",
     status: "Completed",
     area: "",
     image: farid,
@@ -711,7 +742,7 @@ export const projects: Project[] = [
     title: "SILVER SHOP",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Retail",
     status: "Completed",
     area: "",
     image: silver,
@@ -725,7 +756,7 @@ export const projects: Project[] = [
     title: "HSY MANSION",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Retail",
     status: "Completed",
     area: "",
     image: hsy,
@@ -741,7 +772,7 @@ export const projects: Project[] = [
     title: "DEEPAK PERWANI",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Retail",
     status: "Completed",
     area: "",
     image: deepak,
@@ -757,7 +788,7 @@ export const projects: Project[] = [
     title: "MAISON SONRAJ",
     location: "Phase 5 Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Retail",
     status: "Completed",
     area: "",
     image: sonraj,
@@ -772,7 +803,7 @@ export const projects: Project[] = [
     title: "GOLFER’S LOUNGE",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Hospitality",
     status: "Completed",
     area: "",
     image: golfer,
@@ -787,7 +818,7 @@ export const projects: Project[] = [
     title: "OUTDOOR DINING ",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Hospitality",
     status: "Under Construction",
     area: "10,332 SqFt",
     image: outdoor,
@@ -803,7 +834,7 @@ export const projects: Project[] = [
     title: "SNACK BAR & GOLFER TERRACE",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Hospitality",
     status: "Under Construction",
     area: "",
     image: snackbar,
@@ -818,7 +849,7 @@ export const projects: Project[] = [
     title: "COLLECTIBLES ZEBUNISSA STREET",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Retail",
     status: "",
     area: "",
     image: zebunnisa,
@@ -833,7 +864,7 @@ export const projects: Project[] = [
     title: "MAISON SONRAJ",
     location: "Lahore Dollmen Mall",
     year: "2025",
-    category: "Commercial",
+    category: "Retail",
     status: "Under Construction",
     area: "",
     image: maison,
@@ -848,7 +879,7 @@ export const projects: Project[] = [
     title: "MALIR INDUSTRIAL PARK SITE OFFICE",
     location: "Malir Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Offices",
     status: "Under Construction",
     area: "",
     image: malirInd,
@@ -863,7 +894,7 @@ export const projects: Project[] = [
     title: "FUCHSIA RESTAURANT",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Hospitality",
     status: "Completed",
     area: "",
     image: fuchsia,
@@ -878,7 +909,7 @@ export const projects: Project[] = [
     title: "CREEK VIEW AT MANORA ",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Hospitality",
     status: "Under Construction",
     area: "4,392 SqFt",
     image: creek,
@@ -893,7 +924,7 @@ export const projects: Project[] = [
     title: "PNS IQBAL FITNESS CENTRE",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Hospitality",
     status: "Under Construction",
     area: "",
     image: fitness,
@@ -908,7 +939,7 @@ export const projects: Project[] = [
     title: "SQUASH COMPLEX ",
     location: "Karachi",
     year: "2025",
-    category: "Commercial",
+    category: "Hospitality",
     status: "Completed",
     area: "",
     image: squash,
@@ -916,6 +947,51 @@ export const projects: Project[] = [
       `A ground plus building was renovated to have a large championship court and several smaller courts. Having new interior and exteriors, the building now hosts many international championships.
       `,
     images: [squash2, squash2, squash3, squash4, squash5],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "nastp",
+    title: "PAKISTAN BIGGEST IT PARK",
+    location: "Rawalpindi ",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "26 Acres",
+    image: nastp,
+    description:
+      `Built over 26 acres Pakistanis biggest IT Park is a complex of 12 buildings, most of which are at G+1, mezzanine steel structures, with a white AP cladding, giving the complex its unique identity. A unique structure welcomes guests and landscaped garden lead people towards the different buildings of the complex. A special monument was desired for this complex which is now symbolic of all NASTPS of Pakistan and is erected in every one of them.
+      `,
+    images: [nastp1, nastp2, nastp3, nastp4, nastp5, nastp6, nastp7],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "nastp IT",
+    title: "NASTP IT PARK",
+    location: "Karachi ",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "26 Acres",
+    image: nastpIT,
+    description:
+      `This building was a G+3 structure, desired to house offices, and amenities in Karachi’s business district.
+      `,
+    images: [nastpIT1, nastpIT2, nastpIT3, nastpIT4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "innovista",
+    title: "DHA IT HUB / INNOVISTA",
+    location: "DHA Phase II, Karachi. ",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "",
+    image: innovista,
+    description:
+      `This IT park was designed with 3 buildings built around an existing central library. The new buildings house technology software companies and coworking spaces and a large auditorium.
+      `,
+    images: [innovista1, innovista2, innovista3, innovista4, innovista5, innovista6, innovista7, innovista8, innovista9, innovista10],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
 ];
