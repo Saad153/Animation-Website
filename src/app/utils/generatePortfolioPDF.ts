@@ -447,9 +447,9 @@
 //   doc.setGState(doc.GState({ opacity: 1 }));
 // }
 
-// // ---------------------------------------------------------------------------
-// // Main export
-// // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// Main export
+// ---------------------------------------------------------------------------
 
 // export async function generatePortfolioPDF(): Promise<void> {
 //   const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
@@ -474,8 +474,6 @@
 //   // Trigger download
 //   doc.save("Gravity_Portfolio_2025.pdf");
 // }
-
-
 
 export async function generatePortfolioPDF(): Promise<void> {
   const a = document.createElement("a");

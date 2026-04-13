@@ -14,7 +14,7 @@ import glogoIcon1 from "@/assets/logoTrans.png";
 const NAV_LINKS = [
   { label: "Projects",  path: "/projects",  download: false },
   { label: "Team",      path: "/team",      download: false },
-  { label: "About",     path: "/about",     download: false },
+  { label: "About us",     path: "/about",     download: false },
   { label: "Contact",   path: "/contact",   download: false },
   // { label: "Portfolio", path: "/portfolio", download: true  },
 ];
