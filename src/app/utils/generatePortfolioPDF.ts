@@ -475,11 +475,11 @@
 //   doc.save("Gravity_Portfolio_2025.pdf");
 // }
 
-import portfolioPDF from "@/assets/GRAVITY Architecture & Interiors 2026_.pdf";
+
 
 export async function generatePortfolioPDF(): Promise<void> {
   const a = document.createElement("a");
-  a.href = portfolioPDF;
+  a.href = "https://drive.google.com/file/d/1RWvHsO-TgbOPrhAtU_ZoMBNAGrDaV66F/view?usp=drive_link";
   a.download = "GRAVITY Architecture & Interiors 2026.pdf";
   document.body.appendChild(a);
   a.click();
