@@ -184,10 +184,10 @@ const CONCEPTS: Record<string, string> = {
   };
 const SIZE_MAP: Record<string, string> = {
   "HighRise": "varies by tower",
-  "Hospitality": "_",
-  "Educational & Mosques": "—",
-  "Retail": "_",
-  "Offices": "—",
+  "Hospitality & Institutional": "_",
+  "Educational": "—",
+  "Retail & Commercial": "_",
+  "Offices & IT Parks": "—",
   "Residential": "_",
 };
 

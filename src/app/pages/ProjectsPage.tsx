@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { Search, X } from "lucide-react";
 import { projects } from "../data/projects";
 
-const CATEGORIES = ["All", "HighRise", "Hospitality", "Educational & Mosques", "Retail", "Offices", "Residential"];
+const CATEGORIES = ["All", "HighRise", "Hospitality & Institutional", "Educational", "Retail & Commercial", "Offices & IT Parks", "Residential"];
 
 const SERIF = "'Playfair Display', 'Georgia', serif";
 const SANS = "'DM Sans', 'Inter', 'Helvetica Neue', sans-serif";
@@ -298,14 +298,14 @@ export function ProjectsPage() {
                       style={{
                         background: "rgba(0,0,0,1)",
                         backdropFilter: "blur(4px)",
-                        padding: "3px 8px",
+                        padding: "2px 8px",
                         borderRadius: 2,
                       }}
                     >
                       <span
                         style={{
                           fontFamily: SANS,
-                          fontSize: "12px",
+                          fontSize: "9px",
                           letterSpacing: "0.1em",
                           // color: "#0000",
                           color: "rgba(255,255,255,0.92)",
