@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-
+import aboutBg from "@/assets/aboutbg.jpg"; 
+import aboutus from "@/assets/aboutus.png";
 // ─── Font tokens ─────────────────────────────────────────────────────────────
 const SANS  = "'DM Sans', 'Inter', sans-serif";
 const SERIF = "'Playfair Display', Georgia, serif";
@@ -130,7 +131,7 @@ export function AboutPage() {
       >
         <motion.div className="absolute inset-0" style={{ y: heroY, scale: 1.12 }}>
           <img
-            src="/src/assets/aboutbg.jpg"
+            src={aboutBg}
             alt="Gravity Studio — high rise under construction at dusk"
             className="w-full h-full object-cover"
           />
@@ -344,7 +345,7 @@ export function AboutPage() {
       ════════════════════════════════════════════════════════════════════ */}
       <div className="relative overflow-hidden" style={{ height: "clamp(260px, 40vw, 540px)" }}>
         <img
-          src="/src/assets/aboutus.png"
+          src={aboutus}
           alt="Architectural facade detail"
           className="w-full h-full object-cover"
           style={{ transform: "scale(1.05)" }}
