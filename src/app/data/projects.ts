@@ -253,6 +253,204 @@ import innovista8 from "@/assets/innovista8.jpg";
 import innovista9 from "@/assets/innovista9.jpg";
 import innovista10 from "@/assets/innovista10.jpg";
 
+// Project 51  NCSA 
+import ncsa from "@/assets/ncsa.jpg";
+import ncsa2 from "@/assets/ncsa2.jpg";
+
+// Project 52  MOSQUE SHIFA 
+import mosqueShifa from "@/assets/mosqueShifa.png";
+import mosqueShifa2 from "@/assets/mosqueShifa2.jpg";
+import mosqueShifa3 from "@/assets/mosqueShifa3.png";
+
+
+// Project 53  ASKARI MOSQUE 
+import askariMos from "@/assets/askariMos.jpg";
+import askariMos2 from "@/assets/askariMos2.jpg";
+import askariMos3 from "@/assets/askariMos3.jpg";
+import askariMos4 from "@/assets/askariMos4.jpg";
+import askariMos5 from "@/assets/askariMos5.jpg";
+
+// Project 54  ASKARI VI 
+import askariVI from "@/assets/askariVI.jpg";
+import askariVI2 from "@/assets/askariVI2.jpg";
+
+// Project 55  BMA 8th Floor
+import bma8 from "@/assets/bma8.jpg";
+import bma82 from "@/assets/bma82.jpg";
+import bma83 from "@/assets/bma83.jpg";
+import bma84 from "@/assets/bma84.jpg";
+import bma85 from "@/assets/bma85.jpg";
+
+// Project 56  BMA 10th Floor
+import bma10 from "@/assets/bma10.jpg";
+import bma102 from "@/assets/bma102.jpg";
+import bma103 from "@/assets/bma103.jpg";
+import bma104 from "@/assets/bma104.jpg";
+
+// Project 57  ABHI OFFICE
+import abhi from "@/assets/abhi.jpg";
+import abhi2 from "@/assets/abhi2.jpg";
+import abhi3 from "@/assets/abhi3.jpg";
+
+// Project 58  ABHI NASTP
+import abhiNASTP from "@/assets/abhiNASTP.jpg";
+import abhiNASTP2 from "@/assets/abhiNASTP2.jpg";
+import abhiNASTP3 from "@/assets/abhiNASTP3.jpg";
+import abhiNASTP4 from "@/assets/abhiNASTP4.jpg";
+
+// Project 59  ABHI Lahore
+import abhiLahore from "@/assets/abhiLhore.jpg";
+import abhiLahore2 from "@/assets/abhiLhore2.jpg";
+import abhiLahore3 from "@/assets/abhiLhore3.jpg";
+import abhiLahore4 from "@/assets/abhiLhore4.jpg";
+
+// Project 60  MATRIX 
+import matrix from "@/assets/matrix.jpg";
+import matrix2 from "@/assets/matrix2.jpg";
+
+// Project 61  CLEAR ROUTE
+import clear from "@/assets/clear.jpg";
+import clear2 from "@/assets/clear2.jpg";
+
+// Project 62  GLOBAL CONNECT
+import global from "@/assets/global.jpg";
+
+// Project 63  SIBER KOZA
+import siber from "@/assets/siber.jpg";
+import siber2 from "@/assets/siber2.jpg";
+import siber3 from "@/assets/siber3.jpg";
+
+// Project 64  CIVIL AVIATION 
+import caa from "@/assets/caa.png";
+import caa2 from "@/assets/caa2.png";
+
+// Project 65  MR. A 
+import mr from "@/assets/mr.png";
+import mr2 from "@/assets/mr2.png";
+import mr3 from "@/assets/mr3.jpg";
+import mr4 from "@/assets/mr4.png";
+
+// Project 66  MR. B 
+import mrb from "@/assets/mrb.jpg";
+import mrb2 from "@/assets/mrb2.jpg";
+import mrb3 from "@/assets/mrb3.jpg";
+
+// Project 67  MR. C 
+import mrc from "@/assets/mrc.jpg";
+import mrc2 from "@/assets/mrc2.jpg";
+import mrc3 from "@/assets/mrc3.jpg";
+import mrc4 from "@/assets/mrc4.jpg";
+import mrc5 from "@/assets/mrc5.jpg";
+import mrc6 from "@/assets/mrc6.jpg";
+import mrc7 from "@/assets/mrc7.png";
+import mrc8 from "@/assets/mrc8.jpg";
+
+// Project 68  MR. Z
+import mrz from "@/assets/mrz.png";
+import mrz2 from "@/assets/mrz2.png";
+import mrz3 from "@/assets/mrz3.png";
+import mrz4 from "@/assets/mrz4.png";
+
+// Project 69  MR. N
+import mrn from "@/assets/mrn.jpg";
+import mrn2 from "@/assets/mrn2.png";
+import mrn3 from "@/assets/mrn3.png";
+import mrn4 from "@/assets/mrn4.png";
+import mrn5 from "@/assets/mrn5.png";
+
+// Project 70  MR. D
+import mrd from "@/assets/mrd.jpg";
+import mrd2 from "@/assets/mrd2.jpg";
+import mrd3 from "@/assets/mrd3.png";
+import mrd4 from "@/assets/mrd4.png";
+import mrd5 from "@/assets/mrd5.png";
+import mrd6 from "@/assets/mrd6.png";
+
+// Project 71  MR. E
+import mre from "@/assets/mre.jpg";
+import mre2 from "@/assets/mre2.jpg";
+import mre3 from "@/assets/mre3.jpg";
+import mre4 from "@/assets/mre4.jpg";
+import mre5 from "@/assets/mre5.jpg";
+import mre6 from "@/assets/mre6.jpg";
+import mre7 from "@/assets/mre7.jpg";
+
+// Project 72  MR. L
+import mrl from "@/assets/mrl.jpg";
+import mrl2 from "@/assets/mrl2.jpg";
+import mrl3 from "@/assets/mrl3.png";
+
+// Project 73  MR. F
+import mrf from "@/assets/mrf.jpg";
+import mrlf2 from "@/assets/mrf2.jpg";
+import mrf3 from "@/assets/mrf3.png";
+import mrf4 from "@/assets/mrf4.png";
+
+// Project 74  MR. L Shifa
+import mrlShifa from "@/assets/mrlShifa.png";
+import mrlShifa2 from "@/assets/mrlShifa2.png";
+import mrlShifa3 from "@/assets/mrlShifa3.png";
+import mrlShifa4 from "@/assets/mrlShifa4.png";
+
+// Project 75  MR. R
+import mrr from "@/assets/mrr.png";
+import mrr2 from "@/assets/mrr2.png";
+import mrr3 from "@/assets/mrr3.png";
+
+// Project 76  MR. H
+import mrh from "@/assets/mrh.jpg";
+import mrh2 from "@/assets/mrh2.jpg";
+import mrh3 from "@/assets/mrh3.png";
+import mrh4 from "@/assets/mrh4.png";
+
+// Project 77  MR. 
+import mrs from "@/assets/mrs.png";
+import mrs2 from "@/assets/mrs2.png";
+import mrs3 from "@/assets/mrs3.jpg";
+
+// Project 78  SPH
+import sph from "@/assets/sph.jpg";
+import sph2 from "@/assets/sph2.jpg";
+import sph3 from "@/assets/sph3.png";
+import sph4 from "@/assets/sph4.png";
+
+// Project 79  MR Z DHA
+import mrzDHA from "@/assets/mrzDHA.png";
+import mrzDHA1 from "@/assets/mrzDHA2.png";
+
+// Project 80  MR S DHA
+import mrsDHA from "@/assets/mrsDHA.png";
+import mrsDHA1 from "@/assets/mrsDHA2.png";
+
+// Project 81  MR M DHA
+import mrm from "@/assets/mrm.png";
+import mrm2 from "@/assets/mrm2.png";
+
+// Project 82  CM
+import cm from "@/assets/cm.jpg";
+import cm2 from "@/assets/cm2.jpg";
+
+// Project 82  CM
+import lux from "@/assets/lux.jpg";
+import lux2 from "@/assets/lux2.jpg";
+import lux3 from "@/assets/lux3.jpg";
+import lux4 from "@/assets/lux4.jpg";
+import lux5 from "@/assets/lux5.png";
+import lux6 from "@/assets/lux6.jpg";
+
+// Project 83  MRS A
+import mrsa from "@/assets/mrsa.jpg";
+import mrsa2 from "@/assets/mrsa2.jpg";
+import mrsa3 from "@/assets/mrsa3.jpg";
+import mrsa4 from "@/assets/mrsa4.jpg";
+import mrsa5 from "@/assets/mrsa5.jpg";
+import mrsa6 from "@/assets/mrsa6.jpg";
+import mrsa7 from "@/assets/mrsa7.jpg";
+
+// Project 84  Petaro
+import petaro from "@/assets/petaro.jpg";
+import petaro2 from "@/assets/petaro2.jpg";
+import petaro3 from "@/assets/petaro3.jpg";
 
 export interface Project {
   id: string;
@@ -992,6 +1190,532 @@ export const projects: Project[] = [
       `This IT park was designed with 3 buildings built around an existing central library. The new buildings house technology software companies and coworking spaces and a large auditorium.
       `,
     images: [innovista1, innovista2, innovista3, innovista4, innovista5, innovista6, innovista7, innovista8, innovista9, innovista10],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "ncsa",
+    title: "NCSA (National Cyber Security Command) ",
+    location: "Islamabad",
+    year: "2025",
+    category: "Educational & Mosques",
+    status: "Under construction",
+    area: "",
+    image: ncsa,
+    description:
+      `This G+6 university was designed to be a part of the air university complex in Islamabad. The building has a small footprint but allows the classrooms to be spacious with light and views, encased in a modernistic form..
+      `,
+    images: [ncsa2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mosqueShifa",
+    title: "MOSQUE SHIFA HOUSING SOCIETY",
+    location: "Islamabad",
+    year: "2025",
+    category: "Educational & Mosques",
+    status: "Completed",
+    area: "",
+    image: mosqueShifa,
+    description:
+      `This mosque has a massive block form, with angular modern geometry, a double-height interior, and a mezzanine.
+      `,
+    images: [mosqueShifa2, mosqueShifa3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "askariMos",
+    title: "ASKARI-IV MOSQUE MALE & FEMALE",
+    location: "Karachi",
+    year: "2025",
+    category: "Educational & Mosques",
+    status: "Completed",
+    area: "",
+    image: askariMos,
+    description:
+      `This mosque was a renovation of an old mosque in which the outer walls were clad in marble, and the interior was renovated with chandeliers and mirror ceilings to give it a completely new look and enhance its original decorative form. Adjacent to this, a female mosque was designed as a complementary white structure consisting mostly of metal screens, a closed area, and a courtyard.
+      `,
+    images: [askariMos2, askariMos3, askariMos4, askariMos5],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "askariVI",
+    title: "ASKARI-VI MOSQUE EXTERIOR & INTERIOR",
+    location: "Karachi",
+    year: "2025",
+    category: "Educational & Mosques",
+    status: "Under Construction",
+    area: "",
+    image: askariVI,
+    description:
+      `This mosque was designed as a traditional grand mosque with chandeliers, mirror work, calligraphy, and marble.
+      `,
+    images: [askariVI2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "bma8",
+    title: "BMA OFFICE 8TH FLOOR",
+    location: "Karachi",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "",
+    image: bma8,
+    description:
+      `The unique terraces surrounding the entire office floors provide these offices with light and green spaces while being inside the office spaces. The building itself is very old but the modern design elements free it from its existing architecture of ribbon windows by the introduction of the terraces. The furniture is in muted colors, keeping the emphasis on the external spaces.
+      `,
+    images: [bma82, bma83, bma84, bma85],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "bma10",
+    title: "BMA OFFICE 10TH FLOOR",
+    location: "Karachi",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "",
+    image: bma10,
+    description:
+      `The unique terraces surrounding the entire office floors provide these offices with light and green spaces while being inside the office spaces. The building itself is very old but the modern design elements free it from its existing architecture of ribbon windows by the introduction of the terraces. The furniture is in muted colors, keeping the emphasis on the external spaces.
+      `,
+    images: [bma102, bma103, bma104],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "abhi",
+    title: "ABHI OFFICE",
+    location: "Karachi",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "",
+    image: abhi,
+    description:
+      `This office was designed to maximize the light and views from the windows on inside while reflecting them inside and keeping the colors white with light wooden floors.
+      `,
+    images: [abhi2, abhi3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "abhiNASTP",
+    title: "ABHI OFFICE",
+    location: "NASTP Karachi",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "",
+    image: abhiNASTP,
+    description:
+      `An unusual radial planning dictates the spatial geometry of this office with the central space occupied by the circular glass conference room around which are placed the radial desks.
+      `,
+    images: [abhiNASTP2, abhiNASTP3, abhiNASTP4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "abhiLahore",
+    title: "ABHI OFFICE",
+    location: "Lahore",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "",
+    image: abhiLahore,
+    description:
+      `This office too maximizes the sense of space by keeping the furniture in white colors and light floorings, the brand colors being the only pops of colors.
+      `,
+    images: [abhiLahore2, abhiLahore3, abhiLahore4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "matrix",
+    title: "MATRIX INTERNATIONAL OFFICE ",
+    location: "NASTP Karachi",
+    year: "2025",
+    category: "Offices",
+    status: "Under design phase",
+    area: "",
+    image: matrix,
+    description:
+      `This office is dominated by the bright company colors and maximizing of the seating spaces.
+      `,
+    images: [matrix2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "clear",
+    title: "CLEAR ROUTE OFFICE",
+    location: "NASTP Karachi",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "",
+    image: clear,
+    description:
+      `This office has been designed to house US Company’s branch with a muted palette and exposed ceilings, it establishes a strong design element despite its restricted palette.
+      `,
+    images: [clear2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "global",
+    title: "GLOBAL CONNECT SYNERGY",
+    location: "Karachi",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "200 SqFt",
+    image: global,
+    description:
+      `This 200sqft IT office is in the Innovista IT park, and consists of an interior dominated by its strong brand colors, and offices and meeting rooms.
+      `,
+    images: [],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "siber",
+    title: "SIBER KOZA",
+    location: "NASTP Rawalpindi",
+    year: "2025",
+    category: "Offices",
+    status: "Completed",
+    area: "",
+    image: siber,
+    description:
+      `Turkish IT office interior, with space age finishes and pod like meeting spaces, this unusual interior was the very essence of cutting-edge space-age office design.
+      `,
+    images: [siber2, siber3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "caa",
+    title: "CIVIL AVIATION AUTHORITY OFFICE ",
+    location: "Karsaz, Karachi",
+    year: "2025",
+    category: "Offices",
+    status: "Upcoming Project",
+    area: "",
+    image: caa,
+    description:
+      `Complete renovation of the civil aviation authority office at Share-e-Faisal, with the elevation updated with the addition of a second floor, and another building which has a café, reception, and lift lobby. 
+      `,
+    images: [caa2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mr",
+    title: "MR. A RESIDENCE",
+    location: "Phase-2, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "2000 SqYds",
+    image: mr,
+    description:
+      `This modern home has 3 level living spaces, as it’s built into an elevated rock. The spaces are flooded with light through huge windows and a central staircase takes a singular flight connecting the 3 levels. Its double height entrance and clerestory windows with dramatic pool and gardens ensure every space has light and views.
+      `,
+    images: [mr2, mr3, mr4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrb",
+    title: "MR. B RESIDENCE",
+    location: "Phase-8, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "1000 SqYds",
+    image: mrb,
+    description:
+      `This classic residence accommodates 3 separate apartments for 3 families, with common dining and drawing spaces. There is basement pool which is open to sky and provides views to the entertaining spaces of the residence. The exterior is inspired by chalet and has dormer windows, slate roof and sash windows.
+      `,
+    images: [mrb2, mrb3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrc",
+    title: "MR. C RESIDENCE",
+    location: "Phase-5, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "1000 SqYds",
+    image: mrc2,
+    description:
+      `This is a modern residence, with double height entry and the floor plan that maximizes pool and gardens views from every room.
+      `,
+    images: [mrc, mrc3, mrc4, mrc5, mrc6, mrc7, mrc8],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrz",
+    title: "MR. Z RESIDENCE",
+    location: "DHA, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "1000 SqYds",
+    image: mrz,
+    description:
+      `
+      `,
+    images: [mrz2, mrz3, mrz4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrn",
+    title: "MR. N RESIDENCE",
+    location: "Phase-8, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "500 SqYds",
+    image: mrn,
+    description:
+      `
+      `,
+    images: [mrn2, mrn3, mrn4, mrn5],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrd",
+    title: "MR. D RESIDENCE",
+    location: "Phase-5, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "1000 SqYds",
+    image: mrd,
+    description:
+      `This residence has a classical architecture designed to accommodate the family and their fleet of cars. Unusually, the car collection is accessed through a ramp that leads from the main gate at the side of the residence. The basement also houses the theatre accessed through the main staircase and lift. On the ground and first floor are the bedrooms and entertainment spaces and a beautiful roof terrace nestled in between the residence slopes Unfortunately, as it happens in many cases, the client went against the architects chosen finishing materials, and decided to add black glass windows, his own railing and lighting designs and other decorations, leaving the design unrecognizable from what was initially visualized.
+      `,
+    images: [mrd2, mrd3, mrd4, mrd5, mrd6],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mre",
+    title: "MR. E RESIDENCE",
+    location: "Phase-5, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "800 SqYds",
+    image: mre,
+    description:
+      `This residence built on 3 levels with a pool has spacious living spaces and views overlooking its pool and garden with trees the elevation is modern and clad in a cool travertine stone.
+      `,
+    images: [mre2, mre3, mre4, mre5, mre6, mre7],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrl",
+    title: "MR. L RESIDENCE",
+    location: "Phase-5, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "500 SqYds",
+    image: mrl,
+    description:
+      `The early residences designed for this residence have a lift structure connecting the 3 levels, and travertine and alucobond form a maintenance-free modern elevation element.
+      `,
+    images: [mrl2, mrl3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrf",
+    title: "MR. F RESIDENCE",
+    location: "Phase-8, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "1500 SqYds",
+    image: mrf,
+    description:
+      `This residence was built with the traditional colonial architecture in mind, with a lot of the design and color decisions being taken by the clients. The pool is also an integral part of the interior of the house.
+      `,
+    images: [mrlf2, mrf3, mrf4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrlShifa",
+    title: "MR. L RESIDENCE",
+    location: "Shifa colony (Islamabad)",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "2000 SqYds",
+    image: mrlShifa,
+    description:
+      `This residence was built with a very Spanish architecture in mind, but for American clients so the house design with its great room and American architectural design elements highlight the taste and origins of the clients.
+      `,
+    images: [mrlShifa2, mrlShifa3, mrlShifa4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrr",
+    title: "MR. R RESIDENCE",
+    location: "KHAYABAN E ARAFAT, KARACHI ",
+    year: "2025",
+    category: "Residential",
+    status: "Under Construction",
+    area: "1000 SqYds",
+    image: mrr,
+    description:
+      `This residence was built with a very Spanish architecture in mind, but for American clients so the house design with its great room and American architectural design elements highlight the taste and origins of the clients.
+      `,
+    images: [mrr2, mrr3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrh",
+    title: "MR. H RESIDENCE",
+    location: "Islamabad",
+    year: "2025",
+    category: "Residential",
+    status: "Under Construction",
+    area: "2000 SqYds",
+    image: mrh,
+    description:
+      `With simpler lines, but still a classic elevation, this residence, too, has been designed for American clients with
+      Their requirements for open family living spaces, great rooms, and open kitchens
+      `,
+    images: [mrh2, mrh3, mrh4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrs",
+    title: "MR. S House ",
+    location: "Sukkur",
+    year: "2025",
+    category: "Residential",
+    status: "Under Construction",
+    area: "200 SqYds",
+    image: mrs,
+    description:
+      `This residence a part of row houses in a housing society. But its tiny footprint still allows for a 4-bedroom house with a roof terrace and entertainment spaces, demonstrating that small footprints can also provide a high standard of living spaces.
+      `,
+    images: [mrs2, mrs3],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "sph",
+    title: "SPH HOUSING",
+    location: "Malir Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Under Construction",
+    area: "",
+    image: sph,
+    description:
+      `Over 30 houses designed by gravity, ranging between 800-1000sq yards. Some of the selected designs are below.
+      `,
+    images: [sph2, sph3, sph4],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrzDHA",
+    title: "MR. Z RESIDENCE ",
+    location: "DHA, Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Under Construction",
+    area: "1000 SqYds",
+    image: mrzDHA,
+    description:
+      `The residence offer privacy to the clients while embracing outdoor views in every room, an opulent 1000sq yards house having neo classical influences.
+      `,
+    images: [mrzDHA1],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrsDHA",
+    title: "MR. S RESIDENCE ",
+    location: "DHA, Lahore",
+    year: "2025",
+    category: "Residential",
+    status: "Under Construction",
+    area: "850 SqYds",
+    image: mrsDHA,
+    description:
+      `Behind the glass façade this residence opens up to an open courtyard getting light into the basement and creating multi-level living spaces.
+      `,
+    images: [mrsDHA1],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrm",
+    title: "MR. M RESIDENCE ",
+    location: "DHA, Lahore",
+    year: "2025",
+    category: "Residential",
+    status: "Under Construction",
+    area: "1000 SqYds",
+    image: mrm,
+    description:
+      `A modern villa in lah ore with a central staircase and a glas atrium opening up the internal spaces to several courtyards allowing light to filter to at different levels.
+      `,
+    images: [mrm2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "cm",
+    title: "CM SECRETERIAT",
+    location: "Gwadar, Baluchistan",
+    year: "2025",
+    category: "Residential",
+    status: "Under Construction",
+    area: "",
+    image: cm,
+    description:
+      `The chief minister's secretariat was designed to have the office and residence block. This modern building overlooking the sea has a unique location and breathtaking water views.
+      `,
+    images: [cm2],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "luxury",
+    title: "LUXURY HOMES INTERIOR",
+    location: "Karachi",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "2000 SqYds",
+    image: lux,
+    description:
+      `This opulent residence interior has been designed with classic elements and furnishings, highlighting the client's taste for the grand
+      `,
+    images: [lux2, lux3, lux4, lux5, lux6],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "mrsa",
+    title: "RESIDENCE MRS. A",
+    location: "Lahore",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "1000 SqYds",
+    image: mrsa,
+    description:
+      `The house opens into a dramatic double-height space where marble clads the walls from floor to ceiling, emphasizing the height and elegance of the interior. The muted palette creates a calm and refined atmosphere, allowing the natural beauty of the marble to stand out. Blending modern simplicity with classic sophistication, the space feels timeless, balanced, and quietly luxurious
+      `,
+    images: [mrsa2, mrsa3, mrsa4, mrsa5, mrsa6, mrsa7],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "petaro",
+    title: "MASTER PLAN PETARO, SINDH",
+    location: "Sindh",
+    year: "2025",
+    category: "Residential",
+    status: "Completed",
+    area: "1000 SqYds",
+    image: petaro,
+    description:
+      `This unique masterplan was designed with canals to provide the community with a unique experience and landscape reminiscent of Europe. This waterway also provides the dual function of providing water to homes and communities
+      `,
+    images: [petaro2, petaro3],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
 ];

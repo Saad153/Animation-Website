@@ -212,7 +212,7 @@ export function ProjectsPage() {
         style={{ paddingBottom: "clamp(80px, 12vw, 120px)" }}
       >
         {/* Results count */}
-        <motion.div
+        {/* <motion.div
           className="flex items-center justify-between mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -232,7 +232,7 @@ export function ProjectsPage() {
                 : `${filtered.length} of ${projects.length} projects`}
             </motion.p>
           </AnimatePresence>
-        </motion.div>
+        </motion.div> */}
 
         {/* Grid */}
         <AnimatePresence mode="popLayout">
