@@ -232,13 +232,59 @@ import nastp4 from "@/assets/nastp4.jpg";
 import nastp5 from "@/assets/nastp5.jpg";
 import nastp6 from "@/assets/nastp6.jpg";
 import nastp7 from "@/assets/nastp7.png";
+import nastp8 from "@/assets/nastp8.jpg";
+import nastp9 from "@/assets/nastp9.jpg";
+import nastp10 from "@/assets/nastp10.jpg";
+import nastp11 from "@/assets/nastp11.jpg";
+import nastp12 from "@/assets/nastp12.jpg";
+import nastp13 from "@/assets/nastp13.jpg";
+import nastp14 from "@/assets/nastp14.jpg";
+import nastp15 from "@/assets/nastp15.jpg";
+import nastp16 from "@/assets/nastp16.jpg";
+import nastp17 from "@/assets/nastp17.jpg";
+import nastp18 from "@/assets/nastp18.jpg";
+import nastp19 from "@/assets/nastp19.jpg";
+import nastp20 from "@/assets/nastp20.jpg";
+import nastp21 from "@/assets/nastp21.jpg";
+import nastp22 from "@/assets/nastp22.jpg";
+import nastp23 from "@/assets/nastp23.jpg";
+import nastp24 from "@/assets/nastp24.jpg";
+import nastp25 from "@/assets/nastp25.jpg";
+import nastp26 from "@/assets/nastp26.jpg";
+import nastp27 from "@/assets/nastp27.jpg";
+import nastp28 from "@/assets/nastp28.jpg";
+import nastp29 from "@/assets/nastp29.jpg";
+import nastp30 from "@/assets/nastp30.jpg";
+import nastp31 from "@/assets/nastp31.jpg";
+import nastp32 from "@/assets/nastp32.jpg";
+import nastp33 from "@/assets/nastp33.jpg";
+import nastp34 from "@/assets/nastp34.jpg";
+import nastp35 from "@/assets/nastp35.jpg";
+import nastp36 from "@/assets/nastp36.jpg";
+import nastp37 from "@/assets/nastp37.jpg";
+import nastp38 from "@/assets/nastp38.jpg";
+import nastp39 from "@/assets/nastp39.jpg";
+import nastp40 from "@/assets/nastp40.jpg";
+import nastp41 from "@/assets/nastp41.jpg";
+import nastp42 from "@/assets/nastp42.jpg";
+import nastp43 from "@/assets/nastp43.jpg";
 
 // Project 49  NASTP IT 
-import nastpIT from "@/assets/nastpIT.jpg";
-import nastpIT1 from "@/assets/nastpIT1.jpg";
-import nastpIT2 from "@/assets/nastpIT2.jpg";
-import nastpIT3 from "@/assets/nastpIT3.jpg";
-import nastpIT4 from "@/assets/nastpIT4.jpg";
+import nastpIT from "@/assets/nastpKarachi.jpg";
+import nastpIT1 from "@/assets/nastpKarachi2.jpg";
+import nastpIT2 from "@/assets/nastpKarachi3.jpg";
+import nastpIT3 from "@/assets/nastpKarachi4.jpg";
+import nastpIT4 from "@/assets/nastpKarachi4.jpg";
+import nastpIT5 from "@/assets/nastpKarachi5.jpg";
+import nastpIT6 from "@/assets/nastpKarachi6.jpg";
+import nastpIT7 from "@/assets/nastpKarachi7.jpg";
+import nastpIT8 from "@/assets/nastpKarachi8.jpg";
+import nastpIT9 from "@/assets/nastpKarachi9.jpg";
+import nastpIT10 from "@/assets/nastpKarachi10.jpg";
+import nastpIT11 from "@/assets/nastpKarachi11.jpg";
+import nastpIT12 from "@/assets/nastpKarachi12.jpg";
+import nastpIT13 from "@/assets/nastpKarachi13.jpg";
+import nastpIT14 from "@/assets/nastpKarachi14.jpg";
 
 // Project 50  INNOVISTA 
 import innovista from "@/assets/innovista.jpg";
@@ -451,6 +497,13 @@ import mrsa7 from "@/assets/mrsa7.jpg";
 import petaro from "@/assets/petaro.jpg";
 import petaro2 from "@/assets/petaro2.jpg";
 import petaro3 from "@/assets/petaro3.jpg";
+
+// Project 86  Container
+import container from "@/assets/container.jpg";
+import container2 from "@/assets/container2.jpg";
+import container3 from "@/assets/container3.jpg";
+import container4 from "@/assets/container4.jpg";
+
 
 export interface Project {
   id: string;
@@ -681,6 +734,20 @@ export const projects: Project[] = [
     description:
       "This hotel has been renovated keeping the original classic element intact but adding modern elements to redesign the interiors and give it a beautiful new look.",
     images: [challet14],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "container",
+    title: "CONTAINER HUT",
+    location: "Karachi",
+    year: "2026",
+    category: "Hospitality & Institutional",
+    status: "Completed",
+    area: "—",
+    image: container,
+    description:
+      "By taking advantage of the structural strength of containers, the project features a striking cantilevered design. The upper module extends outward, creating a dramatic overhang that naturally shades the lower deck, eliminating the need for extra support columns.",
+    images: [container2, container3, container4],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
   {
@@ -1167,13 +1234,13 @@ export const projects: Project[] = [
 
       Till to date, it stands as the official standards for excellence in IT parks
       `,
-    images: [nastp1, nastp2, nastp3, nastp4, nastp5, nastp6, nastp7],
+    images: [nastp1, nastp2, nastp3, nastp4, nastp5, nastp6, nastp7, nastp8, nastp9, nastp10, nastp11, nastp12, nastp13, nastp14, nastp15, nastp16, nastp17, nastp18, nastp19, nastp20, nastp21, nastp22, nastp23, nastp24, nastp25, nastp26, nastp27, nastp28, nastp29, nastp30, nastp31, nastp32, nastp32, nastp33, nastp34, nastp35, nastp36, nastp37, nastp38, nastp39, nastp40, nastp41, nastp42, nastp43],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
   {
     id: "nastp IT",
     title: "NASTP IT PARK",
-    location: "NASTP Karachi ",
+    location: "Karachi ",
     year: "2024",
     category: "Offices & IT Parks",
     status: "Completed",
@@ -1181,14 +1248,14 @@ export const projects: Project[] = [
     image: nastpIT,
     description:
       `Gravity Architecture was responsible for converting this mall building into an IT park. The inauguration of this IT park was done on 12th January 2024, by field marshal Asim Munir. 
-
+      
       From the original plan we carved out the space for the amenities, like welcome centre, daycare, conference rooms, prayer area, events hall, cafes, landscaping, admin offices, signage’s, corridor spaces, banks etc. 
 
       The individual offices were then designed by the companies who rented them, in which one or two were done by Gravity. 
 
       As NASTPs grow and succeed, Gravity continuously designs and builds the NASTPs around Pakistan.
       `,
-    images: [nastpIT1, nastpIT2, nastpIT3, nastpIT4],
+    images: [nastpIT1, nastpIT2, nastpIT3, nastpIT4, nastpIT5, nastpIT6, nastpIT7, nastpIT8, nastpIT9, nastpIT10,nastpIT11, nastpIT12,nastpIT13, nastpIT14],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
   {
@@ -1443,24 +1510,24 @@ export const projects: Project[] = [
     description:
       `This classic residence accommodates 3 separate apartments for 3 families, with common dining and drawing spaces. There is basement pool which is open to sky and provides views to the entertaining spaces of the residence. The exterior is inspired by chalet and has dormer windows, slate roof and sash windows.
       `,
-    images: [mrb2, mrb3],
+    images: [mrb2, mrb3, mrc, mrc2, mrc3, mrc4, mrc5, mrc6, mrc7, mrc8],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
-  {
-    id: "mrc",
-    title: "MR. C RESIDENCE",
-    location: "Phase-5, Karachi",
-    year: "2025",
-    category: "Residential",
-    status: "Completed",
-    area: "1000 SqYds",
-    image: mrc2,
-    description:
-      `This is a modern residence, with double height entry and the floor plan that maximizes pool and gardens views from every room.
-      `,
-    images: [mrc, mrc3, mrc4, mrc5, mrc6, mrc7, mrc8],
-    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
-  },
+  // {
+  //   id: "mrc",
+  //   title: "MR. C RESIDENCE",
+  //   location: "Phase-5, Karachi",
+  //   year: "2025",
+  //   category: "Residential",
+  //   status: "Completed",
+  //   area: "1000 SqYds",
+  //   image: mrc2,
+  //   description:
+  //     `This is a modern residence, with double height entry and the floor plan that maximizes pool and gardens views from every room.
+  //     `,
+  //   images: [mrc, mrc3, mrc4, mrc5, mrc6, mrc7, mrc8],
+  //   tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  // },
   {
     id: "mrz",
     title: "MR. Z RESIDENCE",

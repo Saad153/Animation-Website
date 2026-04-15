@@ -474,11 +474,12 @@
 //   // Trigger download
 //   doc.save("Gravity_Portfolio_2025.pdf");
 // }
+import profile from "@/assets/GRAVITY PROFILE 10 SELECTED PROJECT.pdf"
 
 export async function generatePortfolioPDF(): Promise<void> {
   const a = document.createElement("a");
-  a.href = "https://drive.google.com/file/d/1RWvHsO-TgbOPrhAtU_ZoMBNAGrDaV66F/view?usp=drive_link";
-  a.download = "GRAVITY Architecture & Interiors 2026.pdf";
+  a.href = profile
+  a.download = "GRAVITY Architecture & Interiors 10 SELECTED PROJECT.pdf";
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

@@ -10,7 +10,7 @@ import logo from "@/assets/logo.png";
 
 // ─── New replacement images (slots 0–7) ───────────────────────────────────────
 import newImg0 from "@/assets/3ed75039c8ed75a966529d7f1a79fa162314833f.png"; // Aabhi interior store
-import newImg1 from "@/assets/f257d47652ed9787b02479a73ffac1b61f3a53cd.png"; // elegant hallway
+import newImg1 from "@/assets/pafSchool7.jpg"; // elegant hallway
 import newImg2 from "@/assets/creek2.jpg"; // modern curved wood-glass building at dusk
 import newImg3 from "@/assets/5c06433b5ec4dbb425bd01103261ec12403a3041.png"; // luxury retail
 import newImg4 from "@/assets/574cd1294d9f97c3c16200d8a8499d1b55706437.png"; // modern residential pool
@@ -21,18 +21,18 @@ import newImg7 from "@/assets/bb00a237e6019606a36a0c71d5089d9f3b5f203a.png"; // 
 // ─── New replacement images (slots 8–16) ──────────────────────────────────────
 import newImg8  from "@/assets/09d0d22780ebe0c3ad49ef060d2aca3119dc4bb7.png"; // mountain chalet cabins on hillside
 import newImg9  from "@/assets/c675d7b65e8fc74117d5dbcc8897d3a295759ae8.png"; // Innovista auditorium red seats
-import newImg10 from "@/assets/7c8e59d7c8faafdb80468dbc5fa3029b2980f855.png"; // indoor swimming pool
+import newImg10 from "@/assets/pafSchool11.jpg"; // indoor swimming pool
 import newImg11 from "@/assets/e5e5dfafc7c463ebad3493e5ca687eafb2f29bf4.png"; // beige high-rise tower at dusk with palms
 import newImg12 from "@/assets/a21b1fa5e5c998176a0fde43522a103bdb11e367.png"; // white classical arched building with landscaped street
 import newImg13 from "@/assets/f3ff9122ce0bd8e52bcec5d4826c7723f33b294a.png"; // Pearl Towers entrance canopy at night
 import newImg14 from "@/assets/26ceeda23a165793d73a41d22f04d8d00f149811.png"; // glass high-rise with green terraces
-import newImg15 from "@/assets/560d95bd040747c62cd8edc43662c33556166bba.png"; // brick arched colonnade building at sunset
-import newImg16 from "@/assets/a3d6653f3bb781608bdf1e0984437f3ebcb82e06.png"; // TMF Center of Excellence dual tower
+import newImg15 from "@/assets/pafSchool2.jpg"; // brick arched colonnade building at sunset
+import newImg16 from "@/assets/shifa.jpg"; // TMF Center of Excellence dual tower
 
 // ─── New replacement images (slots 17–19) ─────────────────────────────────────
 import newImg17 from "@/assets/87a33b798bdb69012f897e09338192c5db0b97ef.png"; // indoor swimming pool
 import newImg18 from "@/assets/69377d84dfc6fd48852caa26119ac4261c664e56.png"; // white arched building exterior
-import newImg19 from "@/assets/9479798145357a18c2d8da2b2abbaeb08af8ed43.png"; // modern tech campus garden
+import newImg19 from "@/assets/innovista.jpg"; // modern tech campus garden
 
 // ─── New replacement images (slots 20–22) ─────────────────────────────────────
 import newImg20 from "@/assets/ca59191f23ff730c6f17f9716db953ec92031041.png"; // brick school building at dusk

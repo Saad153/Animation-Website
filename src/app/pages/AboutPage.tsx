@@ -181,7 +181,7 @@ export function AboutPage() {
               </em>
               <br />
               <em style={{ fontStyle: "italic", color: "rgba(255,255,255,0.7)" }}>
-                spaces that elevate andenhance
+                spaces that elevate and enhance
               </em>
               <br />
               human experiences.
