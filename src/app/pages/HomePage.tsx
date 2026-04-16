@@ -14,8 +14,7 @@ import newImg3 from "@/assets/maison2.jpg"; // luxury retail
 import newImg4 from "@/assets/574cd1294d9f97c3c16200d8a8499d1b55706437.png"; // modern residential pool
 import newImg5 from "@/assets/c316ade365712c6f044c78c0ac37513f99d12fc2.png"; // glass high-rise towers at dusk
 import newImg6 from "@/assets/innovista2.jpg"; // Innovista Indus entrance
-import newImg7 from "@/assets/bb00a237e6019606a36a0c71d5089d9f3b5f203a.png"; // classical villa entrance wrought iron
-import newImg8  from "@/assets/09d0d22780ebe0c3ad49ef060d2aca3119dc4bb7.png"; // mountain chalet cabins on hillside
+import newImg7 from "@/assets/bb00a237e6019606a36a0c71d5089d9f3b5f203a.png"; // classical villa entrance wrought iron// mountain chalet cabins on hillside
 import newImg9  from "@/assets/c675d7b65e8fc74117d5dbcc8897d3a295759ae8.png"; // Innovista auditorium red seats
 import newImg10 from "@/assets/pafSchool11.jpg"; // indoor swimming pool
 import newImg11 from "@/assets/e5e5dfafc7c463ebad3493e5ca687eafb2f29bf4.png"; // beige high-rise tower at dusk with palms

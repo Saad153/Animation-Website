@@ -57,29 +57,41 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 }
 
 export function ContactPage() {
-  const EMAILJS_SERVICE_ID = "service_0sjt6xk";   // from EmailJS → Email Services
-  const EMAILJS_TEMPLATE_ID = "template_8k2dmtk"; // from EmailJS → Email Templates
-  const EMAILJS_PUBLIC_KEY = "sJqliB35jhzFJCPvJ";  
+  const EMAILJS_SERVICE_ID = "service_4o77tr6";   // from EmailJS → Email Services
+  const EMAILJS_TEMPLATE_ID = "template_1ueq4pp"; // from EmailJS → Email Templates
+  const EMAILJS_PUBLIC_KEY = "aYF45smSjG8H09_6y";  
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [formState, setFormState] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [focused, setFocused] = useState<string | null>(null);
 
+  const socialLinks = {
+  Instagram: "https://instagram.com/gravity_architecture_interiors?igsh=MXRybno4aDVtN203bA==",
+  LinkedIn: "https://linkedin.com/company/gravityarchitectureinteriors/",
+} as const;
+
+type SocialKey = keyof typeof socialLinks;
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setSending(true);
   setError(null);
+  
+  const currentTime = new Date().toLocaleString("en-PK", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  });
 
   try {
     await emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
       {
-        from_name: formState.name,
-        from_email: formState.email,
+        name: formState.name,
+        email: formState.email,
         subject: formState.subject,
         message: formState.message,
+        time: currentTime,
       },
       EMAILJS_PUBLIC_KEY
     );
@@ -90,6 +102,8 @@ export function ContactPage() {
     setSending(false);
   }
 };
+
+
 
   const inputStyle = (field: string): React.CSSProperties => ({
     width: "100%",
@@ -211,11 +225,11 @@ export function ContactPage() {
                     }}
                   >
                     <option value="" style={{ background: "#111" }}>Select a topic</option>
-                    <option value="project" style={{ background: "#111" }}>New Project Inquiry</option>
-                    <option value="press" style={{ background: "#111" }}>Press & Media</option>
-                    <option value="careers" style={{ background: "#111" }}>Careers</option>
-                    <option value="collaboration" style={{ background: "#111" }}>Collaboration</option>
-                    <option value="other" style={{ background: "#111" }}>Other</option>
+                    <option value="Project" style={{ background: "#111" }}>New Project Inquiry</option>
+                    <option value="Press" style={{ background: "#111" }}>Press & Media</option>
+                    <option value="Careers" style={{ background: "#111" }}>Careers</option>
+                    <option value="Collaboration" style={{ background: "#111" }}>Collaboration</option>
+                    <option value="Other" style={{ background: "#111" }}>Other</option>
                   </select>
                 </div>
 
@@ -255,6 +269,7 @@ export function ContactPage() {
                   disabled={sending}
                   className="flex items-center gap-3 text-white uppercase tracking-[0.15em] group cursor-pointer border-none bg-transparent p-0 hover:gap-5 transition-all duration-300"
                   style={{ fontSize: "11px", opacity: sending ? 0.5 : 1 }}
+             
                 >
                   <span>{sending ? "Sending..." : "Send Message"}</span>
                   <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -347,10 +362,12 @@ export function ContactPage() {
                   Follow Along
                 </p>
                 <div className="flex gap-6">
-                  {["Instagram", "LinkedIn", "Dezeen"].map((s) => (
+                  {(Object.keys(socialLinks) as SocialKey[]).map((s) => (
                     <a
                       key={s}
-                      href="#"
+                      href={socialLinks[s]}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-white/30 hover:text-white/70 transition-colors no-underline uppercase tracking-[0.1em]"
                       style={{ fontSize: "10px" }}
                     >
