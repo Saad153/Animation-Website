@@ -1,5 +1,5 @@
 import jinnahAerial from "@/assets/fe7c436dbcda8afd381392cfcd6639d0c94349bc.png";
-import jinnahNight   from "@/assets/5d5179836a3dc3bd68c1c31ea82c64911df76586.png";
+import jinnahNight   from "@/assets/aboutbg.jpg";
 import jinnahSite    from "@/assets/7614ccce12f7d22c2945bf816a70004963816937.png";
 
 import pearlNight    from "@/assets/6add05817dfda4fcb1eea94226150f85fa6f8aaf.png";
@@ -47,7 +47,7 @@ import cyberAtrium        from "@/assets/137dd2a9779e1d9657cb57203ef12250661cea7
 import cyberConstruction  from "@/assets/3221dfd860f2581c3b61802235c4366e3931227e.png";
 
 // Project 12 — Gravity Tower 1 G+21
-import gravityTower1Night       from "@/assets/6d7e66940bebc0cab8a432d5e6707b65e1a5c8ae.png";
+import gravityTower1Night       from "@/assets/aboutus.png";
 import gravityTower1Construction from "@/assets/7791e506d5a18a0753ad8380f4432effc5b2828c.png";
 import gravityTower1Day         from "@/assets/15e205cbe59271f70ac142f75736004114a026ba.png";
 

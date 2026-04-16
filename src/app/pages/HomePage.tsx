@@ -1,88 +1,41 @@
 import { motion, useMotionValue, useSpring, useTransform, animate } from "motion/react";
 import React, { useRef, useEffect, useState, useMemo, JSX } from "react";
 import { useLocation } from "react-router";
-import { GravityWaveIcon } from "../components/GravityWaveIcon";
 
 // ─── Gravity logo ─────────────────────────────────────────────────────────────
 import gravityLogo from "@/assets/laptoplogo.png";
 import logo from "@/assets/logo.png";
 
 
-// ─── New replacement images (slots 0–7) ───────────────────────────────────────
 import newImg0 from "@/assets/3ed75039c8ed75a966529d7f1a79fa162314833f.png"; // Aabhi interior store
 import newImg1 from "@/assets/pafSchool7.jpg"; // elegant hallway
 import newImg2 from "@/assets/creek2.jpg"; // modern curved wood-glass building at dusk
-import newImg3 from "@/assets/5c06433b5ec4dbb425bd01103261ec12403a3041.png"; // luxury retail
+import newImg3 from "@/assets/maison2.jpg"; // luxury retail
 import newImg4 from "@/assets/574cd1294d9f97c3c16200d8a8499d1b55706437.png"; // modern residential pool
 import newImg5 from "@/assets/c316ade365712c6f044c78c0ac37513f99d12fc2.png"; // glass high-rise towers at dusk
-import newImg6 from "@/assets/5297e2828cca6f5d266afc2ce916e25792429e5c.png"; // Innovista Indus entrance
+import newImg6 from "@/assets/innovista2.jpg"; // Innovista Indus entrance
 import newImg7 from "@/assets/bb00a237e6019606a36a0c71d5089d9f3b5f203a.png"; // classical villa entrance wrought iron
-
-// ─── New replacement images (slots 8–16) ──────────────────────────────────────
 import newImg8  from "@/assets/09d0d22780ebe0c3ad49ef060d2aca3119dc4bb7.png"; // mountain chalet cabins on hillside
 import newImg9  from "@/assets/c675d7b65e8fc74117d5dbcc8897d3a295759ae8.png"; // Innovista auditorium red seats
 import newImg10 from "@/assets/pafSchool11.jpg"; // indoor swimming pool
 import newImg11 from "@/assets/e5e5dfafc7c463ebad3493e5ca687eafb2f29bf4.png"; // beige high-rise tower at dusk with palms
 import newImg12 from "@/assets/a21b1fa5e5c998176a0fde43522a103bdb11e367.png"; // white classical arched building with landscaped street
-import newImg13 from "@/assets/f3ff9122ce0bd8e52bcec5d4826c7723f33b294a.png"; // Pearl Towers entrance canopy at night
 import newImg14 from "@/assets/26ceeda23a165793d73a41d22f04d8d00f149811.png"; // glass high-rise with green terraces
 import newImg15 from "@/assets/pafSchool2.jpg"; // brick arched colonnade building at sunset
 import newImg16 from "@/assets/shifa.jpg"; // TMF Center of Excellence dual tower
-
-// ─── New replacement images (slots 17–19) ─────────────────────────────────────
-import newImg17 from "@/assets/87a33b798bdb69012f897e09338192c5db0b97ef.png"; // indoor swimming pool
-import newImg18 from "@/assets/69377d84dfc6fd48852caa26119ac4261c664e56.png"; // white arched building exterior
 import newImg19 from "@/assets/innovista.jpg"; // modern tech campus garden
-
-// ─── New replacement images (slots 20–22) ─────────────────────────────────────
 import newImg20 from "@/assets/ca59191f23ff730c6f17f9716db953ec92031041.png"; // brick school building at dusk
-import newImg21 from "@/assets/0ff2ea99a0e32031f5ae3eb1972595fa5b40122c.png"; // luxury wood-ceiling lounge interior
+import newImg21 from "@/assets/golfer2.jpg"; // luxury wood-ceiling lounge interior
 import newImg22 from "@/assets/a2f687d23538885d8b2ae97cb646ac0f6d94aeab.png"; // open-plan office workspace
-
-// ─── New replacement images (slots 23–25) ─────────────────────────────────────
-import newImg23 from "@/assets/6d29a36b8d8b5e9e6e369f49ab0a953158974b6a.png"; // glass-partition office with plants
-import newImg24 from "@/assets/dad33bfb5e58029f3bd62539147ee8209a046fb4.png"; // open studio office floor
-import newImg25 from "@/assets/2ba56b1853d6b65c8214b9bb5038a6a06c11437c.png"; // Askari Towers high-rise render
-
-// ─── New replacement images (slots 26–27) ─────────────────────────────────────
-import newImg26 from "@/assets/8c2f737cae4806558089adc86b99a320bc950b34.png"; // modern residential townhouses street view
 import newImg27 from "@/assets/1d92653eec918a706702f502d07c11309d836b31.png"; // DHA building red-white striped facade with lawn
-
-// ─── Real project images ──────────────────────────────────────────────────────
 import jinnahAerial    from "@/assets/b06f1f503232e620858c7013456bed2e8a969db4.png";
-// import jinnahNight     from "@/assets/5d5179836a3dc3bd68c1c31ea82c64911df76586.png";
 import pearlNight      from "@/assets/6add05817dfda4fcb1eea94226150f85fa6f8aaf.png";
-import pearlGate       from "@/assets/d904eb6644b26f621312f75f1150adba64e4e1cd.png";
-import pearlAerial     from "@/assets/8c2f737cae4806558089adc86b99a320bc950b34.png";
-// import dhaSunset       from "@/assets/e0034d139ea3b04423620fccffb2677d5d20d566.png";
-// import dhaBirdsEye     from "@/assets/bb13b321df0cdaa668c1ee46fcfb0248f3ac2d0e.png";
-// import askariRender    from "@/assets/a35c08468163fa9dc0d1871006cc1e08bcb48f9e.png";
-// import askariPhoto     from "@/assets/81fd1d357b221b52c6a9f17d0df5f6c5d8721018.png";
-// import dhaEnclaveHero  from "@/assets/09d0d22780ebe0c3ad49ef060d2aca3119dc4bb7.png";
-// import askari18aFront  from "@/assets/ef1bca31f3087b65b1c6af961c22229a30517c5c.png";
-// import askari18aStreet from "@/assets/4859b3b2f408f91a882e750efbe3cc87609bc2af.png";
-// import askari711Render from "@/assets/2e8c9d3309b8e3e58d8d00faa794f7f65a636784.png";
-import askari1012Evening from "@/assets/df217dc95983a8b88bf39091e14445fe0cc52434.png";
-// import askari1012Night from "@/assets/1aa6d0725f65e00cc9d0b255dfbc2352cbeb0ea3.png";
-// import embassyCompleted from "@/assets/a8b07d4d7114f6131ebaa11e8c1371701fa94a93.png";
-// import malirAerial     from "@/assets/27dcbce900ba5c921a3bf91389d0ea1597fc7542.png";
-// import malirConstruction from "@/assets/ad25a5b0ce14e7dbc2bb669caa37a1981c672522.png";
-// import cyberExterior   from "@/assets/fdca48499e55dcb74fa40cbb5f9bee2494dbad9d.png";
-// import cyberRender     from "@/assets/632fcbe2413eb2351b52bbf8b44a4956615066ba.png";
-// import cyberLobby      from "@/assets/0ba821698482d0a8f11cd01056a5597811171651.png";
-// import gravityTower1Night from "@/assets/6d7e66940bebc0cab8a432d5e6707b65e1a5c8ae.png";
-import gravityTower1Day from "@/assets/d6ca377de74b166e20e20edd82f10e604a981995.png";
-// import pafChaletExterior from "@/assets/020fc8f9c34c12665429860cbdef1feb0c1a555d.png";
-// import pafChaletHillside from "@/assets/3e1a3d4e73b598fd8d58ed65309af26183b92660.png";
-import pafChaletRestaurant from "@/assets/89c70f4bea1afeac8168cb2d157428484c70695f.png";
-// import pafVfomFront    from "@/assets/52bc6d7b4898187277b1fbc9dbe83b10faa34b6f.png";
 import pafVfomAerial   from "@/assets/89f81c652f2e9f13876e822dd6938385b3bb96b2.png";
-// import pafVfomEntrance from "@/assets/a69fcac697524958699441c33414e8339ff97c50.png";
 import natap from "@/assets/natap.png";
 import newImage29 from "@/assets/ecb6770e41175b59a115b0f3a41a8c6334c19752.png";
 import newImage30 from "@/assets/a7759569c3d6c1a258e218b1b80afb6a72a99f29.png";
 import newImg31 from "@/assets/177a777dbde57cc4b769b815ef7b4eff0027131f.png";
-import newImg32 from "@/assets/newAdd.jpeg";
+import newImg32 from "@/assets/pafSchool8.jpg";
 import newImg33 from "@/assets/advans.jpg";
 import newImg34 from "@/assets/fuchsia3.jpg";
 import newImg35 from "@/assets/golfer4.jpg";
@@ -122,65 +75,6 @@ const IMAGES = [
   newImg34,
   newImg35,
   newImg36
-  
-
-  // newImg0,             // slot  0 — Aabhi interior store
-  // newImg1,            // slot  1 — Pearl Towers entrance canopy
-  // newImg2,             // slot  2 — modern curved wood-glass building at dusk
-  // newImg3,             // slot  3 — luxury retail
-  // newImg4,             // slot  4 — modern residential pool
-  // newImg5,             // slot  5 — glass high-rise towers at dusk
-  // newImg6,             // slot  6 — Innovista Indus entrance
-  // newImg7,             // slot  7 — classical villa entrance
-  // gravityTower1Day,    // slot  8 — Gravity Tower day view (replaces duplicate chalet)
-  // newImg9,             // slot  9 — Innovista auditorium red seats
-  // newImg10,            // slot 10 — indoor swimming pool
-  // newImg11,            // slot 11 — beige high-rise at dusk with palms
-  // newImg12,            // slot 12 — white classical arched building
-  // newImg1,             // slot 13 — elegant hallway
-  // newImg14,            // slot 14 — glass high-rise with green terraces
-  // newImg15,            // slot 15 — brick arched colonnade at sunset
-  // newImg16,            // slot 16 — TMF Center of Excellence dual tower
-  // newImg17,            // slot 17 — indoor swimming pool 2
-  // newImg18,            // slot 18 — white arched building exterior
-  // newImg19,            // slot 19 — modern tech campus garden
-  // newImg20,            // slot 20 — brick school building at dusk
-  // newImg21,            // slot 21 — luxury wood-ceiling lounge interior
-  // newImg22,            // slot 22 — open-plan office workspace
-  // newImg23,            // slot 23 — glass-partition office with plants
-  // newImg24,            // slot 24 — open studio office floor
-  // newImg25,            // slot 25 — Askari Towers high-rise render
-  // newImg26,            // slot 26 — modern residential townhouses
-  // newImg27,            // slot 27 — DHA building red-white striped facade
-  // pafChaletRestaurant, // slot 28
-  // // pafVfomFront,        // slot 29
-  // // pafVfomAerial,       // slot 30
-  // // pafVfomEntrance,     // slot 31
-  // ,        // slot 32
-  // // jinnahNight,         // slot 33
-  // pearlNight,          // slot 34
-  // // pearlGate,           // slot 35
-  // pearlAerial,         // slot 36
-  // // dhaSunset,           // slot 37
-  // // dhaBirdsEye,         // slot 38
-  // // askariRender,        // slot 39
-  // // askariPhoto,         // slot 40
-  // // dhaEnclaveHero,      // slot 41
-  // // askari18aFront,      // slot 42
-  // // askari18aStreet,     // slot 43
-  // // askari711Render,     // slot 44
-  // // askari1012Evening,   // slot 45
-  // // askari1012Night,     // slot 46  
-  // // embassyCompleted,    // slot 47
-  // // malirAerial,         // slot 48
-  // // malirConstruction,   // slot 49
-  // // cyberExterior,       // slot 50
-  // // cyberRender,         // slot 51
-  // // cyberLobby,          // slot 52
-  // // gravityTower1Night,  // slot 53
-  // // pafChaletExterior,   // slot 54
-  // // pafChaletHillside,   // slot 55
-  // newImg8,             // slot 56 — mountain chalet (placed at end, far from visible area)
 ];
 
 // ─── Column config ────────────────────────────────────────────────────────────

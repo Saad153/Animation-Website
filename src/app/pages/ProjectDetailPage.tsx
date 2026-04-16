@@ -32,156 +32,156 @@ const SUBTITLES: Record<string, string> = {
   "challet": "Challet",
 };
 
-const QUOTES: Record<string, { text: string; author: string; role: string }> = {
-  "jinnah-askari-ii": {
-    text: "A constrained site is not a limitation — it is an invitation to innovate. The narrow plot forced us to think vertically, and in doing so we discovered a richer spatial typology.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "pearl-towers": {
-    text: "A gate is not merely a threshold — it is a statement of intent. The winged steel form at Pearl Towers announces, before a single apartment is seen, that what lies beyond is extraordinary.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "dha4-islamabad": {
-    text: "The cliff does not resist the building — it demands that the building respond. Every curve of these towers is a reply to the valley, an acknowledgement that the landscape was here first.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "askari-block-130": {
-    text: "An irregular plot is an honest plot. Rather than forcing a standard layout onto a non-standard site, we let the land dictate the plan — and discovered that every home became extraordinary as a result.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "dha-enclave-highrise": {
-    text: "To build on the sea's edge is to accept that the horizon is the most important element of every room. Every decision in this project — from tower placement to facade angle — was made in service of that view.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "askari-block-18a": {
-    text: "The park was not a backdrop — it was a collaborator. Every angle of this tower was drawn in conversation with the green expanse of Askari Park, so that nature enters every apartment as an equal resident.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "askari-block-7-11": {
-    text: "A triangle is the most structurally honest shape in geometry. We took that honesty and made it the building's identity — two towers that are direct, confident, and unapologetically of their site.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "askari-block-10-12": {
-    text: "Amenity is not an afterthought — it is architecture. At Askari 11, the swimming pool, the gym, and the lounge are not tucked away; they are celebrated as part of the building's identity, as much a facade element as glass and steel.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "embassy-gardens": {
-    text: "When the authorities ask you to set the standard for an entire boulevard, you understand that architecture is not a private act. Every arch, every balcony, every cornice on this building was drawn with the weight of the street in mind.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "malir-jinnah-boulevard": {
-    text: "Colour in architecture is not decoration — it is identity. Each bay window on Jinnah Boulevard is a resident announcing themselves to the street. The building is not one thing; it is eight towers, hundreds of homes, and a thousand small acts of personal expression.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "cyber-command-ahq": {
-    text: "To unify is harder than to build anew. Two buildings that once spoke different languages had to be made to sing the same note — and that note had to be strong enough to belong to one of Pakistan's most significant military institutions.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "gravity-tower-1": {
-    text: "A tower on three sides of glass is not a building that hides behind its walls — it is one that offers itself entirely to the city, to the sea, and to the sky. Every terrace, every stepped setback, is a gesture of generosity toward the view.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "paf-chalet-resort": {
-    text: "To build in the mountains is to accept that the landscape will always be the dominant presence. The chalets do not compete with Kalabagh's peaks — they settle quietly among the pines, dark-clad and angular, as though they grew from the rock itself.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "paf-vfom-52-suites": {
-    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "challet": {
-    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "american": {
-    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "cigar": {
-    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "roof": {
-    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "americanRes": {
-    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "pafSchool": {
-    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-  "atts": {
-    text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
-    author: "Design Director",
-    role: "Gravity Studio",
-  },
-};
+// const QUOTES: Record<string, { text: string; author: string; role: string }> = {
+  // "jinnah-askari-ii": {
+  //   text: "A constrained site is not a limitation — it is an invitation to innovate. The narrow plot forced us to think vertically, and in doing so we discovered a richer spatial typology.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "pearl-towers": {
+  //   text: "A gate is not merely a threshold — it is a statement of intent. The winged steel form at Pearl Towers announces, before a single apartment is seen, that what lies beyond is extraordinary.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "dha4-islamabad": {
+  //   text: "The cliff does not resist the building — it demands that the building respond. Every curve of these towers is a reply to the valley, an acknowledgement that the landscape was here first.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "askari-block-130": {
+  //   text: "An irregular plot is an honest plot. Rather than forcing a standard layout onto a non-standard site, we let the land dictate the plan — and discovered that every home became extraordinary as a result.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "dha-enclave-highrise": {
+  //   text: "To build on the sea's edge is to accept that the horizon is the most important element of every room. Every decision in this project — from tower placement to facade angle — was made in service of that view.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "askari-block-18a": {
+  //   text: "The park was not a backdrop — it was a collaborator. Every angle of this tower was drawn in conversation with the green expanse of Askari Park, so that nature enters every apartment as an equal resident.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "askari-block-7-11": {
+  //   text: "A triangle is the most structurally honest shape in geometry. We took that honesty and made it the building's identity — two towers that are direct, confident, and unapologetically of their site.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "askari-block-10-12": {
+  //   text: "Amenity is not an afterthought — it is architecture. At Askari 11, the swimming pool, the gym, and the lounge are not tucked away; they are celebrated as part of the building's identity, as much a facade element as glass and steel.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "embassy-gardens": {
+  //   text: "When the authorities ask you to set the standard for an entire boulevard, you understand that architecture is not a private act. Every arch, every balcony, every cornice on this building was drawn with the weight of the street in mind.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "malir-jinnah-boulevard": {
+  //   text: "Colour in architecture is not decoration — it is identity. Each bay window on Jinnah Boulevard is a resident announcing themselves to the street. The building is not one thing; it is eight towers, hundreds of homes, and a thousand small acts of personal expression.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "cyber-command-ahq": {
+  //   text: "To unify is harder than to build anew. Two buildings that once spoke different languages had to be made to sing the same note — and that note had to be strong enough to belong to one of Pakistan's most significant military institutions.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "gravity-tower-1": {
+  //   text: "A tower on three sides of glass is not a building that hides behind its walls — it is one that offers itself entirely to the city, to the sea, and to the sky. Every terrace, every stepped setback, is a gesture of generosity toward the view.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "paf-chalet-resort": {
+  //   text: "To build in the mountains is to accept that the landscape will always be the dominant presence. The chalets do not compete with Kalabagh's peaks — they settle quietly among the pines, dark-clad and angular, as though they grew from the rock itself.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "paf-vfom-52-suites": {
+  //   text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "challet": {
+  //   text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "american": {
+  //   text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "cigar": {
+  //   text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "roof": {
+  //   text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "americanRes": {
+  //   text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "pafSchool": {
+  //   text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+  // "atts": {
+  //   text: "A courtyard is not a void — it is the heart of a building. At PAFVOM, every suite opens onto a private green space, so that the boundary between inside and outside dissolves, and the fruit gardens become as much a part of the room as its walls.",
+  //   author: "Design Director",
+  //   role: "Gravity Studio",
+  // },
+// };
 
-const CONCEPTS: Record<string, string> = {
-  "jinnah-askari-ii":
-    "The design response to this challenging narrow and elongated plot is a quartet of towers that read as a unified composition from afar while revealing distinct characters up close. High and low masses alternate in a syncopated rhythm, breaking the monotony typical of high-rise residential clusters. The podium weaves generous amenity floors — a gym, pool deck, and landscaped sky terrace — beneath the residential floors, while two basement levels accommodate the parking demand of a building of this scale. The result is a vertical neighbourhood that delivers world-class urban living within one of Karachi's most ambitious residential developments.",
-  "pearl-towers":
-    "Pearl Towers is conceived as a self-sufficient urban village rising from a generous 70-kanal site. Six towers of G+29 floors are arranged around a central communal garden — a green heart that every apartment looks toward. The podium level is a richly programmed base: gyms, swimming pools, a pharmacy, salon, and a mosque integrated seamlessly so that residents need rarely leave. The signature element is the monumental steel winged gate — a soaring sculptural canopy inspired by the spread of wings — that frames the entrance boulevard and gives the entire complex its unmistakable civic identity.",
-  "dha4-islamabad":
-    "Sited on the precipitous cliff edge of DHA Phase 4, Islamabad, these G+15 oval towers exploit what most developments would consider an impossible constraint. The fluid elliptical floor plates rotate subtly floor by floor, maximising valley views from every unit while reducing wind loads at altitude. The soft, undulating facade — composed of continuous horizontal bands of glazing and warm cladding — echoes the contour lines of the hillside below. Each tower appears to grow organically from the terrain, as though shaped by the same geological forces that formed the valley over millennia. At 76.78 kanals, the master plan preserves the natural cliff ecology, threading landscape between the towers and down the escarpment in a continuous green cascade.",
-  "askari-block-130":
-    "The irregular geometry of this Askari 5 plot — a condition that typically forces architects toward compromise — became the generative logic of the entire design. Rather than subdividing the land into a regular grid and accepting residual awkward spaces, the design team embraced the angular boundaries, deriving each apartment's layout directly from the site's perimeter. The result is a G+14 tower in which no two floor plans are identical. Some apartments open wide toward the south; others are narrow and deep, oriented east. Each has a distinct spatial character, a particular relationship to light, and a unique sense of address. The warm facade palette of cream and bronze cladding, punctuated by deep balconies, gives the building a coherent exterior identity that belies the richly individual world within.",
-  "dha-enclave-highrise":
-    "The DHA Enclave Highrise is one of Karachi's most ambitious waterfront developments currently in the design phase. Four towers — two residential, sea-facing to the west, and two commercial, anchoring the eastern edge of the podium — are arranged around a landscaped promenade at grade. The residential towers are characterised by curving, full-height glazed facades that maximise Arabian Sea views, while the commercial towers adopt a more orthogonal language, creating a dialogue between the two programmatic worlds. Cascading sky gardens interrupt each tower's facade at every fourth floor, bringing nature into the vertical realm and reducing solar gain. The podium stitches the four towers together with retail, hospitality, and civic amenity, creating a destination that belongs as much to the city as to its residents and tenants.",
-  "askari-block-18a":
-    "The G+18 Askari Block 18A tower is one of the studio's most disciplined exercises in site-responsive design. The small, acutely angular plot in Askari 5 demanded a building form that did not attempt to disguise its boundaries but instead celebrated them. The result is a slender tower of emphatic geometry — each facade a different angle, each elevation reading uniquely from the street. Two luxury 3-bed apartments occupy each floor, both oriented to face the Askari Park directly to the north. Deep balconies slice across the facade at each level, providing shade, outdoor living space, and a visual rhythm that gives the tower an identity from a distance. The base is compact and secure, with parking integrated into the lower floors and ground-level amenities serving the building's residents.",
-  "askari-block-7-11":
-    "Askari Blocks 7 and 11 presented an unusual brief: two towers of matching footprint, sited on a narrow triangular plot. Rather than treating this as a problem of subdivision, the design team conceived the two towers as a single architectural statement — a pair in conversation, separated by a shared podium and linked by the bold central latticed core that rises between them. Three 3-bed apartments per floor wrap around the triangular plan, each with generous terraces that turn every face of the triangle outward to light and air. The distinctive cross-braced central element is structural and expressive simultaneously — carrying vertical loads while creating a legible architectural identity that makes these twin towers instantly recognisable within the Askari 5 neighbourhood.",
-  "askari-block-10-12":
-    "Rising G+18 floors in the prestigious Askari 11 enclave, Blocks 10 and 12 represent Gravity Studio's vision of vertical community living in Lahore. Two towers of matching floor plan stand side by side, their shared language creating a harmonious pair rather than two isolated objects. The defining ambition of this project is the integration of amenities — swimming pool, gymnasium, and residents' lounges — not as basement afterthoughts but as celebrated volumes within the building's envelope, expressed on the facade and contributing to the towers' distinctive vertical character. Construction is well advanced, with the concrete structure rising steadily against Lahore's skyline. The evening render captures the promise of the finished towers: warm, lit apartments above a generously planted ground level, the twin forms majestic in the dusk light of one of Pakistan's most sought-after residential addresses.",
-  "embassy-gardens":
-    "Embassy Gardens in Bahria Town, Islamabad, is a study in the civic power of classical architecture. The G+3 building occupies a prominent boulevard plot, its ground floor given over to arched retail colonnades that animate the street, while three upper floors of residential apartments rise above with a composed, symmetrical facade of articulated bays, wrought-iron balconies, and decorative cornicing. The classicism is neither pastiche nor nostalgia — it is a precise response to Bahria Town's neoclassical planning language, executed with material care and proportional discipline. The design's success was decisive: Bahria Town authorities, recognising the elevation's quality and its ability to give coherence to the streetscape, mandated it as the template for all subsequent buildings on the surrounding boulevard. Embassy Gardens thus became not merely a completed project but the architectural DNA of an entire neighbourhood — a rare honour and a testament to the enduring relevance of classically grounded design.",
-  "malir-jinnah-boulevard":
-    "Jinnah Boulevard in Malir, Karachi, is among the studio's most ambitious residential masterplans — eight apartment towers of varying heights arranged across a generous 4-acre gated site, creating a self-contained urban quarter. The compositional strategy deliberately resists uniformity: towers step up and down in section, creating a dynamic roofline that reads as a small skyline unto itself. The signature gesture is the bay window system — projecting volumes clad in a palette of warm, saturated colours that animate the otherwise white rendered facades. Red, teal, amber, and cream bays punctuate each elevation at irregular intervals, giving each apartment a distinct street identity and the overall complex a playful, residential warmth rarely achieved at this scale. At ground level, a commercial boulevard runs along the main entrance, providing retail and services that activate the public edge of the site. The interior of the complex is pedestrianised, landscaped, and fully amenitised — a secure, green world that contrasts with the density of the surrounding Malir urban fabric.",
-  "cyber-command-ahq":
-    "The PAF Cyber Command Complex presented a fundamentally different challenge from any other project in the studio's portfolio: not to design from scratch, but to unify. Two existing structures — independently constructed, formally inconsistent, and physically separated — had to be transformed into a single coherent institutional complex befitting Pakistan Air Force's premier cyber operations facility. The unifying strategy operated on two levels. Externally, a continuous cladding system of Aluminum Composite Panels — selected specifically to match the material language of the surrounding Air Headquarters campus — was applied across both buildings, erasing their previous individuality and binding them into one legible whole. A central courtyard was introduced between the two structures, providing both a physical connection and a civic breathing space within the complex. Internally, the transformation was equally ambitious. The Cyber Security Centre lobby — a double-height volume of rich timber cladding, polished marble, and blue-lit display screens — delivers an arrival experience of genuine institutional gravitas. The hexagonal ceiling of the main atrium, composed of dark timber coffers with integrated LED lighting in the Cyber Command's signature blue, directly references the unit's emblem and the geometry of the honeycomb glass entrance doors. The result is a building that reads as always having been a single, purposeful whole — and that carries, in its every detail, the technological identity of the force it serves.",
-  "gravity-tower-1":
-    "Gravity Tower 1 is the studio's most emphatic statement on the relationship between architecture and the sea. Rising G+21 floors on a prime 2,000 sq yard site near Dolmen Mall in Clifton, Karachi, the tower's three-sided glazed envelope was conceived as a continuous frame for the Arabian Sea — a building that does not simply stand near the water but is in permanent dialogue with it. Stepped terraces cascade up the facade at every third floor, breaking the sheer glass plane into a succession of generous outdoor spaces from which the sea is visible at every level. Internally, world-class finishes — marble, brushed brass, and dark-toned timber — give the office floors a weight and materiality that counterbalances the lightness of the all-glass exterior. The lower floors, given over to above-ground parking, posed the challenge of integration: a precisely detailed decorative metal screen wraps these levels, its pattern drawn from the tower's triangular plan geometry, transforming a utilitarian programme into a legible and elegant element of the building's public identity. The result is a tower that belongs to Karachi's seafront with the confidence of a civic landmark.",
-  "paf-chalet-resort":
-    "The PAF Chalet Mountain Resort at Kalabagh represents a fundamentally different typology from any other project in the studio's portfolio — not a single monumental building, but a dispersed community of lightweight structures woven into the forested hillside. The chalets are prefabricated metal structures, precision-manufactured and erected on site with minimal ground disturbance, their steeply pitched dark-steel rooflines and timber-clad walls echoing the geometry of the surrounding pine canopy. Each chalet — available in 2- and 3-bedroom configurations — is designed as a complete residence: full kitchen, spacious lounge, and generous terraces oriented deliberately toward the mountain panorama so that every room is framed by the landscape. The main building adopts a contrasting architectural language — a flowing, aerodynamic white form with a full-perimeter glazed restaurant volume that appears to float above the hillside. From within its dining rooms, the mountains of Kalabagh are the wallpaper. The construction sequence — steel frames rising among the pines — is itself a form of site poetry: lightweight, reversible, and respectful of the ecology it inhabits. The resort is a project about restraint as much as ambition; about building only as much as the mountain will permit, and making every square metre of it extraordinary.",
-  "paf-vfom-52-suites":
-    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
-  "challet":
-    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
-  "american":
-    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
-  "cigar":
-    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
-  "roof":
-    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
-  "americanRes":
-    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
-  "pafSchool":
-    "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
-  };
+// const CONCEPTS: Record<string, string> = {
+//   "jinnah-askari-ii":
+//     "The design response to this challenging narrow and elongated plot is a quartet of towers that read as a unified composition from afar while revealing distinct characters up close. High and low masses alternate in a syncopated rhythm, breaking the monotony typical of high-rise residential clusters. The podium weaves generous amenity floors — a gym, pool deck, and landscaped sky terrace — beneath the residential floors, while two basement levels accommodate the parking demand of a building of this scale. The result is a vertical neighbourhood that delivers world-class urban living within one of Karachi's most ambitious residential developments.",
+//   "pearl-towers":
+//     "Pearl Towers is conceived as a self-sufficient urban village rising from a generous 70-kanal site. Six towers of G+29 floors are arranged around a central communal garden — a green heart that every apartment looks toward. The podium level is a richly programmed base: gyms, swimming pools, a pharmacy, salon, and a mosque integrated seamlessly so that residents need rarely leave. The signature element is the monumental steel winged gate — a soaring sculptural canopy inspired by the spread of wings — that frames the entrance boulevard and gives the entire complex its unmistakable civic identity.",
+//   "dha4-islamabad":
+//     "Sited on the precipitous cliff edge of DHA Phase 4, Islamabad, these G+15 oval towers exploit what most developments would consider an impossible constraint. The fluid elliptical floor plates rotate subtly floor by floor, maximising valley views from every unit while reducing wind loads at altitude. The soft, undulating facade — composed of continuous horizontal bands of glazing and warm cladding — echoes the contour lines of the hillside below. Each tower appears to grow organically from the terrain, as though shaped by the same geological forces that formed the valley over millennia. At 76.78 kanals, the master plan preserves the natural cliff ecology, threading landscape between the towers and down the escarpment in a continuous green cascade.",
+//   "askari-block-130":
+//     "The irregular geometry of this Askari 5 plot — a condition that typically forces architects toward compromise — became the generative logic of the entire design. Rather than subdividing the land into a regular grid and accepting residual awkward spaces, the design team embraced the angular boundaries, deriving each apartment's layout directly from the site's perimeter. The result is a G+14 tower in which no two floor plans are identical. Some apartments open wide toward the south; others are narrow and deep, oriented east. Each has a distinct spatial character, a particular relationship to light, and a unique sense of address. The warm facade palette of cream and bronze cladding, punctuated by deep balconies, gives the building a coherent exterior identity that belies the richly individual world within.",
+//   "dha-enclave-highrise":
+//     "The DHA Enclave Highrise is one of Karachi's most ambitious waterfront developments currently in the design phase. Four towers — two residential, sea-facing to the west, and two commercial, anchoring the eastern edge of the podium — are arranged around a landscaped promenade at grade. The residential towers are characterised by curving, full-height glazed facades that maximise Arabian Sea views, while the commercial towers adopt a more orthogonal language, creating a dialogue between the two programmatic worlds. Cascading sky gardens interrupt each tower's facade at every fourth floor, bringing nature into the vertical realm and reducing solar gain. The podium stitches the four towers together with retail, hospitality, and civic amenity, creating a destination that belongs as much to the city as to its residents and tenants.",
+//   "askari-block-18a":
+//     "The G+18 Askari Block 18A tower is one of the studio's most disciplined exercises in site-responsive design. The small, acutely angular plot in Askari 5 demanded a building form that did not attempt to disguise its boundaries but instead celebrated them. The result is a slender tower of emphatic geometry — each facade a different angle, each elevation reading uniquely from the street. Two luxury 3-bed apartments occupy each floor, both oriented to face the Askari Park directly to the north. Deep balconies slice across the facade at each level, providing shade, outdoor living space, and a visual rhythm that gives the tower an identity from a distance. The base is compact and secure, with parking integrated into the lower floors and ground-level amenities serving the building's residents.",
+//   "askari-block-7-11":
+//     "Askari Blocks 7 and 11 presented an unusual brief: two towers of matching footprint, sited on a narrow triangular plot. Rather than treating this as a problem of subdivision, the design team conceived the two towers as a single architectural statement — a pair in conversation, separated by a shared podium and linked by the bold central latticed core that rises between them. Three 3-bed apartments per floor wrap around the triangular plan, each with generous terraces that turn every face of the triangle outward to light and air. The distinctive cross-braced central element is structural and expressive simultaneously — carrying vertical loads while creating a legible architectural identity that makes these twin towers instantly recognisable within the Askari 5 neighbourhood.",
+//   "askari-block-10-12":
+//     "Rising G+18 floors in the prestigious Askari 11 enclave, Blocks 10 and 12 represent Gravity Studio's vision of vertical community living in Lahore. Two towers of matching floor plan stand side by side, their shared language creating a harmonious pair rather than two isolated objects. The defining ambition of this project is the integration of amenities — swimming pool, gymnasium, and residents' lounges — not as basement afterthoughts but as celebrated volumes within the building's envelope, expressed on the facade and contributing to the towers' distinctive vertical character. Construction is well advanced, with the concrete structure rising steadily against Lahore's skyline. The evening render captures the promise of the finished towers: warm, lit apartments above a generously planted ground level, the twin forms majestic in the dusk light of one of Pakistan's most sought-after residential addresses.",
+//   "embassy-gardens":
+//     "Embassy Gardens in Bahria Town, Islamabad, is a study in the civic power of classical architecture. The G+3 building occupies a prominent boulevard plot, its ground floor given over to arched retail colonnades that animate the street, while three upper floors of residential apartments rise above with a composed, symmetrical facade of articulated bays, wrought-iron balconies, and decorative cornicing. The classicism is neither pastiche nor nostalgia — it is a precise response to Bahria Town's neoclassical planning language, executed with material care and proportional discipline. The design's success was decisive: Bahria Town authorities, recognising the elevation's quality and its ability to give coherence to the streetscape, mandated it as the template for all subsequent buildings on the surrounding boulevard. Embassy Gardens thus became not merely a completed project but the architectural DNA of an entire neighbourhood — a rare honour and a testament to the enduring relevance of classically grounded design.",
+//   "malir-jinnah-boulevard":
+//     "Jinnah Boulevard in Malir, Karachi, is among the studio's most ambitious residential masterplans — eight apartment towers of varying heights arranged across a generous 4-acre gated site, creating a self-contained urban quarter. The compositional strategy deliberately resists uniformity: towers step up and down in section, creating a dynamic roofline that reads as a small skyline unto itself. The signature gesture is the bay window system — projecting volumes clad in a palette of warm, saturated colours that animate the otherwise white rendered facades. Red, teal, amber, and cream bays punctuate each elevation at irregular intervals, giving each apartment a distinct street identity and the overall complex a playful, residential warmth rarely achieved at this scale. At ground level, a commercial boulevard runs along the main entrance, providing retail and services that activate the public edge of the site. The interior of the complex is pedestrianised, landscaped, and fully amenitised — a secure, green world that contrasts with the density of the surrounding Malir urban fabric.",
+//   "cyber-command-ahq":
+//     "The PAF Cyber Command Complex presented a fundamentally different challenge from any other project in the studio's portfolio: not to design from scratch, but to unify. Two existing structures — independently constructed, formally inconsistent, and physically separated — had to be transformed into a single coherent institutional complex befitting Pakistan Air Force's premier cyber operations facility. The unifying strategy operated on two levels. Externally, a continuous cladding system of Aluminum Composite Panels — selected specifically to match the material language of the surrounding Air Headquarters campus — was applied across both buildings, erasing their previous individuality and binding them into one legible whole. A central courtyard was introduced between the two structures, providing both a physical connection and a civic breathing space within the complex. Internally, the transformation was equally ambitious. The Cyber Security Centre lobby — a double-height volume of rich timber cladding, polished marble, and blue-lit display screens — delivers an arrival experience of genuine institutional gravitas. The hexagonal ceiling of the main atrium, composed of dark timber coffers with integrated LED lighting in the Cyber Command's signature blue, directly references the unit's emblem and the geometry of the honeycomb glass entrance doors. The result is a building that reads as always having been a single, purposeful whole — and that carries, in its every detail, the technological identity of the force it serves.",
+//   "gravity-tower-1":
+//     "Gravity Tower 1 is the studio's most emphatic statement on the relationship between architecture and the sea. Rising G+21 floors on a prime 2,000 sq yard site near Dolmen Mall in Clifton, Karachi, the tower's three-sided glazed envelope was conceived as a continuous frame for the Arabian Sea — a building that does not simply stand near the water but is in permanent dialogue with it. Stepped terraces cascade up the facade at every third floor, breaking the sheer glass plane into a succession of generous outdoor spaces from which the sea is visible at every level. Internally, world-class finishes — marble, brushed brass, and dark-toned timber — give the office floors a weight and materiality that counterbalances the lightness of the all-glass exterior. The lower floors, given over to above-ground parking, posed the challenge of integration: a precisely detailed decorative metal screen wraps these levels, its pattern drawn from the tower's triangular plan geometry, transforming a utilitarian programme into a legible and elegant element of the building's public identity. The result is a tower that belongs to Karachi's seafront with the confidence of a civic landmark.",
+//   "paf-chalet-resort":
+//     "The PAF Chalet Mountain Resort at Kalabagh represents a fundamentally different typology from any other project in the studio's portfolio — not a single monumental building, but a dispersed community of lightweight structures woven into the forested hillside. The chalets are prefabricated metal structures, precision-manufactured and erected on site with minimal ground disturbance, their steeply pitched dark-steel rooflines and timber-clad walls echoing the geometry of the surrounding pine canopy. Each chalet — available in 2- and 3-bedroom configurations — is designed as a complete residence: full kitchen, spacious lounge, and generous terraces oriented deliberately toward the mountain panorama so that every room is framed by the landscape. The main building adopts a contrasting architectural language — a flowing, aerodynamic white form with a full-perimeter glazed restaurant volume that appears to float above the hillside. From within its dining rooms, the mountains of Kalabagh are the wallpaper. The construction sequence — steel frames rising among the pines — is itself a form of site poetry: lightweight, reversible, and respectful of the ecology it inhabits. The resort is a project about restraint as much as ambition; about building only as much as the mountain will permit, and making every square metre of it extraordinary.",
+//   "paf-vfom-52-suites":
+//     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+//   "challet":
+//     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+//   "american":
+//     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+//   "cigar":
+//     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+//   "roof":
+//     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+//   "americanRes":
+//     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+//   "pafSchool":
+//     "The PAF PAFVOM 52 Suites complex in Malir, Karachi, is a hospitality project of unusual ambition: a low-rise, G+1 building that achieves a sense of grandeur not through height, but through proportion, landscape, and the careful orchestration of indoor and outdoor space. The traditional European façade — arched colonnades, symmetrically composed bays, and a hipped tiled roof — announces a building of deliberate elegance, one that draws from classical European precedent while remaining unmistakably of its place. The 52 suites are self-contained residences: each has a kitchen, a dining space, and a living area, enabling extended stays with the comforts of home and the service of a hotel. The building is organised around a series of private courtyards that serve a dual purpose — providing each suite with a sheltered outdoor space that opens directly off the rooms, and threading light and greenery deep into the building's plan. The fruit gardens that surround and penetrate the complex are not decorative afterthoughts; they are an integral part of the guest experience, providing shade, scent, and a living landscape that changes with the seasons. Beyond the suites, the complex is richly programmed: a fully equipped dining hall and professional kitchen serve group meals and events; multiple socialising spaces — lounges, terraces, and communal gardens — encourage gathering and repose; and gymnasium facilities ensure the complex functions as a complete, self-sufficient residential retreat. Completed and in use, PAFVOM is among the studio's most considered hospitality projects: a place of quiet generosity, where European formal discipline meets the lush informality of the subcontinent's garden tradition.",
+//   };
 const SIZE_MAP: Record<string, string> = {
   "HighRise": "varies by tower",
   "Hospitality & Institutional": "_",
@@ -245,9 +245,6 @@ function SlideUp({ children, delay = 0, className = "" }: {
   );
 }
 
-// ─── Parallax Hero Image ──────────────────────────────────────────────────────
-// Accepts scrollYProgress from the parent section ref (position: relative)
-// so Motion can correctly calculate scroll offsets.
 function HeroParallax({ src, scrollYProgress }: { src: string; scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"] }) {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
@@ -273,7 +270,7 @@ export function ProjectDetailPage() {
   const navigate = useNavigate();
   const [carouselIdx, setCarouselIdx] = useState(0);
   const [carouselDir, setCarouselDir] = useState(1);
-  const [planIdx, setPlanIdx] = useState(0);
+  // const [planIdx, setPlanIdx] = useState(0);
 
   // Outer wrapper ref — serves as the positioned container for useScroll
   const containerRef = useRef<HTMLDivElement>(null);
@@ -316,11 +313,11 @@ export function ProjectDetailPage() {
   const prevProject = projects[(projectIndex - 1 + projects.length) % projects.length];
 
   const subtitle  = SUBTITLES[project.id] || project.category;
-  const quote     = QUOTES[project.id]    || { text: "Architecture is a social act.", author: "Gravity Studio", role: "Design Director" };
-  const concept   = CONCEPTS[project.id] || project.description;
+  // const quote     = QUOTES[project.id]    || { text: "Architecture is a social act.", author: "Gravity Studio", role: "Design Director" };
+  // const concept   = CONCEPTS[project.id] || project.description;
   const size      = project.area || SIZE_MAP[project.category] || "—";
-  const yearEnd   = parseInt(project.year);
-  const timespan  = `${yearEnd - 2} — ${project.year}`;
+  // const yearEnd   = parseInt(project.year);
+  // const timespan  = `${yearEnd - 2} — ${project.year}`;
 
   const galleryImages = [
     project.image,
@@ -331,11 +328,11 @@ export function ProjectDetailPage() {
     i === 0 ? `${project.title} — primary view` : `${project.title} — view ${i + 1} of ${galleryImages.length}`
   );
 
-  const floorPlans = [
-    { label: "Site Plan",    img: STATIC.floorplan },
-    { label: "Ground Floor", img: STATIC.floorplan },
-    { label: "Typical Floor",img: STATIC.floorplan },
-  ];
+  // const floorPlans = [
+  //   { label: "Site Plan",    img: STATIC.floorplan },
+  //   { label: "Ground Floor", img: STATIC.floorplan },
+  //   { label: "Typical Floor",img: STATIC.floorplan },
+  // ];
 
   const infoItems = [
     // { label: "Time span",  value: timespan },

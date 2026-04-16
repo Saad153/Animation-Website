@@ -18,7 +18,6 @@ export const router = createBrowserRouter([
       { path: "about", Component: AboutPage },
       { path: "team", Component: TeamPage },
       { path: "contact", Component: ContactPage },
-      // Portfolio triggers a PDF download from the navbar; redirect if accessed directly
       { path: "portfolio", element: <Navigate to="/" replace /> },
     ],
   },

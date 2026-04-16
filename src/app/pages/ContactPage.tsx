@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+
 
 const OFFICES = [
   {
@@ -8,7 +11,7 @@ const OFFICES = [
     label: "Architecture & Interiors",
     address: "Innovista Indus, Block A,\nMain Sunset Blvd,\nD.H.A. Phase II, Karachi.",
     phone: "+92 333 2222777",
-    email: "gravity.dnc@gmail.com",
+    email: "info@gravity.com.pk",
     isPrimary: true,
   },
   {
@@ -18,7 +21,7 @@ const OFFICES = [
     phone: "+92 333 2222777",
     tel: "+92 21 3588666",
     website: "www.gravity.com.pk",
-    email: "gravity.dnc@gmail.com",
+    email: "info@gravity.com.pk",
     isPrimary: false,
   },
   {
@@ -26,7 +29,7 @@ const OFFICES = [
     label: "Architecture & Interiors",
     address: "Address coming soon.",
     phone: "+92 333 2222777",
-    email: "gravity.dnc@gmail.com",
+    email: "info@gravity.com.pk",
     isPrimary: false,
   },
   {
@@ -34,7 +37,7 @@ const OFFICES = [
     label: "Architecture & Interiors",
     address: "Address coming soon.",
     phone: "+92 333 2222777",
-    email: "gravity.dnc@gmail.com",
+    email: "info@gravity.com.pk",
     isPrimary: false,
   },
 ];
@@ -54,14 +57,39 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 }
 
 export function ContactPage() {
+  const EMAILJS_SERVICE_ID = "service_0sjt6xk";   // from EmailJS → Email Services
+  const EMAILJS_TEMPLATE_ID = "template_8k2dmtk"; // from EmailJS → Email Templates
+  const EMAILJS_PUBLIC_KEY = "sJqliB35jhzFJCPvJ";  
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formState, setFormState] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [focused, setFocused] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setSending(true);
+  setError(null);
+
+  try {
+    await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        from_name: formState.name,
+        from_email: formState.email,
+        subject: formState.subject,
+        message: formState.message,
+      },
+      EMAILJS_PUBLIC_KEY
+    );
     setSubmitted(true);
-  };
+  } catch (err) {
+    setError("Something went wrong. Please try again.");
+  } finally {
+    setSending(false);
+  }
+};
 
   const inputStyle = (field: string): React.CSSProperties => ({
     width: "100%",
@@ -224,12 +252,19 @@ export function ContactPage() {
 
                 <button
                   type="submit"
+                  disabled={sending}
                   className="flex items-center gap-3 text-white uppercase tracking-[0.15em] group cursor-pointer border-none bg-transparent p-0 hover:gap-5 transition-all duration-300"
-                  style={{ fontSize: "11px" }}
+                  style={{ fontSize: "11px", opacity: sending ? 0.5 : 1 }}
                 >
-                  <span>Send Message</span>
+                  <span>{sending ? "Sending..." : "Send Message"}</span>
                   <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
+
+                {error && (
+                  <p style={{ color: "rgba(255,100,100,0.8)", fontSize: "13px", marginTop: 8 }}>
+                    {error}
+                  </p>
+                )}
               </form>
             )}
           </FadeIn>
