@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar";
 import { PageTransition } from "../components/PageTransition";
 import { WhatsAppFAB } from "../components/WhatsAppFAB";
 import { PortfolioFAB } from "../components/PortfolioFAB";
+import { Footer } from "../components/Footer";
 
 export function Layout() {
   const location = useLocation();
@@ -29,6 +30,7 @@ export function Layout() {
       </PageTransition>
       <WhatsAppFAB />
       <PortfolioFAB />
+      <Footer />
     </div>
   );
 }
