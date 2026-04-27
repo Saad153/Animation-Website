@@ -270,6 +270,9 @@ export function ProjectDetailPage() {
   const navigate = useNavigate();
   const [carouselIdx, setCarouselIdx] = useState(0);
   const [carouselDir, setCarouselDir] = useState(1);
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalSrc, setModalSrc] = useState('');
+  const [modalAlt, setModalAlt] = useState('');
   // const [planIdx, setPlanIdx] = useState(0);
 
   // Outer wrapper ref — serves as the positioned container for useScroll
@@ -687,7 +690,34 @@ export function ProjectDetailPage() {
                 transition={{ duration: 0.8, ease: EASE_CINEMATIC }}
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{ willChange: "transform" }}
+                onClick={() => {
+                  setIsOpen(true);
+                  setModalSrc(galleryImages[carouselIdx]);
+                  setModalAlt(galleryCapts[carouselIdx]);
+                }}
               />
+            </AnimatePresence>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <motion.img
+                    src={modalSrc}
+                    alt={modalAlt}
+                    initial={{ scale: 0.9 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0.9 }}
+                    transition={{ duration: 0.3 }}
+                    className="max-w-[90vw] max-h-[90vh] object-contain cursor-zoom-out"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </motion.div>
+              )}
             </AnimatePresence>
 
             {/* Image counter overlay */}
@@ -832,7 +862,7 @@ export function ProjectDetailPage() {
           TWO-COLUMN IMAGE GRID — real project images
       ════════════════════════════════════════════════════════════════════ */}
       {project.images.length >= 2 && (
-        <div className="px-[clamp(28px,6vw,96px)]" style={{ paddingBottom: "clamp(80px,10vw,140px)" }}>
+        <div className="px-[clamp(28px,6vw,96px)]" style={{ paddingBottom: "clamp(80px,10vw,10px)" }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {project.images.slice(-2).map((src, i) => (
               <FadeUp key={src} delay={i * 0.15}>
@@ -849,6 +879,60 @@ export function ProjectDetailPage() {
                     alt={`${project.title} — detail view ${i + 1}`}
                     className="w-full h-full object-cover"
                     style={{ display: "block" }}
+                    onClick={() => {
+                      setIsOpen(true);
+                      setModalSrc(src);
+                      setModalAlt(`${project.title} — detail view ${i + 1}`);
+                    }}
+                  />
+                </motion.div>
+                <p
+                  className="m-0 mt-4"
+                  style={{ fontSize: 11, color: "#aaa", fontFamily: SANS, letterSpacing: "0.02em" }}
+                >
+                  {project.title} — detail view {i + 1}
+                </p>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      )}
+      {project.construction.length >= 1 && (
+        <div className="px-[clamp(28px,6vw,96px)]" style={{ paddingBottom: "clamp(80px,10vw,10px)" }}>
+            <h2
+                className="m-0 mb-3"
+                style={{
+                  fontSize: "clamp(26px, 3.5vw, 46px)",
+                  fontWeight: 300,
+                  fontFamily: SERIF,
+                  color: "#111",
+                  lineHeight: 1.1,
+                  letterSpacing: "-0.01em",
+                }}
+              >
+                Under Construction:
+              </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {project.construction.slice(-2).map((src, i) => (
+              <FadeUp key={src} delay={i * 0.15}>
+                <motion.div
+                  className="overflow-hidden"
+                  style={{ height: "clamp(240px, 38vh, 460px)", borderRadius: 2 }}
+                  initial={{ scale: 1.06, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 1.2, delay: i * 0.12, ease: EASE_CINEMATIC }}
+                >
+                  <img
+                    src={src}
+                    alt={`${project.title} — detail view ${i + 1}`}
+                    className="w-full h-full object-cover"
+                    style={{ display: "block" }}
+                    onClick={() => {
+                      setIsOpen(true);
+                      setModalSrc(src);
+                      setModalAlt(`${project.title} — detail view ${i + 1}`);
+                    }}
                   />
                 </motion.div>
                 <p

@@ -516,6 +516,7 @@ export interface Project {
   image: string;
   description: string;
   images: string[];
+  construction: string[];
   tileStyle: {
     width: number;
     height: number;
@@ -527,6 +528,120 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "gravity-tower-1",
+    title: "Gravity Tower 1 G+21",
+    location: "Clifton, Karachi",
+    year: "2026",
+    category: "HighRise",
+    status: "Under Construction",
+    area: "2000 Sq Yards",
+    image: gravityTower1Night,
+    description:
+      "Standing in the heart of the city, this three-sided glass office tower features stepped terraces and expansive windows offering stunning sea views. The building boasts world-class finishes and architecture, while a decorative metal screen seamlessly integrates into the elevation to disguise the above-ground parking levels.",
+    images: [gravityTower1Day],
+    construction: [gravityTower1Construction],
+    tileStyle: { width: 265, height: 215, top: "6%", left: "68%", rotate: -1 },
+  },
+  {
+    id: "paf-vfom-52-suites",
+    title: "PAF PAFVOM 52 Suites",
+    location: "Malir, Karachi",
+    year: "2024",
+    category: "Hospitality & Institutional",
+    status: "Completed",
+    area: "—",
+    image: pafVfomFront,
+    construction: [],
+    description:
+      "A G+1 hospitality complex featuring 52 self-contained suites with kitchens and dining spaces, set amidst lush fruit gardens and private courtyards. The traditional European façade, colonnaded entrance portico, and serene internal courtyards create a retreat of quiet elegance within Karachi.",
+    images: [pafVfomAerial, pafVfomEntrance, pafVfomLobby],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "paf-chalet-resort",
+    title: "PAF Chalet Mountain Resort",
+    location: "Kalabagh, Pakistan",
+    year: "2026",
+    category: "Hospitality & Institutional",
+    status: "Under Construction",
+    area: "4 Acres",
+    image: pafChaletHillside,
+    construction: [pafChaletConstruction],
+    description:
+      "This beautiful resort has chalets that are prefab metal structures, erected at site. The main buildings house the restaurants while the chalets are 2- and 3-bedroom buildings with full kitchen, lounge and terraces to enjoy the breathtaking mountain views.",
+    images: [pafChaletExterior, pafChaletInterior, pafChaletRestaurant, pafChaletConstruction],
+    tileStyle: { width: 285, height: 210, top: "7%", left: "42%", rotate: 1.5 },
+  },
+  {
+    id: "pafSchool",
+    title: "PAF FINISHING SCHOOL G+1",
+    location: "Lahore",
+    year: "2025",
+    category: "Educational",
+    status: "Completed",
+    area: "4 ACRES",
+    image: pafSchool,
+    construction: [],
+    description:
+      "3 buildings complex, housing a hostel building, a swimming pool complex and a main building with an auditorium – the building complex has received numerous architectural awards as well.",
+    images: [pafSchool1, pafSchool2, pafSchool3, pafSchool4, pafSchool5, pafSchool6, pafSchool7, pafSchool8, pafSchool9, pafSchool10,pafSchool11,pafSchool12],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "nastp IT",
+    title: "NASTP IT PARK",
+    location: "Karachi ",
+    year: "2024",
+    category: "Offices & IT Parks",
+    status: "Completed",
+    area: "26 Acres",
+    image: nastpIT,
+    construction: [],
+    description:
+      `Gravity Architecture was responsible for converting this mall building into an IT park. The inauguration of this IT park was done on 12th January 2024, by field marshal Asim Munir. 
+      
+      From the original plan we carved out the space for the amenities, like welcome centre, daycare, conference rooms, prayer area, events hall, cafes, landscaping, admin offices, signage’s, corridor spaces, banks etc. 
+
+      The individual offices were then designed by the companies who rented them, in which one or two were done by Gravity. 
+
+      As NASTPs grow and succeed, Gravity continuously designs and builds the NASTPs around Pakistan.
+      `,
+    images: [nastpIT1, nastpIT2, nastpIT3, nastpIT4, nastpIT5, nastpIT6, nastpIT7, nastpIT8, nastpIT9, nastpIT10,nastpIT11, nastpIT12,nastpIT13, nastpIT14],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "bma8",
+    title: "BMA OFFICE 8TH FLOOR",
+    location: "Karachi",
+    year: "2025",
+    category: "Offices & IT Parks",
+    status: "Completed",
+    area: "",
+    image: bma8,
+    construction: [],
+    description:
+      `The unique terraces surrounding the entire office floors provide these offices with light and green spaces while being inside the office spaces. The building itself is very old but the modern design elements free it from its existing architecture of ribbon windows by the introduction of the terraces. The furniture is in muted colors, keeping the emphasis on the external spaces.
+      `,
+    images: [bma82, bma83, bma84, bma85],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
+    id: "bma10",
+    title: "BMA OFFICE 10TH FLOOR",
+    location: "Karachi",
+    year: "2025",
+    category: "Offices & IT Parks",
+    status: "Completed",
+    area: "",
+    image: bma10,
+    construction: [],
+    description:
+      `The unique terraces surrounding the entire office floors provide these offices with light and green spaces while being inside the office spaces. The building itself is very old but the modern design elements free it from its existing architecture of ribbon windows by the introduction of the terraces. The furniture is in muted colors, keeping the emphasis on the external spaces.
+      `,
+    images: [bma102, bma103, bma104],
+    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
+  },
+  {
     id: "jinnah-askari-ii",
     title: "G+24 Jinnah Askari II Apartment Towers",
     location: "Karachi, Pakistan",
@@ -535,6 +650,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "1 Acre",
     image: jinnahAerial,
+    construction: [],
     description:
       "Built on a narrow and long plot, this apartment building consists of four towers. The buildings consist of high and low towers, giving them a unique identity. The building has world class amenities and generous parking both above and below ground.",
     images: [jinnahNight, jinnahSite],
@@ -549,6 +665,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "70 Kanal",
     image: pearlNight,
+    construction: [],
     description:
       "This 6-tower complex in Lahore consists of 4 and 3 bed apartments, with a central communal garden and a mosque. It has several amenities like gyms, swimming pools, pharmacy, and salon built into its podium. A large steel winged form gate greets visitors into this beautiful complex.",
     images: [pearlGate, pearlAerial, pearlMaster],
@@ -563,6 +680,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "76.78 Kanal",
     image: dhaSunset,
+    construction: [],
     description:
       "These oval residential towers in Islamabad are designed to be built on a cliff edge, with dramatic views of the valley below. The fluid, organic form of each tower responds to the natural topography, curving gently to maximise the panoramic vistas across Islamabad's hills.",
     images: [dhaBirdsEye, dhaSite],
@@ -577,6 +695,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "Askari 5",
     image: askariRender,
+    construction: [],
     description:
       "Built in Askari 5 Karachi on an odd-shaped plot, this tower is a study in customised design — each apartment layout is unique and individual, shaped by the geometry of the land. The apartments are spacious, offering residents every facility of a home, with generous floor areas, space and light.",
     images: [askariPhoto],
@@ -591,6 +710,7 @@ export const projects: Project[] = [
     status: "Upcoming Project",
     area: "—",
     image: dhaEnclaveHero,
+    construction: [],
     description:
       "A landmark mixed-use development composed of four towers — two residential sea-facing and two commercial — all currently in the design phase. The complex is set to redefine Karachi's waterfront skyline with a bold architectural language of curved glazed facades and cascading green terraces.",
     images: [dhaEnclaveHero],
@@ -605,6 +725,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "Askari 5",
     image: askari711Render,
+    construction: [],
     description:
       "A very angular small plot provided an exciting opportunity for a luxury 3-bed apartment design, with 2 apartments per floor, each overlooking the verdant Askari Park. The tower's sharp geometric form is a direct response to the site's boundaries, turning constraint into character.",
     images: [askari18aFront],
@@ -619,6 +740,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "Askari 5",
     image: askari18aStreet,
+    construction: [],
     description:
       "These two towers with similar footprints are built on a narrow triangular site, accommodating three spacious 3-bed apartments per floor. Each apartment enjoys generous terraces wrapping all around, flooding every room with light and open sky. The twin towers share a bold central latticed core that becomes the development's defining architectural signature.",
     images: [askari18aStreet],
@@ -633,6 +755,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "Askari 11",
     image: askari1012Evening,
+    construction: [],
     description:
       "These two towers with similar floor plans rise majestically in Askari 11, at the heart of Lahore. Their envelope is designed to accommodate an enviable suite of resident amenities — swimming pool, gym, and lounges — all woven seamlessly into the building's vertical fabric, delivering a self-sufficient urban lifestyle in one of Lahore's most prestigious addresses.",
     images: [askari1012Night, askari1012Site1, askari1012Site2],
@@ -647,6 +770,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "Bahria Town",
     image: embassyCompleted,
+    construction: [],
     description:
       "This classic low-rise building in Bahria Town, Islamabad, features retail on the ground floor with three floors of apartments above. Its elegantly composed classical facade — arched colonnades at the base, articulated bays with wrought-iron balconies above — proved so compelling that Bahria Town authorities mandated its elevation as the design template for all neighbouring buildings along the boulevard.",
     images: [embassyConstruction],
@@ -661,6 +785,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "4 Acres",
     image: malirAerial,
+    construction: [],
     description:
       "A complex of eight apartment towers of varying heights set within a 4-acre gated site in Malir, Karachi. Playful coloured bay windows punctuate the white facades, giving the development a vibrant, residential character unlike the typical high-rise. A full suite of amenities is woven into the complex, with commercial frontage anchoring the main entrance boulevard.",
     images: [malirConstruction],
@@ -675,52 +800,11 @@ export const projects: Project[] = [
     status: "Completed",
     area: "AHQ Complex",
     image: cyberExterior,
+    construction: [],
     description:
       "Originally two separate structures, the PAF Cyber Command Complex was unified through a strategic facade redesign and the addition of a central courtyard. Clad in Aluminum Composite Panels to match the surrounding Air Headquarters, the building integrates seamlessly into the existing institutional landscape while delivering a bold, technologically expressive interior.",
     images: [cyberRender, cyberLobby, cyberAtrium, cyberConstruction],
     tileStyle: { width: 280, height: 210, top: "8%", left: "30%", rotate: 0.5 },
-  },
-  {
-    id: "gravity-tower-1",
-    title: "Gravity Tower 1 G+21",
-    location: "Clifton, Karachi",
-    year: "2026",
-    category: "HighRise",
-    status: "Under Construction",
-    area: "2000 Sq Yards",
-    image: gravityTower1Night,
-    description:
-      "Standing in the heart of the city, this three-sided glass office tower features stepped terraces and expansive windows offering stunning sea views. The building boasts world-class finishes and architecture, while a decorative metal screen seamlessly integrates into the elevation to disguise the above-ground parking levels.",
-    images: [gravityTower1Day, gravityTower1Construction],
-    tileStyle: { width: 265, height: 215, top: "6%", left: "68%", rotate: -1 },
-  },
-  {
-    id: "paf-chalet-resort",
-    title: "PAF Chalet Mountain Resort",
-    location: "Kalabagh, Pakistan",
-    year: "2026",
-    category: "Hospitality & Institutional",
-    status: "Under Construction",
-    area: "4 Acres",
-    image: pafChaletHillside,
-    description:
-      "This beautiful resort has chalets that are prefab metal structures, erected at site. The main buildings house the restaurants while the chalets are 2- and 3-bedroom buildings with full kitchen, lounge and terraces to enjoy the breathtaking mountain views.",
-    images: [pafChaletExterior, pafChaletInterior, pafChaletRestaurant, pafChaletConstruction],
-    tileStyle: { width: 285, height: 210, top: "7%", left: "42%", rotate: 1.5 },
-  },
-  {
-    id: "paf-vfom-52-suites",
-    title: "PAF PAFVOM 52 Suites",
-    location: "Malir, Karachi",
-    year: "2024",
-    category: "Hospitality & Institutional",
-    status: "Completed",
-    area: "—",
-    image: pafVfomFront,
-    description:
-      "A G+1 hospitality complex featuring 52 self-contained suites with kitchens and dining spaces, set amidst lush fruit gardens and private courtyards. The traditional European façade, colonnaded entrance portico, and serene internal courtyards create a retreat of quiet elegance within Karachi.",
-    images: [pafVfomAerial, pafVfomEntrance, pafVfomLobby],
-    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
   {
     id: "challet",
@@ -731,6 +815,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "—",
     image: challet14,
+    construction: [],
     description:
       "This hotel has been renovated keeping the original classic element intact but adding modern elements to redesign the interiors and give it a beautiful new look.",
     images: [challet14],
@@ -745,6 +830,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "—",
     image: container,
+    construction: [],
     description:
       "By taking advantage of the structural strength of containers, the project features a striking cantilevered design. The upper module extends outward, creating a dramatic overhang that naturally shades the lower deck, eliminating the need for extra support columns.",
     images: [container2, container3, container4],
@@ -759,6 +845,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "—",
     image: american1,
+    construction: [],
     description:
       "The lounge is built on the third floor, with backlit onyx bar dominating the space and dark palette and large paintings giving it a moody but glamorous vibe.",
     images: [american2,american3],
@@ -773,6 +860,7 @@ export const projects: Project[] = [
     status: "Upcoming Projects",
     area: "—",
     image: cigar,
+    construction: [],
     description:
       "Designed for cigar smokers, this wood paneled room ensures every comfort that is required in an ideal cigar lounge.",
     images: [],
@@ -787,6 +875,7 @@ export const projects: Project[] = [
     status: "Upcoming Projects",
     area: "—",
     image: roof,
+    construction: [],
     description:
       "The roof terrace of this building has open air dining with a central bar for a great dining experience.",
     images: [],
@@ -801,23 +890,10 @@ export const projects: Project[] = [
     status: "Upcoming Projects",
     area: "—",
     image: americanRes1,
+    construction: [],
     description:
       "The restaurant is designed in this building to hold up to 30 guests, with a London style vibe, this is the perfect space to relax and entertain guests.",
     images: [americanRes2],
-    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
-  },
-  {
-    id: "pafSchool",
-    title: "PAF FINISHING SCHOOL G+1",
-    location: "Lahore",
-    year: "2025",
-    category: "Educational",
-    status: "Completed",
-    area: "4 ACRES",
-    image: pafSchool,
-    description:
-      "3 buildings complex, housing a hostel building, a swimming pool complex and a main building with an auditorium – the building complex has received numerous architectural awards as well.",
-    images: [pafSchool1, pafSchool2, pafSchool3, pafSchool4, pafSchool5, pafSchool6, pafSchool7, pafSchool8, pafSchool9, pafSchool10,pafSchool11,pafSchool12],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
   {
@@ -829,6 +905,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "9000 SqFt",
     image: atts,
+    construction: [],
     description:
       "Admin trade and training Centre is a v shaped building built facing an existing coconut tree grove, with the central form hosing the vertical circulation and the ‘arms ‘linking the corridors to the classroom. The building offers a very elegant design and ease of student’s access, while being naturally ventilated without any electrical consumption.",
     images: [atts1],
@@ -843,6 +920,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "90,000 SqFt",
     image: ptts,
+    construction: [],
     description:
       "The post trade training center was built next to the ATTS building and is similar in design and function to the PTTS.",
     images: [ptts1],
@@ -857,6 +935,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: monumentPAF,
+    construction: [],
     description:
       "In the same base, a monument was designed to symbolize the PAF base’s educational standing at the Korangi base and its many educational centers at the base.",
     images: [],
@@ -871,6 +950,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "100000 SqFt",
     image: shifa,
+    construction: [],
     description:
       "Designed for the medical students returning from the US, the Shifa University is a small building that houses all the classrooms and labs in a neo traditional brick building.",
     images: [shifa2, shifa3],
@@ -885,6 +965,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: alpha,
+    construction: [],
     description:
       "Alpha school was a renovation project converting an old residence into a school for the clients.",
     images: [alpha2],
@@ -899,6 +980,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: malir,
+    construction: [],
     description:
       "The Malir School was a building for elementary till	O-level students, catering to the many new residents in the area. The building has open corridors along the classrooms intercepted by colorful bands that also hide the MEP and provide security and shade.",
     images: [malir2],
@@ -913,6 +995,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: pafWar,
+    construction: [],
     description:
       "This was a renovation project where the entire college got a new facade and upgraded optician’s entrance lobbies.",
     images: [],
@@ -927,6 +1010,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: pfChang,
+    construction: [],
     description:
       "This commercial interior was designed to have the restaurant on 3 levels and bespoke furniture.",
     images: [pfChang2, pfChang3],
@@ -941,6 +1025,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: albaraka,
+    construction: [],
     description:
       "This small bank was designed under an escalator space in the building and had many unusual design elements due to its unique location.",
     images: [albaraka2, albaraka3, albaraka4],
@@ -955,6 +1040,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: amadeus,
+    construction: [],
     description:
       "This office has a small footprint; it is built across two levels and contains the company’s training and conference rooms.",
     images: [amadeus2],
@@ -969,6 +1055,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: advans,
+    construction: [],
     description:
       "This bank has a casual relaxed vibe, encouraging the users to interact and share thoughts.",
     images: [advans2, advans3],
@@ -983,6 +1070,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: sef,
+    construction: [],
     description:
       "Sindh education foundation’s headquarters designed with a lot of Sindhi cultural elements in mind, this interior draws on both modern and traditional element.",
     images: [sef2, sef3],
@@ -997,6 +1085,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: farid,
+    construction: [],
     description:
       "This super was designed with to have numerous products and services including bakery, fish, butchers, cosmetics etc. besides the general supermarket items in a very beautiful boutique setting where customers could enjoy their time in a beautiful environment.",
     images: [farid1, farid2, farid3],
@@ -1011,6 +1100,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: silver,
+    construction: [],
     description:
       "This small outlet was designed to display the client’s unique silver products in an airy and elegant setting.",
     images: [silver1],
@@ -1025,6 +1115,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: hsy,
+    construction: [],
     description:
       `This stone residence dating to the British times is a heritage building facing Mohatta palace.
       Given its beautiful architecture the store was designed on the two levels to highlight the existing floors and internal architecture of windows and ceilings while moldings and paintings were added to enhance the walls and keep the furniture in the same colonial language.
@@ -1041,6 +1132,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: deepak,
+    construction: [],
     description:
       `This shop in Dolmen mall has a backlit mirror ceiling, the design of which makes the shop appear twice as large, open and glamorous.
       The rest of the design elements, like the oversized custom-made Venetian mirrors have the shop its distinct personality.
@@ -1057,6 +1149,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: sonraj,
+    construction: [],
     description:
       `This luxury perfume store takes its cues from a French villa design, and white marble, classic colors dominate its overall aesthetic.
       `,
@@ -1072,6 +1165,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: golfer,
+    construction: [],
     description:
       `This lounge at the golf club is designed to give respite to the golfers after a long day of golfing.
       `,
@@ -1087,6 +1181,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "10,332 SqFt",
     image: outdoor,
+    construction: [],
     description:
       `Outdoor dining area in front of the creek is designed to blend in with the colonial architect of the golf club.
       With its tapered roofs and waterfront setting, this setting offers an idyllic space for diners to enjoy the cool evenings of Karachi.
@@ -1103,6 +1198,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "",
     image: snackbar,
+    construction: [],
     description:
       `This bakery and coffee shop along with the terrace lounge have been redesigned to give it a beautiful new interior, keeping with its idyllic setting.
       `,
@@ -1118,6 +1214,7 @@ export const projects: Project[] = [
     status: "",
     area: "",
     image: zebunnisa,
+    construction: [],
     description:
       `-
       `,
@@ -1133,6 +1230,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "",
     image: maison,
+    construction: [],
     description:
       `
       `,
@@ -1148,6 +1246,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "",
     image: malirInd,
+    construction: [],
     description:
       `This industrial area site office was conceived as a modern interior, incorporating the company logo as a theme in ceilings, paintings, the grey beige palette making the space feel open and modern, and the client walks through the office with seamlessly integrated technology and interior layouts, where he can enjoy a completely submersible experience of what the park and its amenities would offer.
       `,
@@ -1163,6 +1262,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: fuchsia,
+    construction: [],
     description:
       `This first-floor restaurant was designed as steel structure over an existing restaurant and the interior is in cool earthy tones, inspired by nature, with skylights and windows bringing in lots of light.
       `,
@@ -1178,6 +1278,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "4,392 SqFt",
     image: creek,
+    construction: [],
     description:
       `This beautiful creek facing building has a giant sail and is inspired by marine architecture both on the outside and its interior elements. It has suites on the top floors and dining and lounging on the lower floors.
       `,
@@ -1193,6 +1294,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "",
     image: fitness,
+    construction: [],
     description:
       `This gym is built for marines by the harbor on a narrow plot of land, and is designed to offer all types of gym faculties along with a practice pool and steam room and paddle court and dining space..
       `,
@@ -1208,6 +1310,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: squash,
+    construction: [],
     description:
       `A ground plus building was renovated to have a large championship court and several smaller courts. Having new interior and exteriors, the building now hosts many international championships.
       `,
@@ -1223,6 +1326,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "26 Acres",
     image: nastp,
+    construction: [],
     description:
       `Gravity Architecture designed this project in 2020, when the concept of NASTP was just in its inception. It was inaugurated August 4th 2023 by Prine minister Shehbaz Sharif. 
 
@@ -1238,27 +1342,6 @@ export const projects: Project[] = [
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
   {
-    id: "nastp IT",
-    title: "NASTP IT PARK",
-    location: "Karachi ",
-    year: "2024",
-    category: "Offices & IT Parks",
-    status: "Completed",
-    area: "26 Acres",
-    image: nastpIT,
-    description:
-      `Gravity Architecture was responsible for converting this mall building into an IT park. The inauguration of this IT park was done on 12th January 2024, by field marshal Asim Munir. 
-      
-      From the original plan we carved out the space for the amenities, like welcome centre, daycare, conference rooms, prayer area, events hall, cafes, landscaping, admin offices, signage’s, corridor spaces, banks etc. 
-
-      The individual offices were then designed by the companies who rented them, in which one or two were done by Gravity. 
-
-      As NASTPs grow and succeed, Gravity continuously designs and builds the NASTPs around Pakistan.
-      `,
-    images: [nastpIT1, nastpIT2, nastpIT3, nastpIT4, nastpIT5, nastpIT6, nastpIT7, nastpIT8, nastpIT9, nastpIT10,nastpIT11, nastpIT12,nastpIT13, nastpIT14],
-    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
-  },
-  {
     id: "innovista",
     title: "DHA IT HUB / INNOVISTA",
     location: "DHA Phase II, Karachi. ",
@@ -1267,6 +1350,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: innovista,
+    construction: [],
     description:
       `This IT park was designed with 3 buildings built around an existing central library. The new buildings house technology software companies and coworking spaces and a large auditorium.
       `,
@@ -1282,6 +1366,7 @@ export const projects: Project[] = [
     status: "Under construction",
     area: "",
     image: ncsa,
+    construction: [],
     description:
       `This G+6 university was designed to be a part of the air university complex in Islamabad. The building has a small footprint but allows the classrooms to be spacious with light and views, encased in a modernistic form..
       `,
@@ -1297,6 +1382,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: mosqueShifa,
+    construction: [],
     description:
       `This mosque has a massive block form, with angular modern geometry, a double-height interior, and a mezzanine.
       `,
@@ -1312,6 +1398,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: askariMos,
+    construction: [],
     description:
       `This mosque was a renovation of an old mosque in which the outer walls were clad in marble, and the interior was renovated with chandeliers and mirror ceilings to give it a completely new look and enhance its original decorative form. Adjacent to this, a female mosque was designed as a complementary white structure consisting mostly of metal screens, a closed area, and a courtyard.
       `,
@@ -1327,40 +1414,11 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "",
     image: askariVI,
+    construction: [],
     description:
       `This mosque was designed as a traditional grand mosque with chandeliers, mirror work, calligraphy, and marble.
       `,
     images: [askariVI2],
-    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
-  },
-  {
-    id: "bma8",
-    title: "BMA OFFICE 8TH FLOOR",
-    location: "Karachi",
-    year: "2025",
-    category: "Offices & IT Parks",
-    status: "Completed",
-    area: "",
-    image: bma8,
-    description:
-      `The unique terraces surrounding the entire office floors provide these offices with light and green spaces while being inside the office spaces. The building itself is very old but the modern design elements free it from its existing architecture of ribbon windows by the introduction of the terraces. The furniture is in muted colors, keeping the emphasis on the external spaces.
-      `,
-    images: [bma82, bma83, bma84, bma85],
-    tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
-  },
-  {
-    id: "bma10",
-    title: "BMA OFFICE 10TH FLOOR",
-    location: "Karachi",
-    year: "2025",
-    category: "Offices & IT Parks",
-    status: "Completed",
-    area: "",
-    image: bma10,
-    description:
-      `The unique terraces surrounding the entire office floors provide these offices with light and green spaces while being inside the office spaces. The building itself is very old but the modern design elements free it from its existing architecture of ribbon windows by the introduction of the terraces. The furniture is in muted colors, keeping the emphasis on the external spaces.
-      `,
-    images: [bma102, bma103, bma104],
     tileStyle: { width: 280, height: 205, top: "9%", left: "25%", rotate: -1 },
   },
   {
@@ -1372,6 +1430,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: abhi,
+    construction: [],
     description:
       `This office was designed to maximize the light and views from the windows on inside while reflecting them inside and keeping the colors white with light wooden floors.
       `,
@@ -1387,6 +1446,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: abhiNASTP,
+    construction: [],
     description:
       `An unusual radial planning dictates the spatial geometry of this office with the central space occupied by the circular glass conference room around which are placed the radial desks.
       `,
@@ -1402,6 +1462,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: abhiLahore,
+    construction: [],
     description:
       `This office too maximizes the sense of space by keeping the furniture in white colors and light floorings, the brand colors being the only pops of colors.
       `,
@@ -1417,6 +1478,7 @@ export const projects: Project[] = [
     status: "Under design phase",
     area: "",
     image: matrix,
+    construction: [],
     description:
       `This office is dominated by the bright company colors and maximizing of the seating spaces.
       `,
@@ -1432,6 +1494,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: clear,
+    construction: [],
     description:
       `This office has been designed to house US Company’s branch with a muted palette and exposed ceilings, it establishes a strong design element despite its restricted palette.
       `,
@@ -1447,6 +1510,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "200 SqFt",
     image: global,
+    construction: [],
     description:
       `This 200sqft IT office is in the Innovista IT park, and consists of an interior dominated by its strong brand colors, and offices and meeting rooms.
       `,
@@ -1462,6 +1526,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "",
     image: siber,
+    construction: [],
     description:
       `Turkish IT office interior, with space age finishes and pod like meeting spaces, this unusual interior was the very essence of cutting-edge space-age office design.
       `,
@@ -1477,6 +1542,7 @@ export const projects: Project[] = [
     status: "Upcoming Project",
     area: "",
     image: caa,
+    construction: [],
     description:
       `Complete renovation of the civil aviation authority office at Share-e-Faisal, with the elevation updated with the addition of a second floor, and another building which has a café, reception, and lift lobby. 
       `,
@@ -1492,6 +1558,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "2000 SqYds",
     image: mr,
+    construction: [],
     description:
       `This modern home has 3 level living spaces, as it’s built into an elevated rock. The spaces are flooded with light through huge windows and a central staircase takes a singular flight connecting the 3 levels. Its double height entrance and clerestory windows with dramatic pool and gardens ensure every space has light and views.
       `,
@@ -1507,6 +1574,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "1000 SqYds",
     image: mrb,
+    construction: [],
     description:
       `This classic residence accommodates 3 separate apartments for 3 families, with common dining and drawing spaces. There is basement pool which is open to sky and provides views to the entertaining spaces of the residence. The exterior is inspired by chalet and has dormer windows, slate roof and sash windows.
       `,
@@ -1537,6 +1605,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "1000 SqYds",
     image: mrz,
+    construction: [],
     description:
       `
       `,
@@ -1552,6 +1621,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "500 SqYds",
     image: mrn,
+    construction: [],
     description:
       `
       `,
@@ -1567,6 +1637,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "1000 SqYds",
     image: mrd,
+    construction: [],
     description:
       `This residence has a classical architecture designed to accommodate the family and their fleet of cars. Unusually, the car collection is accessed through a ramp that leads from the main gate at the side of the residence. The basement also houses the theatre accessed through the main staircase and lift. On the ground and first floor are the bedrooms and entertainment spaces and a beautiful roof terrace nestled in between the residence slopes Unfortunately, as it happens in many cases, the client went against the architects chosen finishing materials, and decided to add black glass windows, his own railing and lighting designs and other decorations, leaving the design unrecognizable from what was initially visualized.
       `,
@@ -1582,6 +1653,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "800 SqYds",
     image: mre,
+    construction: [],
     description:
       `This residence built on 3 levels with a pool has spacious living spaces and views overlooking its pool and garden with trees the elevation is modern and clad in a cool travertine stone.
       `,
@@ -1597,6 +1669,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "500 SqYds",
     image: mrl,
+    construction: [],
     description:
       `The early residences designed for this residence have a lift structure connecting the 3 levels, and travertine and alucobond form a maintenance-free modern elevation element.
       `,
@@ -1612,6 +1685,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "1500 SqYds",
     image: mrf,
+    construction: [],
     description:
       `This residence was built with the traditional colonial architecture in mind, with a lot of the design and color decisions being taken by the clients. The pool is also an integral part of the interior of the house.
       `,
@@ -1627,6 +1701,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "2000 SqYds",
     image: mrlShifa,
+    construction: [],
     description:
       `This residence was built with a very Spanish architecture in mind, but for American clients so the house design with its great room and American architectural design elements highlight the taste and origins of the clients.
       `,
@@ -1642,6 +1717,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "1000 SqYds",
     image: mrr,
+    construction: [],
     description:
       `This residence was built with a very Spanish architecture in mind, but for American clients so the house design with its great room and American architectural design elements highlight the taste and origins of the clients.
       `,
@@ -1657,6 +1733,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "2000 SqYds",
     image: mrh,
+    construction: [],
     description:
       `With simpler lines, but still a classic elevation, this residence, too, has been designed for American clients with
       Their requirements for open family living spaces, great rooms, and open kitchens
@@ -1673,6 +1750,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "200 SqYds",
     image: mrs,
+    construction: [],
     description:
       `This residence a part of row houses in a housing society. But its tiny footprint still allows for a 4-bedroom house with a roof terrace and entertainment spaces, demonstrating that small footprints can also provide a high standard of living spaces.
       `,
@@ -1688,6 +1766,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "",
     image: sph,
+    construction: [],
     description:
       `Over 30 houses designed by gravity, ranging between 800-1000sq yards. Some of the selected designs are below.
       `,
@@ -1703,6 +1782,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "1000 SqYds",
     image: mrzDHA,
+    construction: [],
     description:
       `The residence offer privacy to the clients while embracing outdoor views in every room, an opulent 1000sq yards house having neo classical influences.
       `,
@@ -1718,6 +1798,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "850 SqYds",
     image: mrsDHA,
+    construction: [],
     description:
       `Behind the glass façade this residence opens up to an open courtyard getting light into the basement and creating multi-level living spaces.
       `,
@@ -1733,6 +1814,7 @@ export const projects: Project[] = [
     status: "Under Construction",
     area: "1000 SqYds",
     image: mrm,
+    construction: [],
     description:
       `A modern villa in lah ore with a central staircase and a glas atrium opening up the internal spaces to several courtyards allowing light to filter to at different levels.
       `,
@@ -1741,13 +1823,14 @@ export const projects: Project[] = [
   },
   {
     id: "cm",
-    title: "CM SECRETERIAT",
+    title: "CM SECRETARIAT",
     location: "Gwadar, Baluchistan",
     year: "2025",
     category: "Residential",
     status: "Under Construction",
     area: "",
     image: cm,
+    construction: [],
     description:
       `The chief minister's secretariat was designed to have the office and residence block. This modern building overlooking the sea has a unique location and breathtaking water views.
       `,
@@ -1763,6 +1846,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "2000 SqYds",
     image: lux,
+    construction: [],
     description:
       `This opulent residence interior has been designed with classic elements and furnishings, highlighting the client's taste for the grand
       `,
@@ -1778,6 +1862,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "1000 SqYds",
     image: mrsa,
+    construction: [],
     description:
       `The house opens into a dramatic double-height space where marble clads the walls from floor to ceiling, emphasizing the height and elegance of the interior. The muted palette creates a calm and refined atmosphere, allowing the natural beauty of the marble to stand out. Blending modern simplicity with classic sophistication, the space feels timeless, balanced, and quietly luxurious
       `,
@@ -1793,6 +1878,7 @@ export const projects: Project[] = [
     status: "Completed",
     area: "1000 SqYds",
     image: petaro,
+    construction: [],
     description:
       `This unique masterplan was designed with canals to provide the community with a unique experience and landscape reminiscent of Europe. This waterway also provides the dual function of providing water to homes and communities
       `,
