@@ -70,10 +70,10 @@ const IMAGES = [
   newImg11,
   newImg31,
   newImg12,
-  newImg33,
+  // newImg33,
   newImg34,
-  newImg35,
-  newImg36
+  // newImg35,
+  // newImg36
 ];
 
 // ─── Column config ────────────────────────────────────────────────────────────
@@ -286,6 +286,9 @@ function MobileGrid() {
           }
           return acc;
         }, [])}
+        <motion.div key={100} style={{ aspectRatio: "16/9", borderRadius: 2, overflow: "hidden" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.42, delay: 100 * 0.012, ease: [0.22, 1, 0.36, 1] }}>
+          <img src={newImg35} alt="" draggable={false} className="w-full h-full object-cover select-none" />
+        </motion.div>
       </div>
       </div>
     </>

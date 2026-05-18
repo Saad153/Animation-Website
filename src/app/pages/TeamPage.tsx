@@ -30,7 +30,7 @@ const TEAM: Member[] = [
   { sr: 12, name: "Hamza Shahab",       designation: "Project Architect",     education: "B. Arch.",                  hasPhoto: false },
   { sr: 13, name: "Aziz-Ur-Rehman",    designation: "Junior Architect",     education: "B. Arch.",                  hasPhoto: false },
   { sr: 14, name: "Aneel Kumar",        designation: "Junior Architect",     education: "B. Arch.",                  hasPhoto: false },
-  { sr: 15, name: "Syeda Haram Rizwan", designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
+  { sr: 15, name: "Haram Imran", designation: "Architect",             education: "B. Arch.",                  hasPhoto: false },
   { sr: 16, name: "Alisha Nadeem",      designation: "Interior Architect",             education: "B. Arch.",                  hasPhoto: false },
   { sr: 17, name: "Aaminah Mansoor",    designation: "Interior Architect",             education: "B. Arch.",                  hasPhoto: false },
   { sr: 18, name: "Marzia Jan",         designation: "Interior Architect",             education: "B. Arch.",                  hasPhoto: false },
